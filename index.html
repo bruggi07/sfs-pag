@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="es">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	
+	<title>Santa Fe Sistemas</title>
+	<link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
+
+<link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
+</head>
+<body>
+	<header>
+
+		<div class="container_header" id="header">
+		<div class="logo-menu">
+		<div class="logo-header">
+			<div class="imglogo">
+				<a href="index.html"><img id="logoimg" src="img/logo_gsf.png" alt="Santa fe sistemas logo"></a>
+			</div>
+			<button class="btn-acceso" id="open_acceso">Acceso a clientes</button>
+		</div>
+		<div class="menu-resp" id="btn_hambur"><img src="img/menuhambur.png" alt="menú hamburguesa png"></div>
+		</div>
+		<div class="nav_header hamburoculto" id="nav_header">
+			<nav class="nav" id="menu">
+				<a href="#inicio">Inicio</a>
+				<a href="#servicios">Servicios</a>
+				<a href="#irproductos">Productos</a>
+				<a href="#contacto">Contacto</a>
+				<a href="clientes.html">Clientes</a>		
+				<button class="btn-demo" id="open">Solicitar Demo</button>
+			</nav>
+		</div>
+
+		</div>
+	</header>
+	<div class="cuerpo"  id="main">
+
+
+<!-- acceso a cliente formulario----------------------------------------->
+
+<div class="opacooff" id="opaco">
+	<div class="contenedormain contenedormain-acceso">
+		<div class="container-acceso-form oculto" id="container_form_acceso">
+			
+			<form action="" method="POST" id="form_acceso">
+				<div id="close_acceso" class="btn-cerrar-acceso">&nbspX&nbsp</div>
+					
+					<div class="form accesoform">
+					
+					<h2>Acceso a clientes</h2>
+
+					<div class="grupo">
+						<input  type="text" name="usuario" required maxlength="35"><span class="barra"></span>
+						<label for="">Usuario</label>
+					</div>
+
+					<div class="grupo">
+						<input  type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
+						<label for="">Contraseña</label>
+					</div>				
+
+					<button id="btn__acceso" class="btn_enviar" type="submit">deshabilitado</button>
+					<a href="#" class="olvido-pass">Olvidó su contraseña?</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- formulario demo ---------------------------------------------------->
+
+<div class="opacooffdemo" id="opacodemo">
+	<div class="contenedormain">
+		<div class="container-form oculto" id="container_form">
+			
+			<form autocomplete="off" action="" method="POST" id="form">
+				
+				<div class="form">
+					<div id="close" class="btn-cerrar">&nbspX&nbsp</div>
+					<div class="imagform">
+						<img src="img/logo_gsf.png" alt="Santa fe sistemas logo">
+					</div>
+					<h2>Estás a punto de pedir tu demo!</h2>
+					<p>Para una experiencia personalizada, ayúdanos con esta información.</p>
+					
+					<div class="grupo">
+						<input  autocomplete="off" type="text" name="nombre" required minlength="4" maxlength="15"><span class="barra imputado"></span>
+						<label for="">Nombre*</label>
+					</div>
+					<div class="grupo">
+						<input  autocomplete="off" type="text" name="apellido" required minlength="4" maxlength="15"><span class="barra imputado"></span>
+						<label for="">Apellido*</label>
+					</div>
+					<div class="grupo">
+						<input  autocomplete="off" type="Email" name="email" required maxlength="35"><span class="barra imputado"></span>
+						<label for="">Email*</label>
+					</div>
+					<div class="grupo">
+						<input  autocomplete="off" type="tel" name="telefono" required minlength="8" maxlength="35"><span class="barra imputado"></span>
+						<label for="telefono">Número de teléfono*</label>
+					</div>
+					<div class="grupo">
+						<input  autocomplete="off" type="text" name="ciudad" required maxlength="35"><span class="barra imputado"></span>
+						<label for="">Ciudad*</label>
+					</div>
+					<div class="grupo">
+						<input  autocomplete="off" type="text" name="institucion" required maxlength="35"><span class="barra imputado"></span>
+						<label for="">Institución*</label>
+						<input type="text" value="SOLICITUD DE DEMO" name="subject" style="opacity:0 ;" contenteditable="false">
+					</div>				
+					<button id="btn__enviar" class="btn_enviar" name="enviar" type="submit">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+	<!-- Fin formulario--------- -->
+
+
+	<!-- carteles formulario finalizado -->
+	
+		<div class="contenedormain-emergente">
+
+			<div class="container-emergente ocultoemer" id="container_emergente">
+				
+				<div class="ventana">
+					<h1>Enviado correctamente!</h1>
+					<h2>Hemos recibido tu solicitud, nos contactaremos a la brevedad!</h2>
+					<button class="btn_enviar" id="btn_cerrar">Aceptar</button>
+				</div>
+				
+			</div>
+		</div>
+	
+	
+		<div class="contenedormain-emergente">
+
+			<div class="container-emergente ocultoemer" id="container_emergente2">
+				
+				<div class="ventana2">
+					<h1>A ocurrido un error!</h1>
+					<h2>Revisa nuevamente los datos para ver si están correctos...</h2>
+					<button class="btn_enviar" id="btn_cerrar2">Aceptar</button>
+				</div>
+				
+			</div>
+		</div>
+	
+
+	<!-- Fin carteles formulario finalizado -->
+
+<article >
+	<!-- principal--------------------- -->
+		<section class="seccion" id="inicio">
+			<div class="principal" >
+				<div class="imagen_principal">
+				<img src="img/product.png" alt="producto sfs">
+				</div>
+				<div class="text_principal" >
+					<h1>Santa &nbsp Fe &nbsp Sistemas</h1>
+					<p>
+					Somos un grupo de desarrollo de sistemas informáticos de misión crítica, dedicado exclusivamente al sector salud. <br><br>
+					Nuestros clientes son hospitales, clínicas, aseguradoras y gerenciadoras.<br> Nuestras aplicaciones se intercomunican con otros sistemas, utilizando estándares de la industria<br><br>
+					</p>
+				</div>	
+			</div>
+		</section>
+		<!-- Servicios----------------- -->
+		<section class="seccion"  id="servicios">
+			<div class="servicios">
+				<div class="img-servicios">
+					<img src="img/services.png" alt="">
+				</div>
+				<div class="text_servicios">
+					<a href="#"><div class="servicio">
+						<h1>Reingeniería como servicio principal</h1>
+						<p>La implementación de un sistema en una empresa de salud requiere una completa reingenieria de procesos y funciones. Nuestros profesionales analizan el estado actual de los procesos de la institución y se arman los cronogramas de implementación de común acuerdo con el cliente.</p>
+						<h3>haz click para más información</h3>
+					</div></a>
+					<a href="#"><div class="servicio">
+						<h1>Integración con PACS y con SIG/GIS</h1>
+						<p>Mediante la utilización de las tecnologías y estándares más actuales, nuestra empresa implementa los repositorios de imágenes clínicas (PACS) con software libre y utilizando el estándar DICOM para integrar a su equipamiento medico al sistema de información.</p>
+						<h3>haz click para más información</h3>
+					</div></a>
+				</div>
+			</div>
+		</section>
+		<!-- Productos------------------- -->
+		<section class="seccion" id="irproductos">
+			<div class="productos">
+				<h1>Nuestros Productos</h1>
+				<div class="productos-container">
+					<a href=""><div class="prdto">
+						<h1>SIAP</h1>
+						<div class="imagen-product">
+							<img src="img/productos_siap.png" alt="">
+						</div>
+						<p>Sistema Integral de Administración de Prestaciones: Aplicación web diseñada para Prestadores del área de salud.
+						</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>SAPma</h1>
+						<div class="imagen-product">
+							<img src="img/productos_sapma.png" alt="">
+						</div>
+						<p>Sistema de Administración de Prestaciones medico-asistenciales: Aplicación web para tareas admistrativas de Financiadores del área de Salud.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>HCE</h1>
+						<div class="imagen-product">
+							<img src="img/productos_hce.png" alt="">
+						</div>
+						<p>Historia Clínica Electrónica: Aplicación web/mobile orientada a los miembros del equipo de salud que facilita la carga y consulta de información clínica.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>App para pacientes</h1>
+						<div class="imagen-product">
+							<img src="img/productos_app_cliente.png" alt="">
+						</div>
+						<p>Santa Fe Sistemas ha desarrollado una aplicación móvil, para ofrecerle a los pacientes diferentes servicios desde todo tipo de dispositivos móviles.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>Teleconsulta</h1>
+						<div class="imagen-product">
+							<img src="img/productos_teleconsulta.png" alt="">
+						</div>
+						<p>La atención bajo esta modalidad permite acceso al historial médico completo del paciente a través de nuestro sistema de Historia Clínica.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>Triage</h1>
+						<div class="imagen-product">
+							<img src="img/productos_triage.png" alt="">
+						</div>
+						<p>La aplicación realiza un Triaje o protocolo de intervención, el cual es un método de selección y clasificación de pacientes.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>Gestión comercial</h1>
+						<div class="imagen-product">
+							<img src="img/productos_gestion-comercial.png" alt="">
+						</div>
+						<p>Gestión comercial Online: Desarrollo web para generar facturas y comprobantes electrónicos conectándose con AFIP online.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+					<a href=""><div class="prdto">
+						<h1>Turnos Online</h1>
+						<div class="imagen-product">
+							<img src="img/productos_turnos.png" alt="">
+						</div>
+						<p>Gestión de turnos online: Aplicación web diseñada para la gestión y administración de turnos via online.</p>
+						<a href=""><h3>Click para más información</h3></a>
+					</div></a>
+
+				</div>
+			</div>
+		</section>
+		<section class="seccion" id="contacto">
+
+			<div class="contactos-container">
+				<div class="contact">
+					<h1>Estamos en</h1>
+					<h2>Santiago Derqui 3265.<br>
+						Santa Fe, Argentina.</h2>
+				</div>
+				<div class="contact">
+					<h1>Teléfonos</h1>
+					<h2>+54 (0342) 4578665<br>
+						+54 (0342) 4578666</h2>
+				</div>
+				<div class="contact">
+					<h1>Nuestro correo</h1>
+					<h2>info@sfssa.com.ar</h2>
+				</div>
+			</div>
+
+
+		</section>
+</article>
+</div>
+	<footer>
+		<div class="footer">
+			
+			<div class="datafis">
+				<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank">
+				<img src="img/dataweb.jpg" alt="data fiscal sfs">
+				</a>
+			</div>
+			<div class="contacto">
+				<ul>
+					<a>Santiago Derqui 3265.
+						Santa Fe, Argentina</a>
+					<a>+54 (0342) 4578665 / 4578666</a>
+					<a>info@sfssa.com.ar</a>
+				</ul>	
+			</div>
+			<div class="group">
+					
+				<img src="img/logo-footer.png" alt="copyright">
+			</div>
+		
+		</div>
+	</footer>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="apps.js"></script>
+</body>
+</html>
