@@ -14,11 +14,6 @@
 	font-family: AmsiPro-Light;
 	src: url(/fonts/AmsiPro-Light.ttf);
 }
-#inicio{
-	background-image:url(img/fondop53.jpg);
-	background-repeat: no-repeat;
-	background-size:contain;
-}
 
 h1{
 	font-family: AmsiPro-Black;
@@ -130,7 +125,7 @@ nav a:hover{
 	padding-bottom: 1vh;
 	cursor: pointer;
 	font-family:AmsiPro-Bold;
-	transition: .4s linear;
+	transition: .15s linear;
 }
 .btn-acceso{
 	font-weight: 600;
@@ -142,7 +137,7 @@ nav a:hover{
 	padding: 0.5vh 1.5vh;
 	padding-bottom: 1vh;
 	cursor: pointer;
-	transition: .4s linear;
+	transition: .15s linear;
 	font-family: AmsiPro-Bold;
 }
 .btn-demo:hover {
@@ -707,7 +702,9 @@ article{
 }
 @media screen and (min-width:1000px) {
 	#inicio{
-		background-size: cover;
+		background-image:url(img/fondop53.jpg);
+		background-repeat: no-repeat;
+		background-size:cover;
 	}
 	section[id]{
 		padding-top: 1vh;
@@ -765,7 +762,7 @@ article{
 		transform: scale(0.8);
 	}
 	.servicio{
-		margin: 10vh;
+		margin-right: 10vh;
 		font-size: 1.8vh;
 	}
 	.text_principal{
@@ -778,6 +775,9 @@ article{
 	}
 	.imagen_principal{
 		width: 120vh;
+	}
+	.productos{
+		margin-top: 10vh;
 	}
 	.principal{
 		margin-top: 25vh;
