@@ -702,7 +702,7 @@ article{
 }
 @media screen and (min-width:1000px) {
 	#inicio{
-		background-image:url(img/fondop53.jpg);
+		background-image:url(../img/fondop53.jpg);
 		background-repeat: no-repeat;
 		background-size:cover;
 	}
