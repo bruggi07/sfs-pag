@@ -85,11 +85,14 @@ $form.addEventListener('submit',enviar);
 
 // efecto menú con scroll ----------------->
 
-const header = document.getElementById('header')
+const header = document.getElementById('header');
 const imglogo = document.querySelector('.logo-header > .imglogo');
 const fontsizebtnacceso = document.querySelector('.btn-acceso');
+const fonsizebtnpresent = document.querySelector('.btn-demo')
 const nav = document.querySelector('.logo-header');
-const navFontSize = document.querySelector('.nav')
+const navFontSize = document.querySelector('.nav');
+const imgmini = document.getElementById('minilogo');
+const imggrande = document.getElementById('logogrande');
 let prevY = window.scrollY;
 window.addEventListener('scroll', function(){
 
@@ -98,17 +101,23 @@ window.addEventListener('scroll', function(){
 
 		nav.classList.add('navscroll');
 		fontsizebtnacceso.classList.add('scrollbtnacceso');
+		fonsizebtnpresent.classList.add('scrollbtnacceso');
 		imglogo.classList.add('logoscroll');
 		header.classList.add('menuscroll');
 		navFontSize.classList.add('nav-scroll')
+		imggrande.style.opacity="0";
+		imgmini.style.opacity="1"
 
 	}else if(prevY<200){
 
 		nav.classList.remove('navscroll');
 		fontsizebtnacceso.classList.remove('scrollbtnacceso');
+		fonsizebtnpresent.classList.remove('scrollbtnacceso');
 		header.classList.remove('menuscroll');
 		imglogo.classList.remove('logoscroll');
 		navFontSize.classList.remove('nav-scroll')
+		imggrande.style.opacity="1";
+		imgmini.style.opacity="0"
 		
 	};
 
