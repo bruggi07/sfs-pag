@@ -5,6 +5,7 @@ let close_acceso = document.getElementById('close_acceso');
 let opacoacceso = document.getElementById('opaco');
 // formu demo------>
 let open = document.getElementById('open');
+let open_dos = document.getElementById('open2');
 let form = document.getElementById('container_form');
 let close = document.getElementById('close');
 let opaco = document.getElementById('opacodemo');
@@ -25,6 +26,10 @@ btnHambur.addEventListener('click',()=>{
 })
 // formu demo------>
 open.addEventListener('click',()=>{
+	form.classList.remove('oculto');
+	opaco.classList.add('opaco');
+})
+open_dos.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
 })

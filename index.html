@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
 	
 	<title>Santa Fe Sistemas</title>
 	<link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
@@ -13,6 +16,8 @@
 <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
 </head>
 <body>
+	<div class="fondo"></div>
+	<div class="fondo-dos"></div>
 	<header>
 		<div class="header-transition"></div>
 		<div class="container_header" id="header">
@@ -35,8 +40,8 @@
 			</nav>
 		</div>
 		<div class="botones">
-			<button class="btn-demo" id="open">Solicitar presentación</button>
-				<button class="btn-acceso" id="open_acceso">Acceso a clientes</button>
+			<button class="btn-demo" id="open"><span>Solicitar presentación</span></button>
+			<button class="btn-acceso" id="open_acceso"><span>Acceso a clientes</span></button>
 		</div>
 		</div>
 		
@@ -87,7 +92,7 @@
 				<div class="form">
 					<div id="close" class="btn-cerrar">&nbspX&nbsp</div>
 					<div class="imagform">
-						<img src="img/logo_gsf.png" alt="Santa fe sistemas logo">
+						<img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
 					</div>
 					<h2>Estás a punto de pedir tu demo!</h2>
 					<p>Para una experiencia personalizada, ayúdanos con esta información.</p>
@@ -165,11 +170,20 @@
 			<div class="principal" >
 	
 				<div class="text_principal" >
-					<h1>Santa &nbsp Fe &nbsp Sistemas</h1>
+					<h1>SANTA FE SISTEMAS</h1>
+					<h3>Software para el sector salud</h3>
 					<p>
 					Somos un grupo de desarrollo de sistemas informáticos de misión crítica, dedicado exclusivamente al sector salud. <br><br>
-					Nuestros clientes son hospitales, clínicas, aseguradoras y gerenciadoras.<br> Nuestras aplicaciones se intercomunican con otros sistemas, utilizando estándares de la industria<br><br>
+					Nuestras aplicaciones se intercomunican con otros sistemas, utilizando estándares de la industria.<br><br>
 					</p>
+					<div class="botonesprin">
+						<a  href="#irproductos"><button class="btn-conomas">
+							<span> CONOCER MÁS</span>
+						</button></a>
+						<button class="btn-demo2" id="open2">
+							<span>SOLICITAR PRESENTACIÓN</span>
+						</button>
+					</div>
 				</div>	
 				<div class="imagen_principal">
 				
@@ -179,21 +193,7 @@
 		<!-- Servicios----------------- -->
 		<section class="seccion"  id="servicios">
 			<div class="servicios">
-				<div class="img-servicios">
-					<img src="img/services.png" alt="">
-				</div>
-				<div class="text_servicios">
-					<a href="Reingenieria.html"><div class="servicio">
-						<h1>Reingeniería como servicio principal</h1>
-						<p>La implementación de un sistema en una empresa de salud requiere una completa reingenieria de procesos y funciones. Nuestros profesionales analizan el estado actual de los procesos de la institución y se arman los cronogramas de implementación de común acuerdo con el cliente.</p>
-						<h3>haz click para más información</h3>
-					</div></a>
-					<a href="integracion.html"><div class="servicio">
-						<h1>Integración con PACS y con SIG/GIS</h1>
-						<p>Mediante la utilización de las tecnologías y estándares más actuales, nuestra empresa implementa los repositorios de imágenes clínicas (PACS) con software libre y utilizando el estándar DICOM para integrar a su equipamiento medico al sistema de información.</p>
-						<h3>haz click para más información</h3>
-					</div></a>
-				</div>
+				
 			</div>
 		</section>
 		<!-- Productos------------------- -->
@@ -316,7 +316,6 @@
 		
 		</div>
 	</footer>
-	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="apps.js"></script>
 </body>
