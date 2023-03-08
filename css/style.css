@@ -940,7 +940,7 @@ article{
 		display: flex;
 		flex-direction: column;
 		width: 280px;
-		height: 290px;
+		min-height: 290px;
 		padding: 3vh;
 		margin: 0.5vh;
 		margin-bottom: 5vh;
@@ -957,7 +957,6 @@ article{
 	}
 	.nosotros-box p{
 		position:relative;
-		padding: 0 1vh;
 		font-family: Roboto;
 		font-size: 2vh;
 		line-height: 18px;
@@ -1186,7 +1185,7 @@ article{
 		background-size: 90%;
 	}
 	.fondo-dos{
-		background-size: 45%;
+		background-size: 30%;
 		height: 300%;
 	}
 	#minilogo{
@@ -1225,5 +1224,14 @@ article{
 	}
 	.container-form{
 		margin-top: -70px;
+	}
+	.nosotros-box p{
+		line-height: 25px;
+	}
+	.nosotros-box{
+		margin: 0vh;
+		box-sizing: content-box;
+		padding-bottom: 5vh;
+		scale: 0.8;
 	}
 }
