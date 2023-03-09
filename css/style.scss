@@ -99,6 +99,7 @@ body{
 	transition: .4s linear ;
 	z-index: 21;
 	top: 0;
+	user-select: none;
 }
 .header-transition{
 	display: flex;
@@ -420,6 +421,7 @@ article{
 	display: flex;
 	flex-direction: column;
 	margin: 5vh 10vh 0 10vh;
+	user-select: none;
 	h2{
 		font-size: 3vh;
 	}
@@ -725,6 +727,7 @@ article{
 	display: flex;
 	flex-direction: column;
 	margin: 15vh 10vh 0 10vh;
+	user-select: none;
 	.text-contactanos{
 		margin-bottom: 60px;
 	}
@@ -786,6 +789,9 @@ article{
 					font-weight: 400;
 					transition: 0.3s;
 					color:#4D5A9D ;
+					cursor:text;
+					user-select: none;
+					pointer-events: none;
 					img{
 						width: 15px;
 						margin-right: 10px;
@@ -879,6 +885,7 @@ article{
 				font-family: 'Roboto';
 				font-weight: 300;
 				font-size: 2vh;
+				user-select:text;
 			}
 			.correo-cto{
 				text-decoration: underline;
@@ -1066,6 +1073,7 @@ article{
 		display: flex;
 		flex-direction: column;
 		margin: 10vh 10vh 0vh 10vh;
+		user-select: none;
 		h2{
 			font-size:3vh ;
 		}
@@ -1075,6 +1083,7 @@ article{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	
 	}
 	.nosotros-text{
 		text-align: center;
