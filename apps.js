@@ -178,6 +178,7 @@ btnCheck.addEventListener('click',function (){
 		btnCheck2.innerText='Ver más';
 		btnCheck3.innerText='Ver más';
 		flechi2.style.transform='rotate(0deg)'
+		flechi3.style.transform='rotate(0deg)'
 		flechi.style.transform='rotate(180deg)'
 		myCheck.checked=true;
 	}
@@ -193,6 +194,7 @@ btnCheck2.addEventListener('click',function (){
 		btnCheck.innerText='Ver más';
 		btnCheck3.innerText='Ver más';
 		flechi.style.transform='rotate(0deg)'
+		flechi3.style.transform='rotate(0deg)'
 		flechi2.style.transform='rotate(180deg)'
 		myCheck2.checked=true;
 	}
@@ -208,6 +210,7 @@ btnCheck3.addEventListener('click',function (){
 		btnCheck.innerText='Ver más';
 		btnCheck2.innerText='Ver más';
 		flechi.style.transform='rotate(0deg)'
+		flechi2.style.transform='rotate(0deg)'
 		flechi3.style.transform='rotate(180deg)'
 		myCheck3.checked=true;
 	}
