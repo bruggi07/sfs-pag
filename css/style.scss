@@ -45,12 +45,16 @@ section[id]{
 }
 body{
 	background: #EAEEF0;
+	box-sizing: content-box;
+}
+.cuerpo{
+	position: absolute;
 }
 .fondo{
 	display: flex;
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 200%;
 	background-image:url(../img/image-32.png);
 	background-repeat: no-repeat;
 	background-position: 100% 0%;
@@ -66,7 +70,19 @@ body{
 	background-image:url(../img/fondo2.png);
 	background-repeat: no-repeat;
 	background-position: 0% 0%;
-	background-size: 40%;
+	background-size: 50%;
+	z-index: -49;
+}
+.fondo-footer{
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-image:url(../img/footer-bg.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: 70%;
 	z-index: -49;
 }
 /*Header y menu-----------------------------------*/
@@ -709,6 +725,236 @@ article{
 	display: flex;
 	flex-direction: column;
 	margin: 15vh 10vh 0 10vh;
+	.text-contactanos{
+		margin-bottom: 60px;
+	}
+	.contactos-frm{
+		display: flex;
+		width: 100%;
+		margin: 0;
+		flex-direction: row;
+		gap: 60px;
+		.contactos-img{
+			margin-right: -80px;
+		}
+		form{
+			display: flex;
+			flex-direction: column;
+			max-width: 480px;
+			gap: 30px;
+			h3{
+				font-family: Montserrat-SemiBold;
+				font-size: 2vh;
+				color:#4D5A9D ;
+			}
+			.group-input{
+				position: relative;
+				input,
+				textarea{
+					font-family: 'Roboto';
+					width: 100%;
+					border: none;
+					background: rgba(160, 191, 219, 0.15);
+					border-radius: 8px;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					height: 50px;
+					padding: 15px;
+					outline: none;
+				}
+				textarea{
+					height: 150px;
+					resize: none;
+				}
+				input:focus + label,
+				input:not(:placeholder-shown) + label{
+					top: -10px;
+					opacity: 0.6;
+					transition: 0.3s;
+				}
+				textarea:focus + label,
+				textarea:not(:placeholder-shown) + label{
+					top: -10px;
+					opacity: 0.6;
+					transition: 0.3s;
+				}
+				label{
+					display: flex;
+					position: absolute;
+					top: 20px;
+					left: 20px;
+					font-family: 'Roboto';
+					font-weight: 400;
+					transition: 0.3s;
+					color:#4D5A9D ;
+					img{
+						width: 15px;
+						margin-right: 10px;
+					}
+				}
+			}
+			button{
+				display: flex;
+				position: relative;
+				align-items: center;
+				font-weight: 400;
+				font-size: 2vh;
+				min-width:162px ;
+				height: 50px;
+				background: conic-gradient(from 190.41deg at 59.44% 0%, #AEC9E0 0deg, #B9D1E6 360deg);
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				color: #31358D;
+				border-radius: 6px;
+				border: none;
+				cursor: pointer;
+				font-family:Inter;
+				overflow: hidden;
+				span {
+					position: relative;
+					z-index: 10;
+					width: 100%;
+					transition: color 0.4s;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					padding:1.8vh 0.5vh;
+					color: #fff;
+			
+					&:hover{
+						color:#31358D;
+					  }
+				  }
+				  &::before,
+				  &::after{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 0;
+				  }
+				  &::before{
+					content: "";
+					background: conic-gradient(from 191.81deg at 61.22% 0%, #4D5A9D 0deg, rgba(77, 90, 157, 0.93) 360deg);
+					box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.25);
+					width: 120%;
+					left: -10%;
+					transform: skew(30deg);
+					transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+				  }
+				  &:hover::before {
+					transform: translate3d(100%, 0, 0);
+				  }
+				  &:active {
+					transform: scale(0.95);
+				  }
+			}
+		}
+	}
+	.tabs-contactos{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: top;
+		margin: 10vh 0;
+		.box-cto{
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			max-width: 250px;
+			align-items: left;
+			text-align: left;
+			span{
+				font-family: Montserrat-SemiBold;
+				color: #4D5A9D;
+				font-size: 2.5vh;
+				.correo-icon{
+					width: 18px;
+				}
+				img{
+					width: 15px;
+					margin-right: 5px;
+				}
+			}
+			p{
+				font-family: 'Roboto';
+				font-weight: 300;
+				font-size: 2vh;
+			}
+			.correo-cto{
+				text-decoration: underline;
+			}
+		}
+	}
+	.txt-btn{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+		.contactos-text{
+			font-family: Montserrat-SemiBold;
+			font-size: 2.5vh;
+			color:#4D5A9D ;
+			text-align: center;
+			
+		}
+		button{
+			display: flex;
+			position: relative;
+			align-items: center;
+			font-weight: 400;
+			font-size: 2vh;
+			min-width:400px ;
+			height: 50px;
+			background: conic-gradient(from 190.41deg at 59.44% 0%, #AEC9E0 0deg, #B9D1E6 360deg);
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			color: #31358D;
+			border-radius: 6px;
+			border: none;
+			cursor: pointer;
+			font-family:Inter;
+			overflow: hidden;
+			span {
+				position: relative;
+				z-index: 10;
+				width: 100%;
+				transition: color 0.4s;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding:1.8vh 0.5vh;
+				color: #fff;
+		
+				&:hover{
+					color:#31358D;
+				  }
+			  }
+			  &::before,
+			  &::after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+			  }
+			  &::before{
+				content: "";
+				background: conic-gradient(from 191.81deg at 61.22% 0%, #4D5A9D 0deg, rgba(77, 90, 157, 0.93) 360deg);
+				box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.25);
+				width: 120%;
+				left: -10%;
+				transform: skew(30deg);
+				transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+			  }
+			  &:hover::before {
+				transform: translate3d(100%, 0, 0);
+			  }
+			  &:active {
+				transform: scale(0.95);
+			  }
+		}
+	}
 }
 
 /* footer -------------------------> */
@@ -732,8 +978,8 @@ article{
 	#servicios,
 	#irproductos,
 	#contacto{
-		padding-top: 14vh;
-		margin-top: -14vh;
+		padding-top: 5vh;
+		margin-top: -5vh;
 	}
 	.menu-resp{
 		display: none;

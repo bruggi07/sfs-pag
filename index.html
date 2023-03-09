@@ -33,7 +33,7 @@
 				<a href="#inicio" style="display: none;">Inicio</a>
 				<a href="#servicios">Nosotros</a>
 				<a href="#irproductos">Servicios</a>
-				<a href="#">Clientes</a>
+				<!-- <a href="#">Clientes</a> -->
 				<a href="#contacto">Contacto</a>		
 			</nav>
 			<div class="botones">
@@ -45,11 +45,11 @@
 		
 	</header>
 	<div class="cuerpo"  id="main">
-
+	<div class="fondo-footer"></div>
 
 <!-- acceso a cliente formulario----------------------------------------->
 
-<div class="opacooff" id="opaco">
+<!-- <div class="opacooff" id="opaco">
 	<div class="contenedormain contenedormain-acceso">
 		<div class="container-acceso-form oculto" id="container_form_acceso">
 			
@@ -76,12 +76,12 @@
 			</form>
 		</div>
 	</div>
-</div>
+</div> -->
 
 
 <!-- formulario demo ---------------------------------------------------->
 
-<div class="opacooffdemo" id="opacodemo">
+<!-- <div class="opacooffdemo" id="opacodemo">
 	<div class="contenedormain">
 		<div class="container-form oculto" id="container_form">
 			
@@ -125,14 +125,14 @@
 			</form>
 		</div>
 	</div>
-</div>
+</div> -->
 
 	<!-- Fin formulario--------- -->
 
 
 	<!-- carteles formulario finalizado -->
 	
-		<div class="contenedormain-emergente">
+		<!-- <div class="contenedormain-emergente">
 
 			<div class="container-emergente ocultoemer" id="container_emergente">
 				
@@ -157,7 +157,7 @@
 				</div>
 				
 			</div>
-		</div>
+		</div> -->
 	
 
 	<!-- Fin carteles formulario finalizado -->
@@ -175,9 +175,11 @@
 					Nuestras aplicaciones se intercomunican con otros sistemas, utilizando estándares de la industria.<br><br>
 					</p>
 					<div class="botonesprin">
-						<a  href="#servicios"><button class="btn-conomas">
+					<a  href="#servicios">
+						<button class="btn-conomas">
 							<span> CONOCER MÁS</span>
-						</button></a>
+						</button>
+					</a>
 						<button class="btn-demo2" id="open2">
 							<span>SOLICITAR PRESENTACIÓN</span>
 						</button>
@@ -193,7 +195,7 @@
 			<div class="servicios">
 				<span class="separador"></span>
 				<div class="title-nosotros">
-					<img src="/img/VectorNosotros-icon.svg" alt="icon"><h2>SOBRE NOSOTROS</h2>
+					<img src="/img/Vectores/VectorNosotros-icon.svg" alt="icon"><h2>SOBRE NOSOTROS</h2>
 				</div>
 				<div class="nosotros">
 					<p class="nosotros-text">
@@ -240,7 +242,7 @@
 			<div class="productos">
 				<span class="separador"></span>
 				<div class="title-nosotros">
-					<img src="/img/VectorProductos-icon.svg" alt="icon"><h2>NUESTROS PRODUCTOS</h2>
+					<img src="/img/Vectores/VectorProductos-icon.svg" alt="icon"><h2>NUESTROS PRODUCTOS</h2>
 				</div>
 				<p>
 					Softwares de gestión y administrativos
@@ -368,40 +370,94 @@
 			</div>
 		</section>
 		<section class="seccion" id="contacto">
-			<div class="contactos">
+				<div class="contactos">
 				<span class="separador"></span>
-				<div class="title-nosotros">
-					<img src="/img/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
+				<div class="title-nosotros text-contactanos">
+					<img src="/img/Vectores/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
+				</div>
+				<div class="contactos-frm">
+					<form action="">
+						<h3>Escribinos un correo:</h3>
+						<div class="group-input">
+							<input required placeholder=" " type="text">
+						<label for=""><img src="img/Vectores/user.svg">Nombre</label>
+						</div>
+						<div class="group-input">
+							<input required placeholder=" " type="email">
+						<label for=""><img src="img/Vectores/mail.svg">Email</label>
+						</div>
+						<div class="group-input">
+							<input required placeholder=" " type="text">
+						<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
+						</div>
+						<div class="group-input">
+							<textarea required placeholder=" " class="mensaje" type="text"></textarea>
+						<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
+						</div>
+						<button><span>Enviar</span></button>
+					</form>
+					<div class="contactos-img">
+						<img src="/img/image 26.png" alt="">
+					</div>
+				</div>
+				<div class="tabs-contactos">
+					<div class="box-cto">
+						<span><img src="img/Vectores/lugar-point.svg">¿Donde estamos?</span>
+						<p>
+							Santiago Derqui 3265.
+							<br> Santa Fe, Argentina
+						</p>
+					</div>
+					<div class="box-cto">
+						<span><img src="img/Vectores/telefono.svg">Teléfono</span>
+						<p>
+							+54 (0342) 4578665 / 4578666
+						</p>
+					</div>
+					<div class="box-cto">
+						<span><img class="correo-icon" src="img/Vectores/correo.svg">Correo electrónico</span>
+						<p class="correo-cto">
+							info@sfssa.com.ar
+						</p>
+					</div>
+				</div>
+
+				<div class="txt-btn">
+					<p class="contactos-text">
+						¿Querés tener una experiencia personalizada?
+					</p>
+				
+					<button class="btn-demo3" id="open3">
+					<span>SOLICITAR PRESENTACIÓN</span>
+					</button>
 				</div>
 			</div>
-
-
 		</section>
 </article>
-</div>
-	<footer>
-		<div class="footer">
-			
-			<div class="datafis">
-				<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank">
-				<img src="img/dataweb.jpg" alt="data fiscal sfs">
-				</a>
-			</div>
-			<div class="contacto">
-				<ul>
-					<a>Santiago Derqui 3265.
-						Santa Fe, Argentina</a>
-					<a>+54 (0342) 4578665 / 4578666</a>
-					<a>info@sfssa.com.ar</a>
-				</ul>	
-			</div>
-			<div class="group">
-					
-				<img src="img/logo-footer.png" alt="copyright">
-			</div>
-		
+<footer>
+	<div class="footer">
+		<div class="datafis">
+			<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank">
+			<img src="img/dataweb.jpg" alt="data fiscal sfs">
+			</a>
 		</div>
-	</footer>
+		<div class="contacto">
+			<ul>
+				<a>Santiago Derqui 3265.
+					Santa Fe, Argentina</a>
+				<a>+54 (0342) 4578665 / 4578666</a>
+				<a>info@sfssa.com.ar</a>
+			</ul>	
+		</div>
+		<div class="group">
+				
+			<img src="img/logo-footer.png" alt="copyright">
+		</div>
+	
+	</div>
+</footer>
+</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="apps.js"></script>
 </body>
