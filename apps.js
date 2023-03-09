@@ -165,15 +165,18 @@ secciones.forEach(seccion => observer.observe(seccion))
 // Botones ver más/ver menos productos---------------------
 let myCheck = document.getElementById('Acc1');
 let btnCheck = document.getElementById('text-btn');
+let apretar = document.getElementById('btn-check')
 let flechi = document.getElementById('flechi');
 let myCheck2 = document.getElementById('Acc2');
 let btnCheck2 = document.getElementById('text-btn2');
+let apretar2 = document.getElementById('btn-check2')
 let flechi2 = document.getElementById('flechi2');
 let myCheck3 = document.getElementById('Acc3');
 let btnCheck3 = document.getElementById('text-btn3');
+let apretar3 = document.getElementById('btn-check3')
 let flechi3 = document.getElementById('flechi3');
 
-btnCheck.addEventListener('click',function (){
+apretar.addEventListener('click',function (){
 	if(myCheck.checked===false){
 		btnCheck.innerText='Ver menos';
 		btnCheck2.innerText='Ver más';
@@ -189,7 +192,7 @@ btnCheck.addEventListener('click',function (){
 		myCheck.checked=false;
 	}
 })
-btnCheck2.addEventListener('click',function (){
+apretar2.addEventListener('click',function (){
 	if(myCheck2.checked===false){
 		btnCheck2.innerText='Ver menos';
 		btnCheck.innerText='Ver más';
@@ -205,7 +208,7 @@ btnCheck2.addEventListener('click',function (){
 		myCheck2.checked=false;
 	}
 })
-btnCheck3.addEventListener('click',function (){
+apretar3.addEventListener('click',function (){
 	if(myCheck3.checked===false){
 		btnCheck3.innerText='Ver menos';
 		btnCheck.innerText='Ver más';
