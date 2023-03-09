@@ -6,9 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<title>Santa Fe Sistemas</title>
 	<link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
@@ -32,16 +30,16 @@
 		</div>
 		<div class="nav_header hamburoculto" id="nav_header">
 			<nav class="nav" id="menu">
-				<!-- <a href="#inicio">Inicio</a> -->
+				<a href="#inicio" style="display: none;">Inicio</a>
 				<a href="#servicios">Nosotros</a>
 				<a href="#irproductos">Servicios</a>
 				<a href="#">Clientes</a>
 				<a href="#contacto">Contacto</a>		
 			</nav>
-		</div>
-		<div class="botones">
-			<button class="btn-demo" id="open"><span>Solicitar presentación</span></button>
-			<button class="btn-acceso" id="open_acceso"><span>Acceso a clientes</span></button>
+			<div class="botones">
+				<button class="btn-demo" id="open"><span>Solicitar presentación</span></button>
+				<button class="btn-acceso" id="open_acceso"><span>Acceso a clientes</span></button>
+			</div>
 		</div>
 		</div>
 		
@@ -194,7 +192,9 @@
 		<section class="seccion"  id="servicios">
 			<div class="servicios">
 				<span class="separador"></span>
-				<h2>SOBRE NOSOTROS</h2>
+				<div class="title-nosotros">
+					<img src="/img/VectorNosotros-icon.svg" alt="icon"><h2>SOBRE NOSOTROS</h2>
+				</div>
 				<div class="nosotros">
 					<p class="nosotros-text">
 						Optimice con nosotros los procesos de gestión hospitalaria y su comunicación con cada paciente a través de aplicaciones personalizadas que satisfagan sus necesidades específicas.
@@ -215,46 +215,163 @@
 							<h2>Ampliando fronteras</h2>
 							<p>En cuanto a desarrollo e investigación, nuestra empresa esta en constante superación, lo que involucrala incorporación de nuevas soluciones tecnológicas.</p>
 						</div>
-						<div class="nosotros-box">
-							<img src="img/Vectores/recicle.png" alt="intercomunicacion" class="vector">
-							<h2>Intercumunicación</h2>
-							<p>Trabajamos con certificación ISO y bajo el estandar hl7 y así desarrollar la mejor forma de intercomunicar aplicaciones de salud.</p>
-						</div>
-						<div class="nosotros-box">
-							<img src="img/Vectores/mano.png" alt="mano,fácil,acceso" class="vector">
-							<h2>Fácil acceso</h2>
-							<p>Desarrollado íntegramente bajo plataforma Web, nuestro sistema brinda acceso desde cualquier sitio las 24 horas, los 7 días, los 365 días del año.</p>
+						<div class="box-chain">
+							<div class="nosotros-box">
+								<img src="img/Vectores/recicle.png" alt="intercomunicacion" class="vector">
+								<h2>Intercumunicación con HL7</h2>
+								<p>Trabajamos con certificación ISO y bajo el estandar hl7 y así desarrollar la mejor forma de intercomunicar aplicaciones de salud.</p>
+							</div>
+							<div class="nosotros-box">
+								<img src="img/Vectores/mano.png" alt="mano,fácil,acceso" class="vector">
+								<h2>Fácil acceso</h2>
+								<p>Desarrollado íntegramente bajo plataforma Web, nuestro sistema brinda acceso desde cualquier sitio las 24 horas, los 7 días, los 365 días del año.</p>
+							</div>
 						</div>
 					</div>
 					<p class="nosotros-text">
 						¿Tenés alguna pregunta?
 					</p>
-					<button class="btn-contactanos"><span>CONTACTANOS</span></button>
+					<a href="#contacto"><button class="btn-contactanos"><span>CONTACTANOS</span></button></a>
 				</div>
 			</div>
 		</section>
 		<!-- Productos------------------- -->
 		<section class="seccion" id="irproductos">
 			<div class="productos">
-				<h1>productos</h1>
+				<span class="separador"></span>
+				<div class="title-nosotros">
+					<img src="/img/VectorProductos-icon.svg" alt="icon"><h2>NUESTROS PRODUCTOS</h2>
+				</div>
+				<p>
+					Softwares de gestión y administrativos
+				</p>
+				<div class="productos-principal">
+					<div class="tab">
+						<div class="prto p1">
+							<img src="img/image-29.png" alt="pc sfs services">
+							<div class="prto-text">
+								<h3>
+								Healthcare Information System / Sistema de Información Hospitalaria
+								</h3>
+								<p>Aplicacion web destinada a digitalizar o informatizar cualquier tipo de institución dedicada a la salud</p>
+							</div>
+							<div class="circle-icon"><span>HIS</span></div>
+							<button id="btn-check" class="btn-mas">
+								<span id="text-btn">Ver más</span>
+								<i id="flechi" class="fa fa-angle-down"></i>
+							</button>
+						</div>
+						<input type="radio" id="Acc1" name="ver-mas">
+						<div class="prto-info">
+								<h3>Sistema que incluye los siguientes módulos</h3>
+							<li><img src="/img/check.png">Expediente Clínico Electrónico</li>
+							<li><img src="/img/check.png">Gestión de Pacientes Ambulatorios</li>
+							<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados</li>
+							<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados</li>
+							<li><img src="/img/check.png">Sistema de Gestion de Turnos y Citas</li>
+							<li><img src="/img/check.png">Gestión de Autorizaciones y Prestaciones</li>
+							<li><img src="/img/check.png">Sistema de Información Radiológica (RIS)</li>
+							<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
+							<span>Conocé sus funcionalidades →</span>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="prto p2">
+							<img src="img/image-123132.png" alt="pc sfs services">
+							<div class="prto-text">
+							<h3>
+								Healthcare Information System / Sistema de Información Hospitalaria
+							</h3>
+							<p>Aplicación web para tareas admistrativas de Financiadores del área de Salud.</p>
+							</div>
+							<div class="circle-icon"><span>SAPma</span></div>
+							<button id="btn-check2" class="btn-mas">
+								<span id="text-btn2">Ver más</span>
+								<i id="flechi2" class="fa fa-angle-down"></i>
+							</button>
+						</div>
+						<input type="radio" id="Acc2" name="ver-mas">
+						<div class="prto-info2">
+								<h3>Sistema que incluye los siguientes módulos</h3>
+							<li><img src="/img/check.png"> Gestión de Prestadores</li>
+							<li><img src="/img/check.png"> Administración de Prestaciones </li>
+							<li><img src="/img/check.png"> Gestión Administrativa de Afiliados</li>
+							<li><img src="/img/check.png"> Gestión de nomencladores, aranceles y planes de cobertura</li>
+							<li><img src="/img/check.png"> Gestión de Cobranzas</li>
+							<li><img src="/img/check.png"> Facturación Electronica</li>
+							<li><img src="/img/check.png"> Portal para el Afiliado</li>
+							<li><img src="/img/check.png"> Mesa de Ayuda en Linea</li>
+							<span>Conocé sus funcionalidades →</span>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="prto p3">
+							<img src="img/image-27.png" alt="pc sfs services">
+							<div class="prto-text">
+								<h3>
+								Historia Clínica Electrónica /Expediente Clínico Electrónico
+							</h3>
+							<p>
+								Aplicación web/mobile orientada a los miembros del equipo de salud que facilita la carga y consulta de información clínica.
+							</p>
+							</div>
+							<div class="circle-icon"><span>HCE</span></div>
+							<button id="btn-check3" class="btn-mas">
+								<span id="text-btn3">Ver más</span>
+								<i id="flechi3" class="fa fa-angle-down"></i>
+							</button>
+						</div>
+						<input type="radio" id="Acc3" name="ver-mas">
+						<div class="prto-info3">
+									<h3>Sistema que incluye los siguientes módulos</h3>
+								<li><img src="/img/check.png">Expediente Clínico Electrónico</li>
+								<li><img src="/img/check.png">Gestión de Pacientes Ambulatorios</li>
+								<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados</li>
+								<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados</li>
+								<li><img src="/img/check.png">Sistema de Gestion de Turnos y Citas</li>
+								<li><img src="/img/check.png">Gestión de Autorizaciones y Prestaciones</li>
+								<li><img src="/img/check.png">Sistema de Información Radiológica (RIS)</li>
+								<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
+								<span>Conocé sus funcionalidades →</span>
+						</div>
+					</div>
+				</div>
+				<p>
+					Software para el paciente
+				</p>
+				<div class="productos-paciente">
+					<div class="prto-p">
+						<img src="img/image 22.png" alt="celulares">
+						<h3>App para el Paciente</h3>
+						<p>
+							Aplicación web diseñada para Prestadores del área de salud.
+						</p>
+						<span>Funcionalidades →</span>
+					</div>
+					<div class="prto-p">
+						<img src="img/image 25.png" alt="celular,doctor">
+						<h3>Teleconsulta</h3>
+						<p>
+							Aplicación web diseñada para Prestadores del área de salud.
+						</p>
+						<span>Funcionalidades →</span>
+					</div>
+					<div class="prto-p">
+						<img src="img/image 24.png" alt="Celular, app, aplicacion">
+						<h3>Triage</h3>
+						<p>
+							Aplicación web diseñada para Prestadores del área de salud.
+						</p>
+						<span>Funcionalidades →</span>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="seccion" id="contacto">
-
-			<div class="contactos-container">
-				<div class="contact">
-					<h1>Estamos en</h1>
-					<h2>Santiago Derqui 3265.<br>
-						Santa Fe, Argentina.</h2>
-				</div>
-				<div class="contact">
-					<h1>Teléfonos</h1>
-					<h2>+54 (0342) 4578665<br>
-						+54 (0342) 4578666</h2>
-				</div>
-				<div class="contact">
-					<h1>Nuestro correo</h1>
-					<h2>info@sfssa.com.ar</h2>
+			<div class="contactos">
+				<span class="separador"></span>
+				<div class="title-nosotros">
+					<img src="/img/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
 				</div>
 			</div>
 

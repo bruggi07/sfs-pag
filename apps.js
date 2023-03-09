@@ -111,10 +111,10 @@ window.addEventListener('scroll', function(){
 		imglogo.classList.add('logoscroll');
 		header.classList.add('menuscroll');
 		transitionop.classList.add('menuscroll');
-		navFontSize.classList.add('nav-scroll')
-		imggrande.style.opacity="0";
-		imgmini.style.opacity="1"
-		transitionop.style.opacity="1"
+		navFontSize.classList.add('nav-scroll');
+		imggrande.style.scale='0';
+		imgmini.style.scale='1';
+		transitionop.style.opacity="1";
 
 	}else if(prevY<200){
 
@@ -124,10 +124,10 @@ window.addEventListener('scroll', function(){
 		header.classList.remove('menuscroll');
 		transitionop.classList.remove('menuscroll');
 		imglogo.classList.remove('logoscroll');
-		navFontSize.classList.remove('nav-scroll')
-		imggrande.style.opacity="1";
-		imgmini.style.opacity="0"
-		transitionop.style.opacity="0"
+		navFontSize.classList.remove('nav-scroll');
+		imggrande.style.scale='1';
+		imgmini.style.scale='0';
+		transitionop.style.opacity="0";
 		
 	};
 
@@ -161,7 +161,70 @@ const observer = new IntersectionObserver((entradas)=>{
 	rootMargin: '-50% 0% -50% 0%'
 });
 secciones.forEach(seccion => observer.observe(seccion))
+// Botones ver más/ver menos productos---------------------
+let myCheck = document.getElementById('Acc1');
+let btnCheck = document.getElementById('text-btn');
+let flechi = document.getElementById('flechi');
+let myCheck2 = document.getElementById('Acc2');
+let btnCheck2 = document.getElementById('text-btn2');
+let flechi2 = document.getElementById('flechi2');
+let myCheck3 = document.getElementById('Acc3');
+let btnCheck3 = document.getElementById('text-btn3');
+let flechi3 = document.getElementById('flechi3');
 
+btnCheck.addEventListener('click',function (){
+	if(myCheck.checked===false){
+		btnCheck.innerText='Ver menos';
+		btnCheck2.innerText='Ver más';
+		btnCheck3.innerText='Ver más';
+		flechi2.style.transform='rotate(0deg)'
+		flechi.style.transform='rotate(180deg)'
+		myCheck.checked=true;
+	}
+	else{
+		btnCheck.innerText='Ver más';
+		flechi.style.transform='rotate(0deg)'
+		myCheck.checked=false;
+	}
+})
+btnCheck2.addEventListener('click',function (){
+	if(myCheck2.checked===false){
+		btnCheck2.innerText='Ver menos';
+		btnCheck.innerText='Ver más';
+		btnCheck3.innerText='Ver más';
+		flechi.style.transform='rotate(0deg)'
+		flechi2.style.transform='rotate(180deg)'
+		myCheck2.checked=true;
+	}
+	else{
+		btnCheck2.innerText='Ver más';
+		flechi2.style.transform='rotate(0deg)'
+		myCheck2.checked=false;
+	}
+})
+btnCheck3.addEventListener('click',function (){
+	if(myCheck3.checked===false){
+		btnCheck3.innerText='Ver menos';
+		btnCheck.innerText='Ver más';
+		btnCheck2.innerText='Ver más';
+		flechi.style.transform='rotate(0deg)'
+		flechi3.style.transform='rotate(180deg)'
+		myCheck3.checked=true;
+	}
+	else{
+		btnCheck3.innerText='Ver más';
+		flechi3.style.transform='rotate(0deg)'
+		myCheck3.checked=false;
+	}
+})
+
+
+// btn.addEventListener('click', ()=> {
+// 	if(radio.spellcheck){
+// 		btn.innerText = 'Ver menos'
+// 		flechi.style.rotate = '180deg'
+// 	}
+// })
 
 // fix scroll beheivor en todos los navegadores, con jquery-------->
 
