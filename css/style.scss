@@ -1217,6 +1217,9 @@ article{
 	}
 }
 @media screen and (min-width:1000px) {
+	.contenedor-form-demo{
+		scale: 0.8;
+	}
 	section[id]{
 		padding-top: 1vh;
 	}
@@ -1302,12 +1305,11 @@ article{
 		transition: .4s linear;
 	}
 }
-@media screen and (min-width:1360) {
-	.container-form form{
-		transform: scale(0.9);
-	}
-}
+
 @media screen and (min-width:1440px){
+	.contenedor-form-demo{
+		scale: 1;
+	}
 	.fondo{
 		background-size: 90%;
 	}
