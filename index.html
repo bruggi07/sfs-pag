@@ -81,53 +81,43 @@
 
 <!-- formulario demo ---------------------------------------------------->
 
-<!-- <div class="opacooffdemo" id="opacodemo">
-	<div class="contenedormain">
-		<div class="container-form oculto" id="container_form">
-			
-			<form autocomplete="off" action="" method="POST" id="form">
-				
-				<div class="form">
-					<div id="close" class="btn-cerrar">&nbspX&nbsp</div>
-					<div class="imagform">
-						<img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
-					</div>
-					<h2>Estás a punto de pedir tu demo!</h2>
-					<p>Para una experiencia personalizada, ayúdanos con esta información.</p>
-					
+<div class="opacooffdemo" id="opacodemo">
+		<div class="contenedor-form-demo oculto" id="container_form">
+			<div id="close" class="btn-cerrar"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
+			<div class="imagform">
+				<img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
+			</div>
+			<form autocomplete="off" action="" method="POST" id="form-demo">	
+				<div class="form-demo">
+					<h2>PEDÍ TU PRESENTACIÓN</h2>
 					<div class="grupo">
-						<input  autocomplete="off" type="text" name="nombre" required minlength="4" maxlength="15"><span class="barra imputado"></span>
-						<label for="">Nombre*</label>
+						<input placeholder=" "  autocomplete="off" type="text" name="nombre" required minlength="4" maxlength="30"><span class="barra imputado"></span>
+						<label for=""><img src="img/Vectores-formularios/user.svg"> Nombre y apellido</label>
 					</div>
 					<div class="grupo">
-						<input  autocomplete="off" type="text" name="apellido" required minlength="4" maxlength="15"><span class="barra imputado"></span>
-						<label for="">Apellido*</label>
+						<input placeholder=" "  autocomplete="off" type="Email" name="email" required maxlength="35"><span class="barra imputado"></span>
+						<label for=""><img src="img/Vectores-formularios/mail.svg">Correo electrónico</label>
 					</div>
 					<div class="grupo">
-						<input  autocomplete="off" type="Email" name="email" required maxlength="35"><span class="barra imputado"></span>
-						<label for="">Email*</label>
+						<input placeholder=" "  autocomplete="off" type="tel" name="telefono" required minlength="8" maxlength="35"><span class="barra imputado"></span>
+						<label for="telefono"><img src="img/Vectores-formularios/telefono.svg">Número de teléfono</label>
 					</div>
 					<div class="grupo">
-						<input  autocomplete="off" type="tel" name="telefono" required minlength="8" maxlength="35"><span class="barra imputado"></span>
-						<label for="telefono">Número de teléfono*</label>
+						<input placeholder=" "  autocomplete="off" type="text" name="ciudad" required maxlength="35"><span class="barra imputado"></span>
+						<label for=""><img src="img/Vectores-formularios/point-lugar.svg">Ciudad</label>
 					</div>
 					<div class="grupo">
-						<input  autocomplete="off" type="text" name="ciudad" required maxlength="35"><span class="barra imputado"></span>
-						<label for="">Ciudad*</label>
-					</div>
-					<div class="grupo">
-						<input  autocomplete="off" type="text" name="institucion" required maxlength="35"><span class="barra imputado"></span>
-						<label for="">Institución*</label>
+						<input placeholder=" "  autocomplete="off" type="text" name="institucion" required maxlength="35"><span class="barra imputado"></span>
+						<label for=""><img src="img/Vectores-formularios/maletin-institucion.svg">Institución</label>
 						<input type="text" value="SOLICITUD DE DEMO" name="subject" style="opacity:0 ;" contenteditable="false">
 					</div>				
-					<button id="btn__enviar" class="btn_enviar" name="enviar" type="submit">Enviar</button>
+					<button id="btn__enviar" class="btn_enviar" name="enviar" type="submit"><span>Enviar</span></button>
 				</div>
 			</form>
 		</div>
-	</div>
-</div> -->
+</div>
 
-	<!-- Fin formulario--------- -->
+<!-- Fin formulario--------- -->
 
 
 	<!-- carteles formulario finalizado -->
@@ -376,25 +366,25 @@
 					<img src="/img/Vectores/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
 				</div>
 				<div class="contactos-frm">
-					<form action="">
+					<form id="form-contacto" action="" method="POST">
 						<h3>Escribinos un correo:</h3>
 						<div class="group-input">
-						<input required placeholder=" " type="text">
+						<input name="Nombre" required placeholder=" " type="text">
 						<label for=""><img src="img/Vectores/user.svg">Nombre</label>
 						</div>
 						<div class="group-input">
-						<input required placeholder=" " type="email">
+						<input name="Email" required placeholder=" " type="email">
 						<label for=""><img src="img/Vectores/mail.svg">Email</label>
 						</div>
 						<div class="group-input">
-							<input required placeholder=" " type="text">
+							<input name="Asunto" required placeholder=" " type="text">
 						<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
 						</div>
 						<div class="group-input">
-						<textarea required placeholder=" " class="mensaje" type="text"></textarea>
+						<textarea name="Mensaje" required placeholder=" " class="mensaje" type="text"></textarea>
 						<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
 						</div>
-						<button><span>Enviar</span></button>
+						<button name="enviar" type="submit" ><span>Enviar</span></button>
 					</form>
 					<div class="contactos-img">
 						<img src="/img/image 26.png" alt="">

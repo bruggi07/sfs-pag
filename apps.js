@@ -1,23 +1,24 @@
 
-// // formu acceso -------->
-// let open_acceso = document.getElementById('open_acceso');
-// let form_acceso = document.getElementById('container_form_acceso');
-// let close_acceso = document.getElementById('close_acceso');
-// let opacoacceso = document.getElementById('opaco');
-// // formu demo------>
-// let open = document.getElementById('open');
-// let open_dos = document.getElementById('open2');
-// let form = document.getElementById('container_form');
-// let close = document.getElementById('close');
-// let opaco = document.getElementById('opacodemo');
+// formu acceso -------->
+let open_acceso = document.getElementById('open_acceso');
+let form_acceso = document.getElementById('container_form_acceso');
+let close_acceso = document.getElementById('close_acceso');
+let opacoacceso = document.getElementById('opaco');
+// formu demo------>
+let open = document.getElementById('open');
+let open_dos = document.getElementById('open2');
+let open_tres = document.getElementById('open3');
+let form = document.getElementById('container_form');
+let close = document.getElementById('close');
+let opaco = document.getElementById('opacodemo');
 
-// // ventana emergente
-// let ventana = document.getElementById('container_emergente');
-// let cerrar_ventana = document.getElementById('btn_cerrar')
-// let ventana2 = document.getElementById('container_emergente2');
-// let cerrar_ventana2 = document.getElementById('btn_cerrar2');
-// let opacof = document.getElementById('opacof');
-// let opacoa = document.getElementById('opacoa');
+// ventana emergente
+let ventana = document.getElementById('container_emergente');
+let cerrar_ventana = document.getElementById('btn_cerrar')
+let ventana2 = document.getElementById('container_emergente2');
+let cerrar_ventana2 = document.getElementById('btn_cerrar2');
+let opacof = document.getElementById('opacof');
+let opacoa = document.getElementById('opacoa');
 // menu responsive
 let btnHambur = document.getElementById('btn_hambur');
 let navHeader = document.getElementById('nav_header')
@@ -26,18 +27,22 @@ btnHambur.addEventListener('click',()=>{
 	navHeader.classList.toggle('hamburoculto')
 })
 // // formu demo------>
-// open.addEventListener('click',()=>{
-// 	form.classList.remove('oculto');
-// 	opaco.classList.add('opaco');
-// })
-// open_dos.addEventListener('click',()=>{
-// 	form.classList.remove('oculto');
-// 	opaco.classList.add('opaco');
-// })
-// close.addEventListener('click',()=>{
-// 	form.classList.add('oculto');
-// 	opaco.classList.remove('opaco')
-// })
+ open.addEventListener('click',()=>{
+	form.classList.remove('oculto');
+	opaco.classList.add('opaco');
+})
+open_dos.addEventListener('click',()=>{
+	form.classList.remove('oculto');
+	opaco.classList.add('opaco');
+})
+open_tres.addEventListener('click',()=>{
+	form.classList.remove('oculto');
+	opaco.classList.add('opaco');
+})
+close.addEventListener('click',()=>{
+	form.classList.add('oculto');
+	opaco.classList.remove('opaco')
+})
 
 // // formu acceso -------->
 // open_acceso.addEventListener('click',()=>{
@@ -63,31 +68,59 @@ btnHambur.addEventListener('click',()=>{
 
 // https://formspree.io/f/mzbwlyjr
 
-// let $form = document.getElementById('form');
+let $form = document.getElementById('form-demo');
 
-// async	function enviar (event){
-// 		event.preventDefault();
-// 		let fd = new FormData(this)
-// 		let response = await fetch('https://formspree.io/f/mzbwlyjr',{
-// 		method: 'POST',
-// 		body: fd,
-// 		headers: {
-// 			Accept: 'application/json'
-// 		}
+async	function enviar (event){
+		event.preventDefault();
+		let fd = new FormData(this)
+		let response = await fetch('https://formspree.io/f/mzbwlyjr',{
+		method: 'POST',
+		body: fd,
+		headers: {
+			Accept: 'application/json'
+		}
 	
-// 	});
-// 	if (response.ok){
-// 		this.reset();
-// 		form.classList.add('oculto');
-// 		ventana.classList.remove('ocultoemer');
-// 	}
-// 	else{
-// 		form.classList.add('oculto');
-// 		ventana2.classList.remove('ocultoemer');
-// 	}
-// 	};
+	});
+	if (response.ok){
+		this.reset();
+		// form.classList.add('oculto');
+		// ventana.classList.remove('ocultoemer');
+	}
+	else{
+		// form.classList.add('oculto');
+		// ventana2.classList.remove('ocultoemer');
+	}
+	};
 
-// $form.addEventListener('submit',enviar);
+$form.addEventListener('submit',enviar);
+
+// Envío formulario de contacto-------------->
+let $formContacto = document.getElementById('form-contacto');
+
+async	function enviar (event){
+		event.preventDefault();
+		let fd = new FormData(this)
+		let response = await fetch('https://formspree.io/f/mayzbqok',{
+		method: 'POST',
+		body: fd,
+		headers: {
+			Accept: 'application/json'
+		}
+	
+	});
+	if (response.ok){
+		this.reset();
+		// form.classList.add('oculto');
+		// ventana.classList.remove('ocultoemer');
+	}
+	else{
+		console.log('algo no salio bien')
+		// form.classList.add('oculto');
+		// ventana2.classList.remove('ocultoemer');
+	}
+	};
+
+$formContacto.addEventListener('submit',enviar);
 
 // efecto menú con scroll ----------------->
 
