@@ -10,7 +10,6 @@
 	
 	<title>Santa Fe Sistemas</title>
 	<link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
-
 <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
 </head>
 <body>
@@ -19,13 +18,13 @@
 	<header>
 		<div class="header-transition"></div>
 		<div class="container_header" id="header">
-		<div class="logo-menu">
-		<div class="logo-header">
-			<div class="imglogo">
-				<a id="minilogo" href="index.html"><img src="img/logo-mini.png" alt="Santa fe sistemas logo"></a>
-				<a id="logogrande" href="index.html"><img src="img/logo.png" alt="Santa fe sistemas logo"></a>
-			</div>
-		</div>
+			<div class="logo-menu">
+				<div class="logo-header">
+					<div class="imglogo">
+						<a id="minilogo" href="index.html"><img src="img/	logo-mini.png" alt="Santa fe sistemas logo"></a>
+						<a id="logogrande" href="index.html"><img src="img/	logosfs.png" alt="Santa fe sistemas logo"></a>
+					</div>
+				</div>
 		<div class="menu-resp" id="btn_hambur"><img src="img/menuhambur.png" alt="menú hamburguesa png"></div>
 		</div>
 		<div class="nav_header hamburoculto" id="nav_header">
@@ -49,34 +48,31 @@
 
 <!-- acceso a cliente formulario----------------------------------------->
 
-<!-- <div class="opacooff" id="opaco">
-	<div class="contenedormain contenedormain-acceso">
-		<div class="container-acceso-form oculto" id="container_form_acceso">
-			
+<div class="opacooff" id="opaco">
+	<div class="container-acceso-form oculto-acc" id="container_form_acceso">
+		<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
+			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
 			<form action="" method="POST" id="form_acceso">
-				<div id="close_acceso" class="btn-cerrar-acceso">&nbspX&nbsp</div>
+					<div class="accesoform">
 					
-					<div class="form accesoform">
-					
-					<h2>Acceso a clientes</h2>
+					<h2>ACCESO A CLIENTES</h2>
 
 					<div class="grupo">
-						<input  type="text" name="usuario" required maxlength="35"><span class="barra"></span>
-						<label for="">Usuario</label>
+						<input placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
+						<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
 					</div>
 
 					<div class="grupo">
-						<input  type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
-						<label for="">Contraseña</label>
+						<input placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
+						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
 					</div>				
 
-					<button id="btn__acceso" class="btn_enviar" type="submit">deshabilitado</button>
-					<a href="#" class="olvido-pass">Olvidó su contraseña?</a>
+					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Deshabilitado</span></button>
 				</div>
 			</form>
+			<a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
 		</div>
-	</div>
-</div> -->
+</div> 
 
 
 <!-- formulario demo ---------------------------------------------------->
@@ -87,12 +83,25 @@
 			<div class="imagform">
 				<img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
 			</div>
-			<form autocomplete="off" action="" method="POST" id="form-demo">	
-				<div class="form-demo">
+			<div class="laoding" id="load"><div class="spin"></div></div>	
+			<div class="correcto" id="env">
+				<img src="img/tick.png">
+				<h2>ENVIADO CORRECTAMENTE!</h2>
+				<p>Nos contactaremos con vos lo antes posible.</p>
+				<button id="correctoCerrar"><span>Cerrar</span></button>
+			</div>
+			<div class="incorrecto" id="noenv">
+				<img src="img/nottick.png">
+				<h2>¡HA OCURRIDO UN ERROR!</h2>
+				<p>Intentalo de nuevo.</p>
+				<button id="incorrectoCerrar"><span>Cerrar</span></button>
+			</div>
+			<form autocomplete="off" action="" method="POST" id="form-demo">
+				<div class="form-demo" id="formc">
 					<h2>PEDÍ TU PRESENTACIÓN</h2>
 					<div class="grupo">
 						<input placeholder=" "  autocomplete="off" type="text" name="nombre" required minlength="4" maxlength="30"><span class="barra imputado"></span>
-						<label for=""><img src="img/Vectores-formularios/user.svg"> Nombre y apellido</label>
+						<label for=""><img src="img/Vectores-formularios/user.svg"> Nombre y Apellido</label>
 					</div>
 					<div class="grupo">
 						<input placeholder=" "  autocomplete="off" type="Email" name="email" required maxlength="35"><span class="barra imputado"></span>
@@ -188,35 +197,33 @@
 					<img src="/img/Vectores/VectorNosotros-icon.svg" alt="icon"><h2>SOBRE NOSOTROS</h2>
 				</div>
 				<div class="nosotros">
-					<p class="nosotros-text">
-						Optimice con nosotros los procesos de gestión hospitalaria y su comunicación con cada paciente a través de aplicaciones personalizadas que satisfagan sus necesidades específicas.
-					</p>
 					<div class="nosotros-cajas">
-						<div class="nosotros-box">
+						<div class="nosotros-box client">
 							<img src="img/Vectores/user.png" alt="user" class="vector">
 							<h2>Clientes</h2>
-							<p>Algunos de nuestros clientes son grupos de Hospitales, Clínicas, Aseguradoras y Gerenciadoras.</p>
+							<p>Nuestros clientes incluyen profesionales particulares, clinicas, sanatorios, gerenciadoras y aseguradoras
+							</p>
 						</div>
-						<div class="nosotros-box">
+						<div class="nosotros-box veinitinco">
 							<img src="img/Vectores/text.png" alt="25" class="vector">
-							<h2>Más de 25 años de experiencia</h2>
-							<p>SFS cuenta con más de 25 años de experiencia en el rubro, utilizamos las últimas tecnologías de desarrollo web para lograr un producto estable y escalable.</p>
+							<h2>Años de trayectoria</h2>
+							<p>Contamos con mas de 25 años de trayectoria en el desarrollo de aplicaciones, logrando un producto estable y escalable en constante evolución</p>
 						</div>
 						<div class="nosotros-box">
-							<img src="img/Vectores/chain.png" alt="img,cadena" class="vector">
-							<h2>Ampliando fronteras</h2>
-							<p>En cuanto a desarrollo e investigación, nuestra empresa esta en constante superación, lo que involucrala incorporación de nuevas soluciones tecnológicas.</p>
+							<img src="img/Vectores/HL7.png" alt="img,cadena" class="vector">
+							<h2>Integración con HL7</h2>
+							<p>Nuestras aplicaciones utilizan el estandar HL7 para intercomunicarse entre sí y con otras soluciones de software.</p>
 						</div>
 						<div class="box-chain">
 							<div class="nosotros-box">
-								<img src="img/Vectores/recicle.png" alt="intercomunicacion" class="vector">
-								<h2>Intercumunicación con HL7</h2>
-								<p>Trabajamos con certificación ISO y bajo el estandar hl7 y así desarrollar la mejor forma de intercomunicar aplicaciones de salud.</p>
+								<img src="img/Vectores/isoimg.png" alt="intercomunicacion" class="vector">
+								<h2>Calidad Certificada</h2>
+								<p>Nuestros procesos de desarrollo se encuentran certificados por la norma de gestion de calidad ISO 9001</p>
 							</div>
 							<div class="nosotros-box">
-								<img src="img/Vectores/mano.png" alt="mano,fácil,acceso" class="vector">
-								<h2>Fácil acceso</h2>
-								<p>Desarrollado íntegramente bajo plataforma Web, nuestro sistema brinda acceso desde cualquier sitio las 24 horas, los 7 días, los 365 días del año.</p>
+								<img src="img/Vectores/247.png" alt="mano,fácil,acceso" class="vector">
+								<h2>Disponibilidad 24/7</h2>
+								<p>Nuestros sistemas 100% web ofrecen acceso y soporte personalizado desde cualquier ubicación, las 24 horas, los 7 dias de la semana, los 365 del año.</p>
 							</div>
 						</div>
 					</div>
@@ -366,26 +373,42 @@
 					<img src="/img/Vectores/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
 				</div>
 				<div class="contactos-frm">
-					<form id="form-contacto" action="" method="POST">
-						<h3>Escribinos un correo:</h3>
-						<div class="group-input">
-						<input name="Nombre" required placeholder=" " type="text">
-						<label for=""><img src="img/Vectores/user.svg">Nombre</label>
-						</div>
-						<div class="group-input">
-						<input name="Email" required placeholder=" " type="email">
-						<label for=""><img src="img/Vectores/mail.svg">Email</label>
-						</div>
-						<div class="group-input">
-							<input name="Asunto" required placeholder=" " type="text">
-						<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
-						</div>
-						<div class="group-input">
-						<textarea name="Mensaje" required placeholder=" " class="mensaje" type="text"></textarea>
-						<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
-						</div>
-						<button name="enviar" type="submit" ><span>Enviar</span></button>
-					</form>
+					<div class="formulariodecontacto">
+						<div class="laoding" id="load2"><div class="spin"></div></div>	
+							<div class="correcto" id="env2">
+								<img src="img/tick.png">
+								<h2>ENVIADO CORRECTAMENTE!</h2>
+								<p>Nos contactaremos con vos lo antes posible.</p>
+								<button id="correctoCerrar2"><span>Cerrar</span></button>
+							</div>
+							<div class="incorrecto" id="noenv2">
+								<img src="img/nottick.png">
+								<h2>¡HA OCURRIDO UN ERROR!</h2>
+								<p>Intentalo de nuevo.</p>
+								<button id="incorrectoCerrar2"><span>Cerrar</span></button>
+							</div>
+						<form class="" id="form-contacto" action="" method="POST">
+							<h3>Escribinos un correo:</h3>
+							<div class="group-input">
+							<input name="Nombre" required placeholder=" " type="text">
+							<label for=""><img src="img/Vectores/user.svg">Nombre</label>
+							</div>
+							<div class="group-input">
+							<input name="Email" required placeholder=" " type="email">
+							<label for=""><img src="img/Vectores/mail.svg">Email</label>
+							</div>
+							<div class="group-input">
+								<input name="Asunto" required placeholder=" " type="text">
+							<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
+							</div>
+							<div class="group-input">
+							<textarea name="Mensaje" required placeholder=" " class="mensaje" type="text"></textarea>
+							<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
+							</div>
+							<input type="text" value="SOLICITUD DE CONTACTO" name="subject" style="opacity:0;position: absolute;pointer-events: none;" contenteditable="false">
+							<button id="btn_enviar2" name="enviar" type="submit" ><span>Enviar</span></button>
+						</form>
+					</div>
 					<div class="contactos-img">
 						<img src="/img/image 26.png" alt="">
 					</div>

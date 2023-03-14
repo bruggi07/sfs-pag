@@ -44,15 +44,15 @@ close.addEventListener('click',()=>{
 	opaco.classList.remove('opaco')
 })
 
-// // formu acceso -------->
-// open_acceso.addEventListener('click',()=>{
-// 	form_acceso.classList.remove('oculto')
-// 	opacoacceso.classList.add('opaco');
-// })
-// close_acceso.addEventListener('click',()=>{
-// 	form_acceso.classList.add('oculto')
-// 	opacoacceso.classList.remove('opaco');
-// })
+// formu acceso -------->
+open_acceso.addEventListener('click',()=>{
+	form_acceso.classList.remove('oculto-acc')
+	opacoacceso.classList.add('opaco');
+})
+close_acceso.addEventListener('click',()=>{
+	form_acceso.classList.add('oculto-acc')
+	opacoacceso.classList.remove('opaco');
+})
 
 // // ventana emergente-------------------->
 // cerrar_ventana.addEventListener('click',()=>{
@@ -69,7 +69,18 @@ close.addEventListener('click',()=>{
 // https://formspree.io/f/mzbwlyjr
 
 let $form = document.getElementById('form-demo');
+let loading = document.getElementById('load');
+let listo = document.getElementById('env');
+let formcon = document.getElementById('formc');
+let formEnviar = document.getElementById('btn__enviar');
+let formCerrar = document.getElementById('correctoCerrar');
+let noListo = document.getElementById('noenv');
+let form2Cerrar = document.getElementById('incorrectoCerrar');
 
+formEnviar.addEventListener('click',()=>{
+	formcon.classList.add('form-demo-enviado');
+	loading.classList.add('show');
+})
 async	function enviar (event){
 		event.preventDefault();
 		let fd = new FormData(this)
@@ -79,25 +90,47 @@ async	function enviar (event){
 		headers: {
 			Accept: 'application/json'
 		}
-	
 	});
 	if (response.ok){
+		loading.classList.remove('show');
+		listo.classList.add('show');
 		this.reset();
-		// form.classList.add('oculto');
-		// ventana.classList.remove('ocultoemer');
 	}
 	else{
-		// form.classList.add('oculto');
-		// ventana2.classList.remove('ocultoemer');
+		loading.classList.remove('show');
+		noListo.classList.add('show');
 	}
 	};
+	formCerrar.addEventListener('click',()=>{
+		formcon.classList.remove('form-demo-enviado');
+		loading.classList.remove('show');
+		listo.classList.remove('show');
+		form.classList.add('oculto');
+		opaco.classList.remove('opaco')
+	})
+	form2Cerrar.addEventListener('click',()=>{
+		formcon.classList.remove('form-demo-enviado');
+		loading.classList.remove('show');
+		noListo.classList.remove('show');
+	})
 
 $form.addEventListener('submit',enviar);
 
 // Envío formulario de contacto-------------->
 let $formContacto = document.getElementById('form-contacto');
+let loading2 = document.getElementById('load2');
+let listo2 = document.getElementById('env2');
+let formcon2 = document.getElementById('form-contacto');
+let formEnviar2 = document.getElementById('btn_enviar2');
+let formCerrar2 = document.getElementById('correctoCerrar2');
+let noListo2 = document.getElementById('noenv2');
+let form2Cerrar2 = document.getElementById('incorrectoCerrar2');
 
-async	function enviar (event){
+formEnviar2.addEventListener('click',()=>{
+	formcon2.classList.add('form-contacto-enviado');
+	loading2.classList.add('show');
+})
+async	function enviar2 (event){
 		event.preventDefault();
 		let fd = new FormData(this)
 		let response = await fetch('https://formspree.io/f/mayzbqok',{
@@ -109,18 +142,27 @@ async	function enviar (event){
 	
 	});
 	if (response.ok){
+		loading2.classList.remove('show');
+		listo2.classList.add('show');
 		this.reset();
-		// form.classList.add('oculto');
-		// ventana.classList.remove('ocultoemer');
 	}
 	else{
-		console.log('algo no salio bien')
-		// form.classList.add('oculto');
-		// ventana2.classList.remove('ocultoemer');
+		loading2.classList.remove('show');
+		noListo2.classList.add('show');
 	}
 	};
+	formCerrar2.addEventListener('click',()=>{
+		formcon2.classList.remove('form-contacto-enviado');
+		loading2.classList.remove('show');
+		listo2.classList.remove('show');
+	})
+	form2Cerrar2.addEventListener('click',()=>{
+		formcon2.classList.remove('form-contacto-enviado');
+		loading2.classList.remove('show');
+		noListo2.classList.remove('show');
+	})
 
-$formContacto.addEventListener('submit',enviar);
+$formContacto.addEventListener('submit',enviar2);
 
 // efecto menú con scroll ----------------->
 
@@ -142,12 +184,15 @@ window.addEventListener('scroll', function(){
 		nav.classList.add('navscroll');
 		fontsizebtnacceso.classList.add('scrollbtnacceso');
 		fonsizebtnpresent.classList.add('scrollbtnacceso');
-		imglogo.classList.add('logoscroll');
+		// imglogo.classList.add('logoscroll');
 		header.classList.add('menuscroll');
 		transitionop.classList.add('menuscroll');
 		navFontSize.classList.add('nav-scroll');
-		imggrande.style.scale='0';
-		imgmini.style.scale='1';
+		imggrande.style.opacity='0';
+		imggrande.style.left='-100px';
+		imggrande.style.scale='0.6';
+		imgmini.style.scale='0.6';
+		imgmini.style.top='-5px';
 		transitionop.style.opacity="1";
 
 	}else if(prevY<200){
@@ -159,8 +204,11 @@ window.addEventListener('scroll', function(){
 		transitionop.classList.remove('menuscroll');
 		imglogo.classList.remove('logoscroll');
 		navFontSize.classList.remove('nav-scroll');
+		imggrande.style.opacity='1';
+		imggrande.style.left='0';
+		imgmini.style.scale='1';
 		imggrande.style.scale='1';
-		imgmini.style.scale='0';
+		imgmini.style.top='0';
 		transitionop.style.opacity="0";
 		
 	};
