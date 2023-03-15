@@ -133,7 +133,7 @@ body{
 	position: relative;
 	left: 0;
 	z-index: 54;
-	transition: 0.3s linear;
+	transition: opacity 0.2s linear, left .3s linear, scale .3s linear;
 
 }
 .nav_header{
@@ -775,6 +775,7 @@ article{
 		.correcto{
 			position: absolute;
 			display: flex;
+			top: 50px;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -782,22 +783,24 @@ article{
 			user-select: none;
 			pointer-events:none ;
 			transition: 0.3s;
-			h2{
-				font-family: 'Roboto';
-				font-weight: 600;
-				font-size: 30px;
-				color: #1ac014;
-				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-			}
 			p{
-				color: #000;
+				display: flex;
+				position: relative;
+				flex-direction: row;
+				align-items: center;
+				color: #fff;
+				font-family: 'Roboto';
+				font-weight: 400;
+				font-size: 15px;
+				padding: 15px;
+				background: #6DA1C2;
+				border-radius: 8px;
 			}
 			img{
-				width: 210px;
-				height: 200px;
-				border-radius: 50%;
-				padding: 20px;
-				border: 5px solid rgba(0, 255, 0, 0.386);
+				position: relative;
+				display: flex;
+				width: 35px;
+				margin-right: 20px;
 			}
 			button{
 				position: relative;
@@ -857,6 +860,7 @@ article{
 		.incorrecto{
 			position: absolute;
 			display: flex;
+			top: 50px;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
@@ -864,23 +868,24 @@ article{
 			user-select: none;
 			pointer-events:none ;
 			transition: 0.3s;
-			h2{
-				font-family: 'Roboto';
-				font-weight: 600;
-				font-size: 30px;
-				color: #df10109a;
-				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-			}
 			p{
-				color: #000;
+				display: flex;
+				position: relative;
+				flex-direction: row;
+				align-items: center;
+				color: #fff;
+				font-family: 'Roboto';
+				font-weight: 400;
+				font-size: 15px;
+				padding: 15px;
+				background: #9F650D;
+				border-radius: 8px;
 			}
 			img{
-				width: 210px;
-				height: 200px;
-				border-radius: 50%;
-				padding: 20px;
-				opacity: 0.7;
-				border: 5px solid rgba(241, 11, 11, 0.631);
+				position: relative;
+				display: flex;
+				width: 35px;
+				margin-right: 20px;
 			}
 			button{
 				position: relative;

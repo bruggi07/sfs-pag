@@ -189,7 +189,7 @@ window.addEventListener('scroll', function(){
 		transitionop.classList.add('menuscroll');
 		navFontSize.classList.add('nav-scroll');
 		imggrande.style.opacity='0';
-		imggrande.style.left='-100px';
+		imggrande.style.left='-80px';
 		imggrande.style.scale='0.6';
 		imgmini.style.scale='0.6';
 		imgmini.style.top='-5px';
