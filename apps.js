@@ -1,4 +1,10 @@
 
+window.onload = function(){
+	let load = document.getElementById('loading');
+	let contcarga = document.getElementById('contcarga');
+	load.classList.add('cargahide');
+	contcarga.classList.add('imghide');
+}
 // formu acceso -------->
 let open_acceso = document.getElementById('open_acceso');
 let form_acceso = document.getElementById('container_form_acceso');
@@ -11,14 +17,6 @@ let open_tres = document.getElementById('open3');
 let form = document.getElementById('container_form');
 let close = document.getElementById('close');
 let opaco = document.getElementById('opacodemo');
-
-// ventana emergente
-let ventana = document.getElementById('container_emergente');
-let cerrar_ventana = document.getElementById('btn_cerrar')
-let ventana2 = document.getElementById('container_emergente2');
-let cerrar_ventana2 = document.getElementById('btn_cerrar2');
-let opacof = document.getElementById('opacof');
-let opacoa = document.getElementById('opacoa');
 // menu responsive
 let btnHambur = document.getElementById('btn_hambur');
 let navHeader = document.getElementById('nav_header')
@@ -53,17 +51,6 @@ close_acceso.addEventListener('click',()=>{
 	form_acceso.classList.add('oculto-acc')
 	opacoacceso.classList.remove('opaco');
 })
-
-// // ventana emergente-------------------->
-// cerrar_ventana.addEventListener('click',()=>{
-// 	ventana.classList.add('ocultoemer');
-// 	opaco.classList.remove('opaco');
-// })
-// cerrar_ventana2.addEventListener('click',()=>{
-// 	ventana2.classList.add('ocultoemer');
-// 	form.classList.remove('oculto');
-// })
-
 // envío de datos a correo desde el form DEMO-------------->
 
 // https://formspree.io/f/mzbwlyjr
@@ -78,7 +65,7 @@ let noListo = document.getElementById('noenv');
 let form2Cerrar = document.getElementById('incorrectoCerrar');
 
 formEnviar.addEventListener('click',()=>{
-	formcon.classList.add('form-demo-enviado');
+	formcon.classList.add('hide');
 	loading.classList.add('show');
 })
 async	function enviar (event){
@@ -102,14 +89,14 @@ async	function enviar (event){
 	}
 	};
 	formCerrar.addEventListener('click',()=>{
-		formcon.classList.remove('form-demo-enviado');
+		formcon.classList.remove('hide');
 		loading.classList.remove('show');
 		listo.classList.remove('show');
 		form.classList.add('oculto');
 		opaco.classList.remove('opaco')
 	})
 	form2Cerrar.addEventListener('click',()=>{
-		formcon.classList.remove('form-demo-enviado');
+		formcon.classList.remove('hide');
 		loading.classList.remove('show');
 		noListo.classList.remove('show');
 	})
@@ -189,7 +176,7 @@ window.addEventListener('scroll', function(){
 		transitionop.classList.add('menuscroll');
 		navFontSize.classList.add('nav-scroll');
 		imggrande.style.opacity='0';
-		imggrande.style.left='-80px';
+		imggrande.style.left='-70px';
 		imggrande.style.scale='0.6';
 		imgmini.style.scale='0.6';
 		imgmini.style.top='-5px';

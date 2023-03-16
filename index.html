@@ -13,6 +13,17 @@
 <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
 </head>
 <body>
+	<div class="fondocarga" id="loading">
+		<div class="contcarga" id="contcarga">
+			<div class="carga">
+				<img class="imgl top" src="/img/iconcarga/top.png">
+				<img class="imgl left" src="/img/iconcarga/left.png">
+				<img class="imgl right" src="/img/iconcarga/right.png">
+				<img src="/img/iconcarga/center.png">
+			</div>
+		</div>
+	</div>
+	<div class="bodyall">
 	<div class="fondo"></div>
 	<div class="fondo-dos"></div>
 	<header>
@@ -91,10 +102,10 @@
 				<button id="correctoCerrar"><span>Cerrar</span></button>
 			</div>
 			<div class="incorrecto" id="noenv">
-				<img src="img/nottick.png">
-				<h2>¡HA OCURRIDO UN ERROR!</h2>
-				<p>Intentalo de nuevo.</p>
-				<button id="incorrectoCerrar"><span>Cerrar</span></button>
+				<!-- <img src="img/nottick.png"> -->
+				<h2>¡ERROR!</h2>
+				<p>Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
+				<button id="incorrectoCerrar"><span>Volver</span></button>
 			</div>
 			<form autocomplete="off" action="" method="POST" id="form-demo">
 				<div class="form-demo" id="formc">
@@ -125,42 +136,6 @@
 			</form>
 		</div>
 </div>
-
-<!-- Fin formulario--------- -->
-
-
-	<!-- carteles formulario finalizado -->
-	
-		<!-- <div class="contenedormain-emergente">
-
-			<div class="container-emergente ocultoemer" id="container_emergente">
-				
-				<div class="ventana">
-					<h1>Enviado correctamente!</h1>
-					<h2>Hemos recibido tu solicitud, nos contactaremos a la brevedad!</h2>
-					<button class="btn_enviar" id="btn_cerrar">Aceptar</button>
-				</div>
-				
-			</div>
-		</div>
-	
-	
-		<div class="contenedormain-emergente">
-
-			<div class="container-emergente ocultoemer" id="container_emergente2">
-				
-				<div class="ventana2">
-					<h1>Ha ocurrido un error!</h1>
-					<h2>Revisa nuevamente los datos para ver si están correctos...</h2>
-					<button class="btn_enviar" id="btn_cerrar2">Aceptar</button>
-				</div>
-				
-			</div>
-		</div> -->
-	
-
-	<!-- Fin carteles formulario finalizado -->
-
 <article>
 	<!-- principal--------------------- -->
 		<section class="seccion" id="inicio">
@@ -254,7 +229,7 @@
 								</h3>
 								<p>Aplicacion web destinada a digitalizar o informatizar cualquier tipo de institución dedicada a la salud</p>
 							</div>
-							<div class="circle-icon"><span>HIS</span></div>
+							<a target="_blank" href="HIS.html"><div class="circle-icon"><span>HIS</span></div></a>
 							<button id="btn-check" class="btn-mas">
 								<span id="text-btn">Ver más</span>
 								<i id="flechi" class="fa fa-angle-down"></i>
@@ -271,7 +246,7 @@
 							<li><img src="/img/check.png">Gestión de Autorizaciones y Prestaciones</li>
 							<li><img src="/img/check.png">Sistema de Información Radiológica (RIS)</li>
 							<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
-							<span>Conocé sus funcionalidades →</span>
+							<a href="HIS.html" target="_blank"><span>Conocé sus funcionalidades →</span></a>
 						</div>
 					</div>
 					<div class="tab">
@@ -378,12 +353,12 @@
 							<div class="correcto" id="env2">
 								
 								<p><img src="img/Vectores-formularios/correctoicon.png">¡Mensaje enviado con éxito! En breve nos vamos a comunicar con vos</p>
-								<button id="correctoCerrar2"><span>Cerrar</span></button>
+								<button id="correctoCerrar2"><span>Volver</span></button>
 
 							</div>
 							<div class="incorrecto" id="noenv2">
 								<p><img src="img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
-								<button id="incorrectoCerrar2"><span>Cerrar</span></button>
+								<button id="incorrectoCerrar2"><span>Volver</span></button>
 							</div>
 						<form class="" id="form-contacto" action="" method="POST">
 							<h3>Escribinos un correo:</h3>
@@ -446,29 +421,10 @@
 		</section>
 </article>
 <footer>
-	<div class="footer">
-		<div class="datafis">
-			<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank">
-			<img src="img/dataweb.jpg" alt="data fiscal sfs">
-			</a>
-		</div>
-		<div class="contacto">
-			<ul>
-				<a>Santiago Derqui 3265.
-					Santa Fe, Argentina</a>
-				<a>+54 (0342) 4578665 / 4578666</a>
-				<a>info@sfssa.com.ar</a>
-			</ul>	
-		</div>
-		<div class="group">
-				
-			<img src="img/logo-footer.png" alt="copyright">
-		</div>
-	
-	</div>
+	<div class="footer"></div>
 </footer>
 </div>
-
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="apps.js"></script>
 </body>

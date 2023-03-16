@@ -1,19 +1,4 @@
 @import "./font";
-h1{
-	font-family: Montserrat-ExtraBold;
-	color: #5563AA ;
-	font-style: normal;
-	font-weight: 800;
-	font-size: 7vh !important;
-	line-height: 50px;
-	letter-spacing: -0.045em;
-	background: conic-gradient(from 108.12deg at 0% 35.23%, #36358F 0deg, #1D518F 360deg);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-
-	text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
-}
 P{
 	font-family:Roboto;
 	font-style: normal;
@@ -39,6 +24,7 @@ a{
 	color: white;
 	text-decoration: none;
 }
+@import "./carga";
 /* correcion menus links */
 section[id]{
 	padding-top: 20vh;
@@ -105,7 +91,7 @@ body{
 	display: flex;
 	position: absolute;
 	width: 100%;
-	height: 140px;
+	height: 160px;
 	top: 0;
 	opacity: 0;
 	background:#5B96BB ;
@@ -418,6 +404,21 @@ article{
 }
 .text_principal{
 	padding-bottom: 10vh;
+	h1{
+		font-family: Montserrat-ExtraBold;
+		color: #5563AA ;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 7vh;
+		line-height: 50px;
+		letter-spacing: -0.045em;
+		background: conic-gradient(from 108.12deg at 0% 35.23%, #36358F 0deg, #1D518F 360deg);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	
+		text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+	}
 	p{
 		padding-top: 5vh;
 		padding-bottom: 5vh;
@@ -612,6 +613,9 @@ article{
 				color: #31358D;
 				user-select: none;
 				cursor: pointer;
+				&:active{
+					scale: .95;
+				}
 			}
 
 		}
@@ -1176,7 +1180,7 @@ article{
 		}
 	}
 }
-
+@import "./HIS";
 /* footer -------------------------> */
 .footer{
 	display: flex;
@@ -1209,7 +1213,7 @@ article{
 		flex-direction: column;
 		justify-content: space-between;
 		padding-bottom: 4vh;
-		height: 20vh;
+		height: 160px;
 	}
 	.logo-header{
 		display: flex;
@@ -1414,6 +1418,8 @@ article{
 		align-items: center;
 		justify-content: space-evenly;
 		text-align: center;
+		background: #5B96BB;
+		box-shadow: 0px -4px 21px rgba(0, 0, 0, 0.25);
 		height: 20vh;
 	}
 	.productos-container{
