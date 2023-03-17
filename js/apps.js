@@ -64,10 +64,7 @@ let formCerrar = document.getElementById('correctoCerrar');
 let noListo = document.getElementById('noenv');
 let form2Cerrar = document.getElementById('incorrectoCerrar');
 
-formEnviar.addEventListener('click',()=>{
-	formcon.classList.add('hide');
-	loading.classList.add('show');
-})
+
 async	function enviar (event){
 		event.preventDefault();
 		let fd = new FormData(this)
@@ -89,19 +86,110 @@ async	function enviar (event){
 	}
 	};
 	formCerrar.addEventListener('click',()=>{
-		formcon.classList.remove('hide');
-		loading.classList.remove('show');
+		setTimeout(()=>{formcon.classList.remove('hide')},3000);
 		listo.classList.remove('show');
 		form.classList.add('oculto');
 		opaco.classList.remove('opaco')
 	})
 	form2Cerrar.addEventListener('click',()=>{
 		formcon.classList.remove('hide');
-		loading.classList.remove('show');
 		noListo.classList.remove('show');
 	})
+function valNombre(){
+	var elemento = document.getElementById('nombre');
+	if (!elemento.checkValidity()){
+		error(elemento);
+		$formdemo.addEventListener('input',valNombre);
+		return false;
+	}
+	else{
+		limpiarError(elemento);
+		return true;
+	}
+}
+function valEmail(){
+	var elemento = document.getElementById('email');
+	if (!elemento.checkValidity()){
+		error(elemento);
+		$formdemo.addEventListener('input',valEmail);
+		return false;
+	}
+	else{
+		limpiarError(elemento);
+		return true;
+	}
+}
+function valTelefono(){
+	var elemento = document.getElementById('telefono');
+	if (!elemento.checkValidity()){
+		error(elemento);
+		$formdemo.addEventListener('input',valTelefono);
+		return false;
+	}
+	else{
+		limpiarError(elemento);
+		return true;
+	}
+}
+function valCiudad(){
+	var elemento = document.getElementById('ciudad');
+	if (!elemento.checkValidity()){
+		error(elemento);
+		$formdemo.addEventListener('input',valCiudad);
+		return false;
+	}
+	else{
+		limpiarError(elemento);
+		return true;
+	}
+}
+function valInstitucion(){
+	var elemento = document.getElementById('institucion');
+	if (!elemento.checkValidity()){
+		error(elemento);
+		$formdemo.addEventListener('input',valInstitucion);
+		return false;
+	}
+	else{
+		limpiarError(elemento);
+		return true;
+	}
+}
 
-$formdemo.addEventListener('submit',enviar);
+function error (elemento){
+	document.getElementById(`${elemento.id}`).classList.add('errorShow2');
+	document.getElementById(`${elemento.id}Error`).classList.add('errorShow1');
+	if(elemento.id=='ciudad' || elemento.id=='institucion'){
+		document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba una ${elemento.id} válido para continuar`;
+	}
+	else{
+		document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba un ${elemento.id} válido para continuar`;
+	}
+	elemento.focus();
+}
+function limpiarError (elemento){
+	document.getElementById(`${elemento.id}`).classList.remove('errorShow2');
+	document.getElementById(`${elemento.id}Error`).classList.remove('errorShow1');
+}
+function validar (e){
+	if(valNombre() && valEmail() && valTelefono() && valCiudad() && valInstitucion() && true){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+ formEnviar.addEventListener('click',(e)=>{
+	if (validar()){
+		formcon.classList.add('hide');
+		loading.classList.add('show');
+	}
+	else{
+		e.preventDefault();
+		$formdemo.addEventListener('submit',enviar);
+	}
+ })
+
 
 // Envío formulario de contacto-------------->
 let $formContacto = document.getElementById('form-contacto');
@@ -112,6 +200,7 @@ let formEnviar2 = document.getElementById('btn_enviar2');
 let formCerrar2 = document.getElementById('correctoCerrar2');
 let noListo2 = document.getElementById('noenv2');
 let form2Cerrar2 = document.getElementById('incorrectoCerrar2');
+
 
 formEnviar2.addEventListener('click',()=>{
 	formcon2.classList.add('form-contacto-enviado');
