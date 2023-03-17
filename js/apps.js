@@ -55,7 +55,7 @@ close_acceso.addEventListener('click',()=>{
 
 // https://formspree.io/f/mzbwlyjr
 
-let $form = document.getElementById('form-demo');
+let $formdemo = document.getElementById('form-demo');
 let loading = document.getElementById('load');
 let listo = document.getElementById('env');
 let formcon = document.getElementById('formc');
@@ -101,7 +101,7 @@ async	function enviar (event){
 		noListo.classList.remove('show');
 	})
 
-$form.addEventListener('submit',enviar);
+$formdemo.addEventListener('submit',enviar);
 
 // Envío formulario de contacto-------------->
 let $formContacto = document.getElementById('form-contacto');
@@ -230,6 +230,8 @@ const observer = new IntersectionObserver((entradas)=>{
 	rootMargin: '-50% 0% -50% 0%'
 });
 secciones.forEach(seccion => observer.observe(seccion))
+
+
 // Botones ver más/ver menos productos---------------------
 let myCheck = document.getElementById('Acc1');
 let btnCheck = document.getElementById('text-btn');

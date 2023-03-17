@@ -8,12 +8,12 @@ P{
 	font-weight: 300;
 }
 h2{
-	font-family: Montserrat-SemiBold;
+	font-family: 'Montserrat';
 	color: #31358D;
 	font-weight: 700;
 }
 h3{
-	font-family: Montserrat-Italic;
+	font-family: 'Montserrat';
 	color: #35438E;
 	font-size: 3.5vh;
 	font-weight: 400;
@@ -157,7 +157,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: 0% 3px;
 	border-radius: 5px;
-	font-family: Montserrat-Regular;
+	font-family: 'Montserrat';
 	font-weight: 500;
 	
 }
@@ -404,8 +404,10 @@ article{
 }
 .text_principal{
 	padding-bottom: 10vh;
+	padding-top: 5vh;
+	max-width: 60%;
 	h1{
-		font-family: Montserrat-ExtraBold;
+		font-family: 'Montserrat';
 		color: #5563AA ;
 		font-style: normal;
 		font-weight: 800;
@@ -416,10 +418,19 @@ article{
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-	
 		text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
 	}
+	h3{
+		font-family: 'Montserrat';
+		font-style: italic;
+		font-weight: 500;
+	}
 	p{
+		font-family: 'Roboto';
+		font-weight: 300;
+		color: #000;
+		font-size: 2.5vh;
+		line-height: 20px;
 		padding-top: 5vh;
 		padding-bottom: 5vh;
 	}
@@ -514,18 +525,19 @@ article{
 				flex-direction: column;
 				justify-content: center;
 				padding-right: 15vh;
-				padding-top: 5vh;
 				margin-left: 5vh;
 				h3{
-				font-family: Montserrat-ExtraBold;
-				font-size: 2vh;
-				line-height: 20px;
+				font-family: 'Montserrat';
+				font-weight: 800;
+				font-size: 3vh;
+				line-height: 28px;
+				margin: 0;
 				}
 				p{
 					font-family: 'Roboto';
 					font-weight: 300;
 					line-height: 25px;
-					font-size: 2vh;
+					font-size: 2.5vh;
 				}
 			}
 			.circle-icon{
@@ -542,7 +554,9 @@ article{
 				height: 70px;
 				span{
 					position: relative;
-					font-family: Montserrat-SemiBold;
+					font-family: 'Montserrat';
+					font-weight: 700;
+					font-size: 2.5vh;
 				}
 			}		
 			.btn-mas{
@@ -704,7 +718,7 @@ article{
 				margin-top: 20px;
 				font-family: Roboto;
 				font-weight: 700;
-				font-size: 2vh;
+				font-size: 2.5vh;
 				color: #000;
 			}
 			p{
@@ -712,7 +726,7 @@ article{
 				font-weight: 300;
 				padding: 30px 20px 30px 30px;
 				font-size: 2vh;
-				line-height: 23px;
+				line-height: 20px;
 				color: #000;
 			}
 			img{
@@ -959,7 +973,8 @@ article{
 			gap: 30px;
 			transition: 0.3s;
 			h3{
-				font-family: Montserrat-SemiBold;
+				font-family: 'Montserrat';
+				font-weight: 500;
 				font-size: 2vh;
 				color:#4D5A9D ;
 			}
@@ -1016,7 +1031,7 @@ article{
 				position: relative;
 				align-items: center;
 				font-weight: 400;
-				font-size: 2vh;
+				font-size: 2.5vh;
 				min-width:162px ;
 				height: 50px;
 				background: conic-gradient(from 190.41deg at 59.44% 0%, #AEC9E0 0deg, #B9D1E6 360deg);
@@ -1088,8 +1103,9 @@ article{
 			align-items: left;
 			text-align: left;
 			span{
-				font-family: Montserrat-SemiBold;
+				font-family: 'Montserrat';
 				color: #4D5A9D;
+				font-weight: 500;
 				font-size: 2.5vh;
 				.correo-icon{
 					width: 18px;
@@ -1117,7 +1133,8 @@ article{
 		justify-content: center;
 		gap: 30px;
 		.contactos-text{
-			font-family: Montserrat-SemiBold;
+			font-family: 'Montserrat';
+			font-weight: 500;
 			font-size: 2.5vh;
 			color:#4D5A9D ;
 			text-align: center;
@@ -1181,6 +1198,7 @@ article{
 	}
 }
 @import "./HIS";
+@import "./SAPma";
 /* footer -------------------------> */
 .footer{
 	display: flex;
@@ -1292,6 +1310,7 @@ article{
 	.nosotros-text{
 		text-align: center;
 		font-family: Roboto;
+		font-weight: 400;
 		font-size: 2.5vh;
 		color: #36358F;
 		margin: 5vh 3vh;
@@ -1469,14 +1488,6 @@ article{
 	}
 	.logo-header a{
 		width: 25vh;
-	}
-	.text_principal{
-		padding: 2vh;
-		font-size: 3vh;
-		flex-shrink: 1;
-	}
-	.text_principal p{
-		font-size: 2.5vh;
 	}
 	.imagen_principal{
 		width: 100vh;
