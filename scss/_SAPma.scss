@@ -7,6 +7,18 @@
         text-align: center;
     }
 }
+.SAPma{
+    h2{
+        font-size: 1.6em;
+        text-align: center;
+    }
+    .boxinfo{
+        display: flex;
+        img{
+            height: 70vh;
+        }
+    }
+}
 .modulos{
     .contenedor-items{
         .item{

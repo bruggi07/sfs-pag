@@ -1197,8 +1197,11 @@ article{
 		}
 	}
 }
+// import páginas
 @import "./HIS";
 @import "./SAPma";
+@import "./app";
+
 /* footer -------------------------> */
 .footer{
 	display: flex;
@@ -1549,3 +1552,4 @@ article{
 		margin: 10vh 25vh 0vh 25vh;
 	}
 }
+@import "./mediaquerys";
