@@ -1,4 +1,3 @@
-
 window.onload = function(){
 	let load = document.getElementById('loading');
 	let contcarga = document.getElementById('contcarga');
@@ -383,15 +382,6 @@ apretar3.addEventListener('click',function (){
 		myCheck3.checked=false;
 	}
 })
-
-
-// btn.addEventListener('click', ()=> {
-// 	if(radio.spellcheck){
-// 		btn.innerText = 'Ver menos'
-// 		flechi.style.rotate = '180deg'
-// 	}
-// })
-
 // fix scroll beheivor en todos los navegadores, con jquery-------->
 
 $(document).ready(function(){
