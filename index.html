@@ -378,20 +378,32 @@
 						<form class="" id="form-contacto" action="" method="POST">
 							<h3>Escribinos un correo:</h3>
 							<div class="group-input">
-							<input name="Nombre" required placeholder=" " type="text">
-							<label for=""><img src="img/Vectores/user.svg">Nombre</label>
+								<input id="nombre2" name="Nombre" required placeholder=" " type="text">
+								<label for=""><img src="img/Vectores/user.svg">Nombre</label>
+								<div class="error " id="nombre2Error">
+									<span>!</span><p id="nombre2ErrorP">Completa este campo para continuar.</p>
+								</div>
 							</div>
 							<div class="group-input">
-							<input name="Email" required placeholder=" " type="email">
-							<label for=""><img src="img/Vectores/mail.svg">Email</label>
+								<input id="email2" name="Email" required placeholder=" " type="email">
+								<label for=""><img src="img/Vectores/mail.svg">Email</label>
+								<div class="error " id="email2Error">
+									<span>!</span><p id="email2ErrorP">Completa este campo para continuar.</p>
+								</div>
 							</div>
 							<div class="group-input">
-								<input name="Asunto" required placeholder=" " type="text">
-							<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
+								<input id="asunto" name="Asunto" required placeholder=" " type="text">
+								<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
+								<div class="error " id="asuntoError">
+									<span>!</span><p id="asuntoErrorP">Completa este campo para continuar.</p>
+								</div>
 							</div>
 							<div class="group-input">
-							<textarea name="Mensaje" required placeholder=" " class="mensaje" type="text"></textarea>
-							<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
+								<textarea id="mensaje" name="Mensaje" required placeholder=" " class="mensaje" type="text"></textarea>
+								<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
+								<div class="error msj " id="mensajeError">
+									<span>!</span><p id="mensajeErrorP">Completa este campo para continuar.</p>
+								</div>
 							</div>
 							<input type="text" value="SOLICITUD DE CONTACTO" name="subject" style="opacity:0;position: absolute;pointer-events: none;" contenteditable="false">
 							<button id="btn_enviar2" name="enviar" type="submit" ><span>Enviar</span></button>
