@@ -4,30 +4,11 @@ window.onload = function(){
 	load.classList.add('cargahide');
 	contcarga.classList.add('imghide');
 }
-// formu acceso -------->
-let open_acceso = document.getElementById('open_acceso');
-let form_acceso = document.getElementById('container_form_acceso');
-let close_acceso = document.getElementById('close_acceso');
-let opacoacceso = document.getElementById('opaco');
-// formu demo------>
-let open = document.getElementById('open');
+// import { open_dos,open_tres,form,opaco } from "./modules/form_demo";
 let open_dos = document.getElementById('open2');
 let open_tres = document.getElementById('open3');
 let form = document.getElementById('container_form');
-let close = document.getElementById('close');
 let opaco = document.getElementById('opacodemo');
-// menu responsive
-let btnHambur = document.getElementById('btn_hambur');
-let navHeader = document.getElementById('nav_header')
-
-btnHambur.addEventListener('click',()=>{
-	navHeader.classList.toggle('hamburoculto')
-})
-// // formu demo------>
- open.addEventListener('click',()=>{
-	form.classList.remove('oculto');
-	opaco.classList.add('opaco');
-})
 open_dos.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
@@ -36,166 +17,19 @@ open_tres.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
 })
-close.addEventListener('click',()=>{
-	form.classList.add('oculto');
-	opaco.classList.remove('opaco')
-})
+// menu responsive
+let btnHambur = document.getElementById('btn_hambur');
+let navHeader = document.getElementById('nav_header');
 
-// formu acceso -------->
-open_acceso.addEventListener('click',()=>{
-	form_acceso.classList.remove('oculto-acc')
-	opacoacceso.classList.add('opaco');
-})
-close_acceso.addEventListener('click',()=>{
-	form_acceso.classList.add('oculto-acc')
-	opacoacceso.classList.remove('opaco');
-})
-// envío de datos a correo desde el form DEMO-------------->
-
-// https://formspree.io/f/mzbwlyjr
-
-let $formdemo = document.getElementById('form-demo');
-let loading = document.getElementById('load');
-let listo = document.getElementById('env');
-let formcon = document.getElementById('formc');
-let formEnviar = document.getElementById('btn__enviar');
-let formCerrar = document.getElementById('correctoCerrar');
-let noListo = document.getElementById('noenv');
-let form2Cerrar = document.getElementById('incorrectoCerrar');
-
-
-async	function enviar (event){
-		event.preventDefault();
-		let fd = new FormData(this)
-		let response = await fetch('https://formspree.io/f/mbjeaonn',{
-		method: 'POST',
-		body: fd,
-		headers: {
-			Accept: 'application/json'
-		}
-	});
-	if (response.ok){
-		loading.classList.remove('show');
-		listo.classList.add('show');
-		this.reset();
-	}
-	else{
-		loading.classList.remove('show');
-		noListo.classList.add('show');
-	}
-	};
-	formCerrar.addEventListener('click',()=>{
-		setTimeout(()=>{formcon.classList.remove('hide')},3000);
-		listo.classList.remove('show');
-		form.classList.add('oculto');
-		opaco.classList.remove('opaco')
-	})
-	form2Cerrar.addEventListener('click',()=>{
-		formcon.classList.remove('hide');
-		noListo.classList.remove('show');
-	})
-function valNombre(){
-	var elemento = document.getElementById('nombre');
-	if (!elemento.checkValidity()){
-		error(elemento);
-		elemento.addEventListener('input',valNombre);
-		return false;
-	}
-	else{
-		limpiarError(elemento);
-		return true;
-	}
-}
-function valEmail(){
-	var elemento = document.getElementById('email');
-	if (!elemento.checkValidity()){
-		error(elemento);
-		elemento.addEventListener('input',valEmail);
-		return false;
-	}
-	else{
-		limpiarError(elemento);
-		return true;
-	}
-}
-function valTelefono(){
-	var elemento = document.getElementById('telefono');
-	if (!elemento.checkValidity()){
-		error(elemento);
-		elemento.addEventListener('input',valTelefono);
-		return false;
-	}
-	else{
-		limpiarError(elemento);
-		return true;
-	}
-}
-function valCiudad(){
-	var elemento = document.getElementById('ciudad');
-	if (!elemento.checkValidity()){
-		error(elemento);
-		elemento.addEventListener('input',valCiudad);
-		return false;
-	}
-	else{
-		limpiarError(elemento);
-		return true;
-	}
-}
-function valInstitucion(){
-	var elemento = document.getElementById('institucion');
-	if (!elemento.checkValidity()){
-		error(elemento);
-		elemento.addEventListener('input',valInstitucion);
-		return false;
-	}
-	else{
-		limpiarError(elemento);
-		return true;
-	}
-}
-
-function error (elemento){
-	document.getElementById(`${elemento.id}`).classList.add('errorShow2');
-	document.getElementById(`${elemento.id}Error`).classList.add('errorShow1');
-	if(elemento.id=='ciudad' || elemento.id=='institucion'){
-		document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba una ${elemento.id} válido para continuar`;
-	}
-	else{
-		document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba un ${elemento.id} válido para continuar`;
-	}
-	elemento.focus();
-}
-function limpiarError (elemento){
-	document.getElementById(`${elemento.id}`).classList.remove('errorShow2');
-	document.getElementById(`${elemento.id}Error`).classList.remove('errorShow1');
-}
-function validar (e){
-	if(valNombre() && valEmail() && valTelefono() && valCiudad() && valInstitucion() && true){
-		return true;
-	}
-	else{
-		return false;
-	}
-}
- formEnviar.addEventListener('click',(e)=>{
-	if (validar()){
-		formcon.classList.add('hide');
-		loading.classList.add('show');
-		$formdemo.addEventListener('submit',enviar);
-	}
-	else{
-		e.preventDefault();
-	}
- })
-
+btnHambur.addEventListener('click',()=>{
+	navHeader.classList.toggle('hamburoculto');
+});
 // Envío formulario de contacto-------------->
 let $formContacto = document.getElementById('form-contacto');
 let loading2 = document.getElementById('load2');
 let listo2 = document.getElementById('env2');
 let formcon2 = document.getElementById('form-contacto');
 let formEnviar2 = document.getElementById('btn_enviar2');
-let formCerrar2 = document.getElementById('correctoCerrar2');
 let noListo2 = document.getElementById('noenv2');
 let form2Cerrar2 = document.getElementById('incorrectoCerrar2');
 
@@ -213,6 +47,11 @@ async	function enviar2 (event){
 	if (response.ok){
 		loading2.classList.remove('show');
 		listo2.classList.add('show');
+		setTimeout(()=>{
+			formcon2.classList.remove('form-contacto-enviado');
+			loading2.classList.remove('show');
+			listo2.classList.remove('show');
+		},10000);
 		this.reset();
 	}
 	else{
@@ -220,11 +59,6 @@ async	function enviar2 (event){
 		noListo2.classList.add('show');
 	}
 	};
-	formCerrar2.addEventListener('click',()=>{
-		formcon2.classList.remove('form-contacto-enviado');
-		loading2.classList.remove('show');
-		listo2.classList.remove('show');
-	})
 	form2Cerrar2.addEventListener('click',()=>{
 		formcon2.classList.remove('form-contacto-enviado');
 		loading2.classList.remove('show');
