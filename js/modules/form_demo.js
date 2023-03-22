@@ -20,6 +20,10 @@ let form2Cerrar = document.getElementById('incorrectoCerrar');
 	  form.classList.add('oculto');
 	  opaco.classList.remove('opaco')
 })
+opaco.addEventListener('click',()=>{
+    form.classList.add('oculto');
+	opaco.classList.remove('opaco')
+})
 async	function enviar (event){
     event.preventDefault();
     let fd = new FormData(this)
@@ -33,6 +37,11 @@ async	function enviar (event){
 if (response.ok){
       loading.classList.remove('show');
       listo.classList.add('show');
+      setTimeout(()=>{   
+        formcon.classList.remove('hide');
+        listo.classList.remove('show');
+    },10000);
+       
     this.reset();
 }
 else{
@@ -40,12 +49,6 @@ else{
        noListo.classList.add('show');
 }
 };
-   formCerrar.addEventListener('click',()=>{
-    setTimeout(()=>{   formcon.classList.remove('hide')},3000);
-      listo.classList.remove('show');
-      form.classList.add('oculto');
-      opaco.classList.remove('opaco')
-})
    form2Cerrar.addEventListener('click',()=>{
        formcon.classList.remove('hide');
        noListo.classList.remove('show');

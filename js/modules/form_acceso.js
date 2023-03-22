@@ -12,3 +12,7 @@ close_acceso.addEventListener('click',()=>{
 	form_acceso.classList.add('oculto-acc')
 	opacoacceso.classList.remove('opaco');
 })
+opacoacceso.addEventListener('click',()=>{
+	form_acceso.classList.add('oculto-acc')
+	opacoacceso.classList.remove('opaco');
+})

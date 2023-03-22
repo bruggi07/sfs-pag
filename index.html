@@ -59,7 +59,7 @@
 
 <!-- acceso a cliente formulario----------------------------------------->
 
-<div class="opacooff" id="opaco">
+<div class="opacooff" id="opaco"></div> 
 	<div class="container-acceso-form oculto-acc" id="container_form_acceso">
 		<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
 			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
@@ -83,7 +83,7 @@
 			</form>
 			<a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
 		</div>
-</div> 
+
 
 
 <!-- formulario demo ---------------------------------------------------->
@@ -97,8 +97,11 @@
 			<div class="laoding" id="load"><div class="spin"></div></div>	
 			<div class="correcto" id="env">
 								
-				<p><img src="img/Vectores-formularios/correctoicon.png">¡Mensaje enviado con éxito! En breve nos vamos a comunicar con vos</p>
-				<button id="correctoCerrar"><span>Cerrar</span></button>
+			<div class="msj">
+				<img src="img/Vectores-formularios/correctoicon.png">
+				<p><b>¡Mensaje enviado con éxito!</b> En breve nos vamos a comunicar con vos</p>
+			</div>
+				<!-- <button id="correctoCerrar"><span>Cerrar</span></button> -->
 
 			</div>
 			<div class="incorrecto" id="noenv">
@@ -170,9 +173,6 @@
 						</button>
 					</div>
 				</div>	
-				<div class="imagen_principal">
-				
-				</div>
 			</div>
 		</section>
 		<!-- Servicios----------------- -->
@@ -200,7 +200,6 @@
 							<h2>Integración con HL7</h2>
 							<p>Nuestras aplicaciones utilizan el estandar HL7 para intercomunicarse entre sí y con otras soluciones de software.</p>
 						</div>
-						<div class="box-chain">
 							<div class="nosotros-box">
 								<img src="img/Vectores/isoimg.png" alt="intercomunicacion" class="vector">
 								<h2>Calidad Certificada</h2>
@@ -211,7 +210,6 @@
 								<h2>Disponibilidad 24/7</h2>
 								<p>Nuestros sistemas 100% web ofrecen acceso y soporte personalizado desde cualquier ubicación, las 24 horas, los 7 dias de la semana, los 365 del año.</p>
 							</div>
-						</div>
 					</div>
 					<p class="nosotros-text">
 						¿Tenés alguna pregunta?

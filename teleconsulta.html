@@ -55,7 +55,7 @@
 
 <!-- acceso a cliente formulario----------------------------------------->
 
-<div class="opacooff" id="opaco">
+<div class="opacooff" id="opaco"></div>
 	<div class="container-acceso-form oculto-acc" id="container_form_acceso">
 		<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
 			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
@@ -79,7 +79,7 @@
 			</form>
 			<a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
 		</div>
-</div> 
+ 
 
 
 <!-- formulario demo ---------------------------------------------------->
@@ -92,11 +92,14 @@
         </div>
         <div class="laoding" id="load"><div class="spin"></div></div>	
         <div class="correcto" id="env">
-                            
-            <p><img src="img/Vectores-formularios/correctoicon.png">¡Mensaje enviado con éxito! En breve nos vamos a comunicar con vos</p>
-            <button id="correctoCerrar"><span>Cerrar</span></button>
+								
+			<div class="msj">
+				<img src="img/Vectores-formularios/correctoicon.png">
+				<p><b>¡Mensaje enviado con éxito!</b> En breve nos vamos a comunicar con vos</p>
+			</div>
+				<!-- <button id="correctoCerrar"><span>Cerrar</span></button> -->
 
-        </div>
+			</div>
         <div class="incorrecto" id="noenv">
             <p><img src="img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
             <button id="incorrectoCerrar"><span>Volver</span></button>
