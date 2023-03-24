@@ -1,9 +1,10 @@
+'use strict';
 window.onload = function(){
 	let load = document.getElementById('loading');
 	let contcarga = document.getElementById('contcarga');
 	load.classList.add('cargahide');
 	contcarga.classList.add('imghide');
-}
+};
 // import { open_dos,open_tres,form,opaco } from "./modules/form_demo";
 let open_dos = document.getElementById('open2');
 let open_tres = document.getElementById('open3');
@@ -12,11 +13,11 @@ let opaco = document.getElementById('opacodemo');
 open_dos.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
-})
+});
 open_tres.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
-})
+});
 // menu responsive
 let btnHambur = document.getElementById('btn_hambur');
 let navHeader = document.getElementById('nav_header');
@@ -33,10 +34,10 @@ let formEnviar2 = document.getElementById('btn_enviar2');
 let noListo2 = document.getElementById('noenv2');
 let form2Cerrar2 = document.getElementById('incorrectoCerrar2');
 
-async	function enviar2 (event){
-		event.preventDefault();
+async	function enviar2 (e){
+		e.preventDefault();
 		let fd = new FormData(this)
-		let response = await fetch('https://formspree.io/f/mbjeaonn',{
+		let respuesta = await fetch('https://formspree.io/f/mbjeaonn',{
 		method: 'POST',
 		body: fd,
 		headers: {
@@ -44,7 +45,7 @@ async	function enviar2 (event){
 		}
 	
 	});
-	if (response.ok){
+	if (respuesta.ok){
 		loading2.classList.remove('show');
 		listo2.classList.add('show');
 		setTimeout(()=>{
@@ -63,7 +64,7 @@ async	function enviar2 (event){
 		formcon2.classList.remove('form-contacto-enviado');
 		loading2.classList.remove('show');
 		noListo2.classList.remove('show');
-	})
+	});
 
 	function valNombre2(){
 		var elemento = document.getElementById('nombre2');
@@ -76,7 +77,7 @@ async	function enviar2 (event){
 			limpiarError2(elemento);
 			return true;
 		}
-	}
+	};
 	function valEmail2(){
 		var elemento = document.getElementById('email2');
 		if (!elemento.checkValidity()){
@@ -88,7 +89,7 @@ async	function enviar2 (event){
 			limpiarError2(elemento);
 			return true;
 		}
-	}
+	};
 	function valAsunto(){
 		var elemento = document.getElementById('asunto');
 		if (!elemento.checkValidity()){
@@ -100,7 +101,7 @@ async	function enviar2 (event){
 			limpiarError2(elemento);
 			return true;
 		}
-	}
+	};
 	function valMensaje(){
 		var elemento = document.getElementById('mensaje');
 		if (!elemento.checkValidity()){
@@ -112,7 +113,7 @@ async	function enviar2 (event){
 			limpiarError2(elemento);
 			return true;
 		}
-	}
+	};
 	function error2 (elemento){
 		document.getElementById(`${elemento.id}`).classList.add('errorShow2');
 		document.getElementById(`${elemento.id}Error`).classList.add('errorShow1');
@@ -123,20 +124,20 @@ async	function enviar2 (event){
 			document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba un email válido para continuar`;
 		}
 		elemento.focus();
-	}
+	};
 	function limpiarError2 (elemento){
 		document.getElementById(`${elemento.id}`).classList.remove('errorShow2');
 		document.getElementById(`${elemento.id}Error`).classList.remove('errorShow1');
-	}
-	function validar2 (e){
+	};
+	function validar2 (){
 		if(valNombre2() && valEmail2() && valAsunto() && valMensaje() && true){
 			return true;
 		}
 		else{
 			return false;
 		}
-	}
-	 formEnviar2.addEventListener('click',(e)=>{
+	};
+	 formEnviar2.addEventListener('click', e =>{
 		if (validar2()){
 			formcon2.classList.add('form-contacto-enviado');
 			loading2.classList.add('show');
@@ -145,7 +146,7 @@ async	function enviar2 (event){
 		else{
 			e.preventDefault();
 		}
-	 })
+	 });
 
 // efecto menú con scroll ----------------->
 
@@ -203,7 +204,7 @@ window.addEventListener('scroll', function(){
  const menu = document.getElementById('menu');
  const secciones = document.querySelectorAll('.seccion');
 //observer
-const observer = new IntersectionObserver((entradas)=>{
+const observer = new IntersectionObserver((entradas) => {
 
 		entradas.forEach(entrada => {
 			const id = entrada.target.getAttribute('id');

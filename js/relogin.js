@@ -3,4 +3,4 @@ window.onload = function(){
 	let contcarga = document.getElementById('contcarga');
 	load.classList.add('cargahide');
 	contcarga.classList.add('imghide');
-}
+};

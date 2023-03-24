@@ -1,24 +1,28 @@
 // hovers cards------------------
-var item = document.querySelectorAll('.item');
-item.forEach(function(card){
-    card.addEventListener('mouseenter',()=>{
-        card.firstElementChild.classList.add('rotar');
-    })
-    card.addEventListener('mouseleave',()=>{
-        setTimeout(()=>{card.firstElementChild.classList.remove('rotar');},1200);
-    })
-})
 let cardInner = document.querySelectorAll('.card__inner');
-let contenedor = document.querySelector('.contItemsApp');
-let tarjetas = ()=>{
-    cardInner.forEach(function(card){
+cardInner.forEach(card => {
+    card.addEventListener('mouseenter',()=>{
         card.classList.add('rotar');
-        setTimeout(()=>{card.classList.remove('rotar');},1500);
-    })
-}
+    });
+    card.addEventListener('mouseleave',()=>{
+        setTimeout(()=>{card.classList.remove('rotar');},1200);
+    });
+});
+
+let contenedor = document.querySelector('.contItemsApp');
+let tarjetas = (entries)=>{
+    for (const entry of entries){
+        if(entry.isIntersecting){
+            cardInner.forEach(card => {
+                card.classList.add('rotar');
+                setTimeout(()=>{card.classList.remove('rotar');},1500);
+            });
+        }
+    }
+};
 const observador = new IntersectionObserver(tarjetas,{
     root:null,
-    rootMargin:'100px',
-    threshold:0.3
-})
+    rootMargin:'0px 0px 0px 0px',
+    threshold:0.9
+});
 observador.observe(contenedor);

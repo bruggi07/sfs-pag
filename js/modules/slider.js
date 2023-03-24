@@ -41,152 +41,153 @@ let cont8 = document.getElementById('cont8');
 function transla (num){
 	let arr = [cont1,cont2,cont3,cont4,cont5,cont6,cont7,cont8];
 	let i = 1;
-	arr.forEach(function(cont){
+	arr.forEach(cont => {
 		if(i<9){
 			cont.style.transform='translateX('+(i-num)+'00%)';
 		}
 		i++
 	});
 	let cla =[btncheck1,btncheck2,btncheck3,btncheck4,btncheck5,btncheck6,btncheck7,btncheck8];
-	cla.forEach(function(clase){
+	cla.forEach(clase => {
 		clase.classList.remove('seleccionado');
 	})
 	cla[num-1].classList.add('seleccionado');
 }
-let cambio = 1
+var indice = 1;
+
 btnMas.addEventListener('click', function(){
 	let rad =[radio1,radio2,radio3,radio4,radio5,radio6,radio7,radio8];
-	if(cambio<8){
-		transla(cambio+1);
-		rad[cambio-1].checked=false;
-		cambio=cambio+1;
+	if(indice<8){
+		transla(indice+1);
+		rad[indice-1].checked=false;
+		indice=indice+1;
 	}
 	else{
 		transla(1);
-		cambio=1;
+		indice=1;
 	}
 });
 btnMenos.addEventListener('click', function(){
 	let rad =[radio1,radio2,radio3,radio4,radio5,radio6,radio7,radio8];
-	if(cambio>1){
-		transla(cambio-1);
-		rad[cambio-1].checked=false;
-		cambio=cambio-1;
+	if(indice>1){
+		transla(indice-1);
+		rad[indice-1].checked=false;
+		indice=indice-1;
 	}
 	else{
 		transla(8);
-		cambio=8;
+		indice=8;
 	}
 });
 btncheck1.addEventListener('click',function(){
 	if(radio1.checked===false){
 		transla(1);
 		radio1.checked=true;
-		cambio=1;
+		indice=1;
 	}
 });
 btncheck2.addEventListener('click',function(){
 	if(radio2.checked===false){
 		transla(2);
 		radio2.checked=true;
-		cambio=2;
+		indice=2;
 	}
 });
 btncheck3.addEventListener('click',function(){
 	if(radio3.checked===false){
 		transla(3);
 		radio3.checked=true;
-		cambio=3;
+		indice=3;
 	}
 });
 btncheck4.addEventListener('click',function(){
 	if(radio4.checked===false){
 		transla(4);
 		radio4.checked=true;
-		cambio=4;
+		indice=4;
 	}
 });
 btncheck5.addEventListener('click',function(){
 	if(radio5.checked===false){
 		transla(5);
 		radio5.checked=true;
-		cambio=5;
+		indice=5;
 	}
 });
 btncheck6.addEventListener('click',function(){
 	if(radio6.checked===false){
 		transla(6);
 		radio6.checked=true;
-		cambio=6;
+		indice=6;
 	}
 });
 btncheck7.addEventListener('click',function(){
 	if(radio7.checked===false){
 		transla(7);
 		radio7.checked=true;
-		cambio=7;
+		indice=7;
 	}
 });
 btncheck8.addEventListener('click',function(){
 	if(radio8.checked===false){
 		transla(8);
 		radio8.checked=true;
-		cambio=8;
+		indice=8;
 	}
 });
 btncheck11.addEventListener('click',function(){
 	if(radio1.checked===false){
 		transla(1);
 		radio1.checked=true;
-		cambio=1;
+		indice=1;
 	}
 });
 btncheck22.addEventListener('click',function(){
 	if(radio2.checked===false){
 		transla(2);
 		radio2.checked=true;
-		cambio=2;
+		indice=2;
 	}
 });
 btncheck33.addEventListener('click',function(){
 	if(radio3.checked===false){
 		transla(3);
 		radio3.checked=true;
-		cambio=3;
+		indice=3;
 	}
 });
 btncheck44.addEventListener('click',function(){
 	if(radio4.checked===false){
 		transla(4);
 		radio4.checked=true;
-		cambio=4;
+		indice=4;
 	}
 });
 btncheck55.addEventListener('click',function(){
 	if(radio5.checked===false){
 		transla(5);
 		radio5.checked=true;
-		cambio=5;
+		indice=5;
 	}
 });
 btncheck66.addEventListener('click',function(){
 	if(radio6.checked===false){
 		transla(6);
 		radio6.checked=true;
-		cambio=6;
+		indice=6;
 	}
 });
 btncheck77.addEventListener('click',function(){
 	if(radio7.checked===false){
 		transla(7);
 		radio7.checked=true;
-		cambio=7;
+		indice=7;
 	}
 });
 btncheck88.addEventListener('click',function(){
 	if(radio8.checked===false){
 		transla(8);
 		radio8.checked=true;
-		cambio=8;
+		indice=8;
 	}
 });

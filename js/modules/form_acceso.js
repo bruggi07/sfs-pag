@@ -5,14 +5,14 @@ let close_acceso = document.getElementById('close_acceso');
 let opacoacceso = document.getElementById('opaco');
 
 open_acceso.addEventListener('click',()=>{
-	form_acceso.classList.remove('oculto-acc')
+	form_acceso.classList.remove('oculto-acc');
 	opacoacceso.classList.add('opaco');
-})
+});
 close_acceso.addEventListener('click',()=>{
-	form_acceso.classList.add('oculto-acc')
+	form_acceso.classList.add('oculto-acc');
 	opacoacceso.classList.remove('opaco');
-})
+});
 opacoacceso.addEventListener('click',()=>{
-	form_acceso.classList.add('oculto-acc')
+	form_acceso.classList.add('oculto-acc');
 	opacoacceso.classList.remove('opaco');
-})
+});

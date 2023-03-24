@@ -24,7 +24,7 @@ opaco.addEventListener('click',()=>{
     form.classList.add('oculto');
 	opaco.classList.remove('opaco')
 })
-async	function enviar (event){
+async function enviar (event){
     event.preventDefault();
     let fd = new FormData(this)
     let response = await fetch('https://formspree.io/f/mbjeaonn',{
@@ -52,7 +52,7 @@ else{
    form2Cerrar.addEventListener('click',()=>{
        formcon.classList.remove('hide');
        noListo.classList.remove('show');
-})
+});
 function valNombre(){
 var elemento = document.getElementById('nombre');
 if (!elemento.checkValidity()){
@@ -64,7 +64,7 @@ else{
     limpiarError(elemento);
     return true;
 }
-}
+};
 function valEmail(){
 var elemento = document.getElementById('email');
 if (!elemento.checkValidity()){
@@ -76,7 +76,7 @@ else{
     limpiarError(elemento);
     return true;
 }
-}
+};
 function valTelefono(){
 var elemento = document.getElementById('telefono');
 if (!elemento.checkValidity()){
@@ -88,7 +88,7 @@ else{
     limpiarError(elemento);
     return true;
 }
-}
+};
 function valCiudad(){
 var elemento = document.getElementById('ciudad');
 if (!elemento.checkValidity()){
@@ -100,7 +100,7 @@ else{
     limpiarError(elemento);
     return true;
 }
-}
+};
 function valInstitucion(){
 var elemento = document.getElementById('institucion');
 if (!elemento.checkValidity()){
@@ -112,7 +112,7 @@ else{
     limpiarError(elemento);
     return true;
 }
-}
+};
 
 function error (elemento){
 document.getElementById(`${elemento.id}`).classList.add('errorShow2');
@@ -124,11 +124,13 @@ else{
     document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba un ${elemento.id} válido para continuar`;
 }
 elemento.focus();
-}
+};
+
 function limpiarError (elemento){
 document.getElementById(`${elemento.id}`).classList.remove('errorShow2');
 document.getElementById(`${elemento.id}Error`).classList.remove('errorShow1');
-}
+};
+
 function validar (e){
 if(valNombre() && valEmail() && valTelefono() && valCiudad() && valInstitucion() && true){
     return true;
@@ -136,14 +138,15 @@ if(valNombre() && valEmail() && valTelefono() && valCiudad() && valInstitucion()
 else{
     return false;
 }
-}
+};
+
    formEnviar.addEventListener('click',(e)=>{
 if (validar()){
-       formcon.classList.add('hide');
-      loading.classList.add('show');
-      $formdemo.addEventListener('submit',enviar);
+    formcon.classList.add('hide');
+    loading.classList.add('show');
+    $formdemo.addEventListener('submit',enviar);
 }
 else{
     e.preventDefault();
 }
-})
+});
