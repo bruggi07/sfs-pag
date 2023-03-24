@@ -1,11 +1,12 @@
 // hovers cards------------------
 let cardInner = document.querySelectorAll('.card__inner');
 cardInner.forEach(card => {
-    card.addEventListener('mouseenter',()=>{
+    
+    card.addEventListener('mouseover',()=>{
         card.classList.add('rotar');
-    });
-    card.addEventListener('mouseleave',()=>{
-        setTimeout(()=>{card.classList.remove('rotar');},1200);
+        card.addEventListener('mouseleave',()=>{
+            setTimeout(()=>{card.classList.remove('rotar')},1500);
+        });
     });
 });
 
@@ -15,10 +16,10 @@ let tarjetas = (entries)=>{
         if(entry.isIntersecting){
             cardInner.forEach(card => {
                 card.classList.add('rotar');
-                setTimeout(()=>{card.classList.remove('rotar');},1500);
+                    setTimeout(()=>{card.classList.remove('rotar');},1500);
             });
-        }
-    }
+        };
+    };
 };
 const observador = new IntersectionObserver(tarjetas,{
     root:null,
