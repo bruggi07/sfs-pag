@@ -46,13 +46,17 @@ async	function enviar2 (e){
 	
 	});
 	if (respuesta.ok){
+		let ema2=document.getElementById('email2');
+		let emacor2=document.getElementById('email2correct');
+
 		loading2.classList.remove('show');
 		listo2.classList.add('show');
+		emacor2.innerText=`En breve nos vamos a comunicar con vos al correo: ${ema2.value}`
 		setTimeout(()=>{
 			formcon2.classList.remove('form-contacto-enviado');
 			loading2.classList.remove('show');
 			listo2.classList.remove('show');
-		},10000);
+		},15000);
 		this.reset();
 	}
 	else{

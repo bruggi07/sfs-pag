@@ -35,13 +35,16 @@ async function enviar (event){
     }
 });
 if (response.ok){
-      loading.classList.remove('show');
-      listo.classList.add('show');
-      setTimeout(()=>{   
+    let ema=document.getElementById('email');
+    let emaco=document.getElementById('emailcorrect');
+
+        loading.classList.remove('show');
+        listo.classList.add('show');
+        emaco.innerText=`En breve nos vamos a comunicar con vos al correo: ${ema.value}`
+        setTimeout(()=>{   
         formcon.classList.remove('hide');
         listo.classList.remove('show');
-    },10000);
-       
+    },15000);
     this.reset();
 }
 else{
