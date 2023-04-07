@@ -1,22 +1,18 @@
 'use strict';
-window.onload = function(){
-	let load = document.getElementById('loading');
-	let contcarga = document.getElementById('contcarga');
-	load.classList.add('cargahide');
-	contcarga.classList.add('imghide');
-};
-// import { open_dos,open_tres,form,opaco } from "./modules/form_demo";
-let open_dos = document.getElementById('open2');
-let open_tres = document.getElementById('open3');
-let form = document.getElementById('container_form');
-let opaco = document.getElementById('opacodemo');
+import disableScroll from "./modules/model.js";
+import {open_dos,open_tres,opaco,form} from './modules/model.js';
+
 open_dos.addEventListener('click',()=>{
+	scroll(0, 0);
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
+	window.addEventListener('scroll', disableScroll);
 });
 open_tres.addEventListener('click',()=>{
+	scroll(0, 0);
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
+	window.addEventListener('scroll', disableScroll);
 });
 // menu responsive
 let btnHambur = document.getElementById('btn_hambur');
@@ -164,45 +160,46 @@ const imgmini = document.getElementById('minilogo');
 const imggrande = document.getElementById('logogrande');
 const transitionop = document.querySelector('.header-transition');
 let prevY = window.scrollY;
-window.addEventListener('scroll', function(){
+var ventana = screen.width;
+if (ventana > 500){
+	window.addEventListener('scroll', function(){
 
-
-	if(prevY < this.scrollY){
-
-		nav.classList.add('navscroll');
-		fontsizebtnacceso.classList.add('scrollbtnacceso');
-		fonsizebtnpresent.classList.add('scrollbtnacceso');
-		// imglogo.classList.add('logoscroll');
-		header.classList.add('menuscroll');
-		transitionop.classList.add('menuscroll');
-		navFontSize.classList.add('nav-scroll');
-		imggrande.style.opacity='0';
-		imggrande.style.left='-70px';
-		imggrande.style.scale='0.6';
-		imgmini.style.scale='0.6';
-		imgmini.style.top='-5px';
-		transitionop.style.opacity="1";
-
-	}else if(prevY<200){
-
-		nav.classList.remove('navscroll');
-		fontsizebtnacceso.classList.remove('scrollbtnacceso');
-		fonsizebtnpresent.classList.remove('scrollbtnacceso');
-		header.classList.remove('menuscroll');
-		transitionop.classList.remove('menuscroll');
-		imglogo.classList.remove('logoscroll');
-		navFontSize.classList.remove('nav-scroll');
-		imggrande.style.opacity='1';
-		imggrande.style.left='0';
-		imgmini.style.scale='1';
-		imggrande.style.scale='1';
-		imgmini.style.top='0';
-		transitionop.style.opacity="0";
-		
-	};
-
-	prevY = window.scrollY
-});
+		if(prevY < this.scrollY){
+			nav.classList.add('navscroll');
+			fontsizebtnacceso.classList.add('scrollbtnacceso');
+			fonsizebtnpresent.classList.add('scrollbtnacceso');
+			// imglogo.classList.add('logoscroll');
+			header.classList.add('menuscroll');
+			transitionop.classList.add('menuscroll');
+			navFontSize.classList.add('nav-scroll');
+			imggrande.style.opacity='0';
+			imggrande.style.left='-70px';
+			imggrande.style.scale='0.6';
+			imgmini.style.scale='0.6';
+			imgmini.style.top='-5px';
+			transitionop.style.opacity="1";
+	
+		}else if(prevY<200){
+	
+			nav.classList.remove('navscroll');
+			fontsizebtnacceso.classList.remove('scrollbtnacceso');
+			fonsizebtnpresent.classList.remove('scrollbtnacceso');
+			header.classList.remove('menuscroll');
+			transitionop.classList.remove('menuscroll');
+			imglogo.classList.remove('logoscroll');
+			navFontSize.classList.remove('nav-scroll');
+			imggrande.style.opacity='1';
+			imggrande.style.left='0';
+			imgmini.style.scale='1';
+			imggrande.style.scale='1';
+			imgmini.style.top='0';
+			transitionop.style.opacity="0";
+			
+		};
+	
+		prevY = window.scrollY
+	});
+}
 
 // selectores sections ------------------------------>
  const menu = document.getElementById('menu');

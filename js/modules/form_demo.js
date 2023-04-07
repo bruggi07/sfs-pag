@@ -1,28 +1,22 @@
 // formu demo------>
-let open = document.getElementById('open');
-let form = document.getElementById('container_form');
-let close = document.getElementById('close');
-let opaco = document.getElementById('opacodemo');
-let $formdemo = document.getElementById('form-demo');
-let loading = document.getElementById('load');
-let listo = document.getElementById('env');
-let formcon = document.getElementById('formc');
-let formEnviar = document.getElementById('btn__enviar');
-let formCerrar = document.getElementById('correctoCerrar');
-let noListo = document.getElementById('noenv');
-let form2Cerrar = document.getElementById('incorrectoCerrar');
-    // export {open,open_dos,open_tres,form,close,opaco,$formdemo,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar}
-  open.addEventListener('click',()=>{
+import disableScroll from "./model.js";
+import {openf,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form} from './model.js';
+
+  openf.addEventListener('click',()=>{
+      scroll(0, 0);
 	  form.classList.remove('oculto');
 	  opaco.classList.add('opaco');
+      window.addEventListener('scroll', disableScroll);
 })
-  close.addEventListener('click',()=>{
+  closef.addEventListener('click',()=>{
 	  form.classList.add('oculto');
 	  opaco.classList.remove('opaco')
+      window.removeEventListener('scroll', disableScroll);  
 })
 opaco.addEventListener('click',()=>{
     form.classList.add('oculto');
 	opaco.classList.remove('opaco')
+    window.removeEventListener('scroll', disableScroll); 
 })
 async function enviar (event){
     event.preventDefault();
