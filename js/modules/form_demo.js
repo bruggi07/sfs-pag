@@ -1,22 +1,17 @@
 // formu demo------>
-import disableScroll from "./model.js";
 import {openf,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form} from './model.js';
 
   openf.addEventListener('click',()=>{
-      scroll(0, 0);
 	  form.classList.remove('oculto');
 	  opaco.classList.add('opaco');
-      window.addEventListener('scroll', disableScroll);
 })
   closef.addEventListener('click',()=>{
 	  form.classList.add('oculto');
 	  opaco.classList.remove('opaco')
-      window.removeEventListener('scroll', disableScroll);  
 })
 opaco.addEventListener('click',()=>{
     form.classList.add('oculto');
 	opaco.classList.remove('opaco')
-    window.removeEventListener('scroll', disableScroll); 
 })
 async function enviar (event){
     event.preventDefault();

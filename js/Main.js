@@ -1,18 +1,13 @@
 'use strict';
-import disableScroll from "./modules/model.js";
 import {open_dos,open_tres,opaco,form} from './modules/model.js';
 
 open_dos.addEventListener('click',()=>{
-	scroll(0, 0);
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
-	window.addEventListener('scroll', disableScroll);
 });
 open_tres.addEventListener('click',()=>{
-	scroll(0, 0);
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
-	window.addEventListener('scroll', disableScroll);
 });
 // menu responsive
 let btnHambur = document.getElementById('btn_hambur');
