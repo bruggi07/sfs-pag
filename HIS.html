@@ -61,29 +61,35 @@
 <!-- acceso a cliente formulario----------------------------------------->
 
 <div class="opacooff" id="opaco"></div>
-	<div class="container-acceso-form oculto-acc" id="container_form_acceso">
-		<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
-			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
-			<form action="" method="POST" id="form_acceso">
-					<div class="accesoform">
-					
-					<h2>ACCESO A CLIENTES</h2>
+<div class="container-acceso-form oculto-acc" id="container_form_acceso">
+    <div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
+        <div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
+        <form action="" method="POST" id="form_acceso">
+                <div class="accesoform">
+                
+                <h2>ACCESO A CLIENTES</h2>
 
-					<div class="grupo">
-						<input placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
-						<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
-					</div>
+                <div class="grupo">
+                    <input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
+                    <label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
+                    <div class="error" id="usuarioError">
+                        <span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
+                    </div>
+                </div>
 
-					<div class="grupo">
-						<input placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
-						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
-					</div>				
+                <div class="grupo">
+                    <input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
+                    <label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
+                    <div class="error" id="contraseniaError">
+                        <span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
+                    </div>
+                </div>				
 
-					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Deshabilitado</span></button>
-				</div>
-			</form>
-			<a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
-		</div>
+                <button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
+            </div>
+        </form>
+        <a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
+</div>
  
 
 <!-- formulario demo ---------------------------------------------------->
@@ -540,16 +546,18 @@
                     <span class="funcionalidades">Funcionalidades →</span>
                 </div>
                </a>
-                <div class="apps">
-                    <img src="img/HCEimg.png">
-                    <p>
-                        Historia Clínica Electrónica
-                    </p>
-                    <div class="circle-icon">
-                        <span>HCE</span>
+                <a href="ECE.html">
+                    <div class="apps">
+                        <img src="img/HCEimg.png">
+                        <p>
+                            Historia Clínica Electrónica
+                        </p>
+                        <div class="circle-icon">
+                            <span>ECE</span>
+                        </div>
+                        <span class="funcionalidades">Funcionalidades →</span>
                     </div>
-                    <span class="funcionalidades">Funcionalidades →</span>
-                </div>
+                </a>
                 <a href="App.html">
                     <div class="apps">
                         <img src="img/image 22.png">
@@ -567,7 +575,11 @@
     </section>
 </article>
 <footer>
-	<div class="footer"></div>
+	<div class="footer">
+		<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank"><img src="/img/dataweb.jpg" alt="Data fiscal"></a>
+		<img src="/img/Vectores-relogin/logo SFS 2.png" alt="Santa Fe Sistemas">
+		<a href="https://www.clusterticsantafe.org/" target="_blank"><img src="/img/logo_cluster_tic_santafe.png" alt="Cluster Tic Santa Fe"></a>
+	</div>
 </footer>
 </div>
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

@@ -51,14 +51,20 @@
             <form class="formReLogin" action="">
                 <h2>ACCESO A CLIENTES</h2>
                 <div class="grupin">
-                    <input placeholder=" " type="text" name="Usuario" id="usuario">
-                    <label for=""><img src="img/Vectores-relogin/user.png" alt="">Usuario</label>
+                    <input placeholder=" " type="text" required maxlength="35" name="usuario" id="usuario">
+                    <label for=""><img src="img/Vectores-relogin/user.png">Usuario</label>
+                    <div class="error" id="usuarioError">
+                        <span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
+                    </div>
                 </div>
                 <div class="grupin">
-                    <input placeholder=" " type="password" name="Password" id="password">
-                    <label for=""><img src="img/Vectores-relogin/candado.png" alt="">Contraseña</label>
+                    <input placeholder=" " type="password" required maxlength="35" name="Password" id="password">
+                    <label for=""><img src="img/Vectores-relogin/candado.png">Contraseña</label>
+                    <div class="error" id="passwordError">
+                        <span>!</span><p id="passwordErrorP">Completa este campo para continuar.</p>
+                    </div>
                 </div>
-                <button class="btn-relog"><span>Ingresar</span></button>
+                <button id="btn-relogin" class="btn-relog"><span>Ingresar</span></button>
                 <a href="#">
                     <div class="olvpass">
                         <p> <span>!</span> ¿Olvidó su contraseña?</p>

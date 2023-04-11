@@ -59,7 +59,7 @@
 		
 	</header>
 	<div class="cuerpo"  id="main">
-	<div class="fondo-footer"></div>
+	<!-- <div class="fondo-footer"></div> -->
 
 <!-- acceso a cliente formulario----------------------------------------->
 
@@ -73,16 +73,22 @@
 					<h2>ACCESO A CLIENTES</h2>
 
 					<div class="grupo">
-						<input placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
+						<input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
 						<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
+						<div class="error" id="usuarioError">
+							<span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
+						</div>
 					</div>
 
 					<div class="grupo">
-						<input placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
+						<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
 						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
+						<div class="error" id="contraseniaError">
+							<span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
+						</div>
 					</div>				
 
-					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Deshabilitado</span></button>
+					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
 				</div>
 			</form>
 			<a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
@@ -240,10 +246,10 @@
 				<div class="title-nosotros">
 					<img src="/img/Vectores/VectorProductos-icon.svg" alt="icon"><h2>NUESTROS PRODUCTOS</h2>
 				</div>
-				<p>
-					Softwares de gestión y administrativos
-				</p>
 				<div class="productos-principal">
+					<p>
+						Sanatorios y Hospitales
+					</p>
 					<div class="tab">
 						<div class="prto p1">
 							<div class="prtoimg">
@@ -253,7 +259,7 @@
 								<h3>
 								 Sistema de Información Hospitalaria / Healthcare Information System
 								</h3>
-								<p>Aplicacion web destinada a digitalizar o informatizar cualquier tipo de institución dedicada a la salud</p>
+								<p>Conjunto de aplicaciones y módulos diseñados para la gestión y administración de recursos hospitalarios.</p>
 							</div>
 							<a href="HIS.html"><div class="circle-icon"><span>HIS</span></div></a>
 							<button id="btn-check" class="btn-mas">
@@ -265,16 +271,19 @@
 						<div class="prto-info">
 								<h3>Sistema que incluye los siguientes módulos</h3>
 							<li><img src="/img/check.png">Expediente Clínico Electrónico</li>
-							<li><img src="/img/check.png">Gestión de Pacientes Ambulatorios</li>
-							<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados</li>
-							<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados</li>
-							<li><img src="/img/check.png">Sistema de Gestion de Turnos y Citas</li>
-							<li><img src="/img/check.png">Gestión de Autorizaciones y Prestaciones</li>
-							<li><img src="/img/check.png">Sistema de Información Radiológica (RIS)</li>
-							<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
+							<li><img src="/img/check.png">Planificación de Recursos Empresariales (ERP)</li>
+							<li><img src="/img/check.png">Gestión de Pacientes Ambulatorios y Hospitalizados</li>
+							<li><img src="/img/check.png">Sistema de gestión de turnos y citas</li>
+							<li><img src="/img/check.png">Gestión de autorizaciones y prestaciones</li>
+							<li><img src="/img/check.png">Sistema de Informacion Radiológica (RIS)</li>
+							<li><img src="/img/check.png">Sistema de Informacion para laboratiorios (LIS)</li>
+							<li><img src="/img/check.png">Gestión de Farmacia</li>
 							<a href="HIS.html"><span>Conocé sus funcionalidades →</span></a>
 						</div>
 					</div>
+					<p>
+						Aseguradoras y Gerenciadoras
+					</p>
 					<div class="tab">
 						<div class="prto p2">
 							<div class="prtoimg">
@@ -284,7 +293,7 @@
 							<h3>
 								Sistema de Administración de Prestaciones medico-asistenciales
 							</h3>
-							<p>Aplicación web para tareas admistrativas de Financiadores del área de Salud.</p>
+							<p>Aplicaciones y módulos web para administración de aseguradoras y financiadoras de salud.</p>
 							</div>
 							<a href="SAPma.html"><div class="circle-icon"><span>SAPma</span></div></a>
 							<button id="btn-check2" class="btn-mas">
@@ -295,7 +304,7 @@
 						<input type="radio" id="Acc2" name="ver-mas">
 						<div class="prto-info2">
 								<h3>Sistema que incluye los siguientes módulos</h3>
-							<li><img src="/img/check.png"> Gestión de Prestadores</li>
+							<li><img src="/img/check.png"> Gestión de prestadores</li>
 							<li><img src="/img/check.png"> Administración de Prestaciones </li>
 							<li><img src="/img/check.png"> Gestión Administrativa de Afiliados</li>
 							<li><img src="/img/check.png"> Gestión de nomencladores, aranceles y planes de cobertura</li>
@@ -307,7 +316,7 @@
 						</div>
 					</div>
 					<p>
-						Turnero
+						Clínicas, Consultorios y particulares
 					</p>
 					<div class="tab">
 						<div class="prto p3">
@@ -319,10 +328,10 @@
 								Historia Clínica Electrónica /Expediente Clínico Electrónico
 							</h3>
 							<p>
-								Aplicación web/mobile orientada a los miembros del equipo de salud que facilita la carga y consulta de información clínica.
+								Registro integrado de datos clínicos del paciente, prácticas y estudios complementarios realizados.
 							</p>
 							</div>
-							<div class="circle-icon"><span>HCE</span></div>
+							<a href="ECE.html"><div class="circle-icon"><span>ECE</span></div></a>
 							<button id="btn-check3" class="btn-mas">
 								<span id="text-btn3">Ver más</span>
 								<i id="flechi3" class="fa fa-angle-down"></i>
@@ -334,41 +343,45 @@
 								<div class="continfo">
 									<div class="basci">
 										<div class="btnbasic">
-											<h3>Básico</h3>
+											<h3>Lite</h3>
 										</div>
 										<li><img src="/img/check.png">Administración de Datos Clínicos</li>
 										<li><img src="/img/check.png">Notas de Evolución</li>
 										<li><img src="/img/check.png">Carga de Estudios y Prácticas</li>
-										<li><img src="/img/check.png">Prescripción de Medicamentos</li>
-										<li><img src="/img/check.png">Alertas por Medicamentos</li>
-										<li><img src="/img/check.png">Registro de Alergias</li>
 										<li><img src="/img/check.png">Registro de Antecedentes Personales y Familiares</li>
-										<li><img src="/img/check.png">Agenda de Turnos y Citas</li>
+										<li><img src="/img/check.png">Prescripción de Recetas Médicas</li>
+										<li><img src="/img/check.png">Alertas Automáticas por Medicamentos, 
+											Alergias y Resultados de Laboratorio</li>
 									</div>
 									<div class="standart">
 										<div class="btnstandart">
-											<h3>Estándar</h3>
+											<h3>Full</h3>
 										</div>
 										<li><img src="/img/check.png">Administración de Datos Clínicos</li>
-										<li><img src="/img/check.png">Notas de Evolución</li>
+										<li><img src="/img/check.png">Notas de Evolución e Indicaciones Médicas</li>
 										<li><img src="/img/check.png">Carga de Estudios y Prácticas</li>
-										<li><img src="/img/check.png">Prescripción de Medicamentos</li>
-										<li><img src="/img/check.png">Alertas por Medicamentos</li>
-										<li><img src="/img/check.png">Registro de Alergias</li>
 										<li><img src="/img/check.png">Registro de Antecedentes Personales y Familiares</li>
-										<li><img src="/img/check.png">Agenda de Turnos y Citas</li>
-										<li><img src="/img/check.png">Turnos online</li>
-
-										<p>
-											sistema de gestion de turnos y citas - ponerlo junto a hce y hce lite como software para clinicas, consultorios y prof particulares
-										</p>
+										<li><img src="/img/check.png">Prescripción de Recetas Médicas</li>
+										<li><img src="/img/check.png">Alertas Automáticas por Medicamentos, alergias y Resultados de Laboratorio</li>
+										<li><img src="/img/check.png">Módulo de Servicios de Hospitalización</li>
+										<div class="moduloserv">
+											<div class="g1">
+												<img src="/img/Vectores/pinline.png"><p>Gestión de Enfermería</p>
+											</div>
+											<div class="g2">
+												<img src="/img/Vectores/pinline.png"><p>Gestión de Protocolos Quirúrgicos y Anestesia</p>
+											</div>
+											<div class="g3">
+												<img src="/img/Vectores/pinline.png"><p>Registro de Epicrisis</p>
+											</div>
+										</div>
 
 									</div>
 								</div>
-								<span>Conocé sus funcionalidades →</span>
+								<a href="ECE.html"><span>Conocé sus funcionalidades →</span></a>
 						</div>
 					</div>
-					<div class="tab">
+					<!-- <div class="tab">
 						<div class="prto p4">
 							<div class="prtoimg">
 								<img src="img/Turneroimg.png" alt="pc sfs services">
@@ -400,10 +413,10 @@
 								<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
 								<span>Conocé sus funcionalidades →</span>
 						</div>
-					</div>
+					</div> -->
 				</div>
-				<p>
-					Software para el paciente
+				<p class="solPacienteTxt">
+					Soluciónes de software para el paciente
 				</p>
 				<div class="productos-paciente">
 					<a href="App.html">
@@ -436,6 +449,15 @@
 							<span>Funcionalidades →</span>
 						</div>
 					</a>
+				</div>
+				<div class="txt-btn">
+					<p class="contactos-text">
+						¿Querés tener una experiencia personalizada?
+					</p>
+				
+					<button class="btn-demo3" id="open3">
+					<span>SOLICITAR PRESENTACIÓN</span>
+					</button>
 				</div>
 			</div>
 		</section>
@@ -493,38 +515,36 @@
 							<button id="btn_enviar2" name="enviar" type="submit" ><span>Enviar</span></button>
 						</form>
 					</div>
-					<div class="contactos-img">
-						<img src="/img/image 26.png" alt="">
-					</div>
+						<div class="tabs-contactos">
+							<div class="box-cto">
+								<span><img src="img/Vectores/lugar-point.svg">¿Donde estamos?</span>
+								<p>
+									Santiago Derqui 3265.
+									<br> Santa Fe, Argentina
+								</p>
+							</div>
+							<div class="box-cto">
+								<span><img src="img/Vectores/telefono.svg">Teléfono</span>
+								<p>
+									+54 (0342) 4578665 / 4578666
+								</p>
+							</div>
+							<div class="box-cto">
+								<span><img class="correo-icon" src="img/Vectores/correo.svg">Correo electrónico</span>
+								<p class="correo-cto">
+									info@sfssa.com.ar
+								</p>
+							</div>
+						</div>
 				</div>
-				<div class="tabs-contactos">
-					<div class="box-cto">
-						<span><img src="img/Vectores/lugar-point.svg">¿Donde estamos?</span>
-						<p>
-							Santiago Derqui 3265.
-							<br> Santa Fe, Argentina
-						</p>
-					</div>
-					<div class="box-cto">
-						<span><img src="img/Vectores/telefono.svg">Teléfono</span>
-						<p>
-							+54 (0342) 4578665 / 4578666
-						</p>
-					</div>
-					<div class="box-cto">
-						<span><img class="correo-icon" src="img/Vectores/correo.svg">Correo electrónico</span>
-						<p class="correo-cto">
-							info@sfssa.com.ar
-						</p>
-					</div>
-				</div>
+				
 
 				<div class="txt-btn">
 					<p class="contactos-text">
 						¿Querés tener una experiencia personalizada?
 					</p>
 				
-					<button class="btn-demo3" id="open3">
+					<button class="btn-demo3" id="open4">
 					<span>SOLICITAR PRESENTACIÓN</span>
 					</button>
 				</div>
@@ -532,7 +552,11 @@
 		</section>
 </article>
 <footer>
-	<div class="footer"></div>
+	<div class="footer">
+		<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank"><img src="/img/dataweb.jpg" alt="Data fiscal"></a>
+		<img src="/img/Vectores-relogin/logo SFS 2.png" alt="Santa Fe Sistemas">
+		<a href="https://www.clusterticsantafe.org/" target="_blank"><img src="/img/logo_cluster_tic_santafe.png" alt="Cluster Tic Santa Fe"></a>
+	</div>
 </footer>
 </div>
 </div>

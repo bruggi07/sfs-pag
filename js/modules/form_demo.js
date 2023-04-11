@@ -110,7 +110,7 @@ function error (elemento){
 document.getElementById(`${elemento.id}`).classList.add('errorShow2');
 document.getElementById(`${elemento.id}Error`).classList.add('errorShow1');
 if(elemento.id=='ciudad' || elemento.id=='institucion'){
-    document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba una ${elemento.id} válido para continuar`;
+    document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba una ${elemento.id} válida para continuar`;
 }
 else{
     document.getElementById(`${elemento.id}ErrorP`).innerText=`Escriba un ${elemento.id} válido para continuar`;

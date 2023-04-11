@@ -1,11 +1,15 @@
 'use strict';
-import {open_dos,open_tres,opaco,form} from './modules/model.js';
+import {open_dos,open_tres,opaco,form,open_cuatro} from './modules/model.js';
 
 open_dos.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
 });
 open_tres.addEventListener('click',()=>{
+	form.classList.remove('oculto');
+	opaco.classList.add('opaco');
+});
+open_cuatro.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
 });

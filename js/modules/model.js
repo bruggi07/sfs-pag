@@ -1,6 +1,7 @@
 const openf = document.getElementById('open');
 const open_dos = document.getElementById('open2');
 const open_tres = document.getElementById('open3');
+const open_cuatro = document.getElementById('open4');
 const closef = document.getElementById('close');
 const $formdemo = document.getElementById('form-demo');
 const opaco = document.getElementById('opacodemo');
@@ -17,9 +18,10 @@ const open_acceso_mobil = document.getElementById('open_acceso-mobil');
 const form_acceso = document.getElementById('container_form_acceso');
 const close_acceso = document.getElementById('close_acceso');
 const opacoacceso = document.getElementById('opaco');
+const btn__enviar_acceso = document.getElementById('btn__acceso')
 export default function disableScroll(){  
     window.scrollTo(0, 0);
   }
 
-export {openf,open_dos,open_tres,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form,open_acceso,form_acceso,close_acceso,opacoacceso,open_acceso_mobil};
+export {openf,open_dos,open_tres,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form,open_acceso,form_acceso,close_acceso,opacoacceso,open_acceso_mobil,btn__enviar_acceso,open_cuatro};
 
