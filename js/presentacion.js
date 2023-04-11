@@ -1,18 +1,6 @@
 // formu demo------>
-import {openf,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form} from './model.js';
+import {openf,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form} from '../js/modules/model.js';
 
-  openf.addEventListener('click',()=>{
-	  form.classList.remove('oculto');
-	  opaco.classList.add('opaco');
-})
-  closef.addEventListener('click',()=>{
-	  form.classList.add('oculto');
-	  opaco.classList.remove('opaco')
-})
-opaco.addEventListener('click',()=>{
-    form.classList.add('oculto');
-	opaco.classList.remove('opaco')
-})
 async function enviar (event){
     event.preventDefault();
     let fd = new FormData(this)
@@ -41,10 +29,6 @@ else{
        noListo.classList.add('show');
 }
 };
-   form2Cerrar.addEventListener('click',()=>{
-       formcon.classList.remove('hide');
-       noListo.classList.remove('show');
-});
 function valNombre(){
 var elemento = document.getElementById('nombre');
 if (!elemento.checkValidity()){

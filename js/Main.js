@@ -28,7 +28,7 @@ let form2Cerrar2 = document.getElementById('incorrectoCerrar2');
 async	function enviar2 (e){
 		e.preventDefault();
 		let fd = new FormData(this)
-		let respuesta = await fetch('https://formspree.io/f/mbjeaonn',{
+		let respuesta = await fetch('https://formspree.io/f/mqkogqvn',{
 		method: 'POST',
 		body: fd,
 		headers: {
