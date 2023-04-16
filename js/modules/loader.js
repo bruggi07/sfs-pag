@@ -9,3 +9,4 @@ function disableScroll(){
 	      contcarga.classList.add('imghide');
         window.removeEventListener('scroll', disableScroll);
 };
+

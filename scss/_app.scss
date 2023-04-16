@@ -1,0 +1,160 @@
+.headapp{
+    
+    h1{
+        line-height: 150px;
+        text-align: center;
+    }
+}
+.App{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .imgprinapp{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .txtapp{
+        padding: 10%;
+        h2{
+            font-family: 'Roboto';
+            font-weight: 400;
+            line-height: 35px;
+        }
+    }
+}
+.modulos{
+    .contItemsApp{
+        .item{
+            background: transparent;
+            border: none;
+            box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.0);
+            border-radius: 0;
+            padding: 0;
+            width: 200px;
+            height: 200px;
+            perspective: 1500px;
+            .card__inner{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                transition: transform 1s;
+                transform-style: preserve-3d;
+            }
+            .rotar{
+                transform: rotateY(180deg);
+            }
+            .cara{
+                position: absolute;
+                background: #DDE7E6;
+                border: 2px solid rgba(91, 150, 187, 0.2);
+                box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                overflow: hidden;
+            }
+            .frente{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 5px 0;
+                align-items: center;
+                gap: 20px;
+                
+                h3{
+                    font-family: 'Montserrat';
+                    font-weight: 500;
+                    font-size: 1em;
+                    color: #36358F;
+                    text-align: center;
+                    line-height: 20px;
+                }
+                .appimg1{
+                    width: 50%;
+                }
+                
+            }
+            .atras{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                padding: 10px;
+                transform: rotateY(180deg);
+                h3{
+                    margin-top: 35px;
+                    font-family: 'Montserrat';
+                    font-weight: 400;
+                    font-size: 1.2em;
+                    color:#36358F;
+                    text-align: center;
+                    line-height: 20px;
+                }
+                p{
+                    text-align: left;
+                    margin: 0 10px;
+                    margin-top: -1px;
+                    font-family: 'Roboto';
+                    font-weight: 300;
+                    font-size: 0.9em;
+                    color: #000;
+                }
+            }
+        }
+        .item:hover{
+            background: transparent;
+            scale: 1;
+            p{
+                color:#000 ;
+            }
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}
+.mainVideo{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    height: 500px;
+    background-color: #c1c2c3;
+    border-radius: 10px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-family: 'Montserrat';
+        color: #00000079;
+    }
+    .cargador{
+        display: flex;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        margin-left: 15px;
+        .carga{
+            position: absolute;
+            border: 2px solid #0000008a;
+            border-bottom: 2px solid transparent;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            animation: load linear 1s infinite;
+        }
+        @keyframes load {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+.CorrectSAPma{
+    font-size: 1.1em !important;
+}
