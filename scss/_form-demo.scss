@@ -432,18 +432,6 @@
     z-index: 100;
     transition: z-index 0s,background 0.3s;
 }
-@media screen and (min-height:500px) {
-        .contenedor-form-demo{
-            top: 5px;
-            scale: 0.7;
-        } 
-}
-@media screen and (min-height:630px){
-        .contenedor-form-demo{
-            top: 0px;
-            scale: 0.80;
-        }  
-}
 @media screen and (min-width:1440px){
         .contenedor-form-demo{
             top: 0px;

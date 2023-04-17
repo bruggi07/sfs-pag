@@ -4,7 +4,7 @@
 	<meta lang="es">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v1.0.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v1.0.2">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -255,7 +255,7 @@
 						Sanatorios y Hospitales
 					</p>
 					<div class="tab">
-						<div class="prto p1">
+						<div class="prto p1" id="btn-check">
 							<div class="prtoimg">
 								<img src="img/HISimg.png" alt="pc sfs services">
 							</div>
@@ -265,8 +265,8 @@
 								</h3>
 								<p>Conjunto de aplicaciones y módulos diseñados para la gestión y administración de recursos hospitalarios.</p>
 							</div>
-							<a href="HIS.html"><div class="circle-icon"><span>HIS</span></div></a>
-							<button id="btn-check" class="btn-mas">
+							<a class="circle-icon" href="HIS.html"><div ><span>HIS</span></div></a>
+							<button class="btn-mas">
 								<span id="text-btn">Ver más</span>
 								<i id="flechi" class="fa fa-angle-down"></i>
 							</button>
@@ -289,7 +289,7 @@
 						Aseguradoras y Gerenciadoras
 					</p>
 					<div class="tab">
-						<div class="prto p2">
+						<div class="prto p2" id="btn-check2">
 							<div class="prtoimg">
 								<img src="img/SAPmaimg.png" alt="pc sfs services">
 							</div>
@@ -299,8 +299,8 @@
 							</h3>
 							<p>Aplicaciones y módulos web para administración de aseguradoras y financiadoras de salud.</p>
 							</div>
-							<a href="SAPma.html"><div class="circle-icon"><span>SAPma</span></div></a>
-							<button id="btn-check2" class="btn-mas">
+							<a class="circle-icon" href="SAPma.html"><div><span>SAPma</span></div></a>
+							<button class="btn-mas">
 								<span id="text-btn2">Ver más</span>
 								<i id="flechi2" class="fa fa-angle-down"></i>
 							</button>
@@ -323,7 +323,7 @@
 						Clínicas, Consultorios y Particulares
 					</p>
 					<div class="tab">
-						<div class="prto p3">
+						<div class="prto p3" id="btn-check3">
 							<div class="prtoimg">
 								<img src="img/HCEimg.png" alt="pc sfs services">
 							</div>
@@ -335,8 +335,8 @@
 								Registro integrado de datos clínicos del paciente, prácticas y estudios complementarios realizados.
 							</p>
 							</div>
-							<a href="ECE.html"><div class="circle-icon"><span>ECE</span></div></a>
-							<button id="btn-check3" class="btn-mas">
+							<a class="circle-icon" href="ECE.html"><div><span>ECE</span></div></a>
+							<button class="btn-mas">
 								<span id="text-btn3">Ver más</span>
 								<i id="flechi3" class="fa fa-angle-down"></i>
 							</button>
@@ -386,7 +386,7 @@
 						</div>
 					</div>
 					<!-- <div class="tab">
-						<div class="prto p4">
+						<div class="prto p4" id="btn-check4">
 							<div class="prtoimg">
 								<img src="img/Turneroimg.png" alt="pc sfs services">
 							</div>
@@ -398,8 +398,8 @@
 								Aplicación web/mobile orientada a los miembros del equipo de salud que facilita la carga y consulta de información clínica.
 							</p>
 							</div>
-							<div class="circle-icon"><span>HCE</span></div>
-							<button id="btn-check4" class="btn-mas">
+							<a class="circle-icon" href=""><div><span>ECE</span></div></a>
+							<button class="btn-mas">
 								<span id="text-btn4">Ver más</span>
 								<i id="flechi4" class="fa fa-angle-down"></i>
 							</button>
@@ -467,7 +467,7 @@
 		</section>
 		<section class="seccion" id="contacto">
 				<div class="contactos">
-				<span class="separador"></span>
+				<span class="separador sepContacto"></span>
 				<div class="title-nosotros text-contactanos">
 					<img src="/img/Vectores/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
 				</div>
@@ -557,9 +557,19 @@
 </article>
 <footer>
 	<div class="footer">
-		<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank"><img src="/img/dataweb.jpg" alt="Data fiscal"></a>
-		<a href="https://www.clusterticsantafe.org/" target="_blank"><img class="ClusterFooter" src="/img/logo_cluster_tic_santafe.png" alt="Cluster Tic Santa Fe"></a>
-		<img class="logoFooter" src="/img/logo SFS footer.png" alt="Santa Fe Sistemas">
+		<div class="imgContain dataFis">
+			<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank"><img src="/img/dataweb.jpg" alt="Data fiscal"></a>
+		</div>
+		<a href="https://www.clusterticsantafe.org/" target="_blank">
+			<div class="imgContain">
+				<img src="/img/logo_cluster_tic_santafe.png" alt="Cluster Tic Santa Fe">
+			</div>
+		</a>
+		<a href="#inicio">
+			<div class="imgContain">
+				<img src="/img/logo SFS footer.png" alt="Santa Fe Sistemas">
+			</div>
+		</a>
 		<div class="servFooter">
 			<h2>Servicios</h2>
 			<a href="HIS.html"><h3>HIS</h3></a>
@@ -575,9 +585,9 @@
 </footer>
 </div>
 </div>
-	<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js?v1.0.0"></script>
-	<script type="module" src="/js/Main.js?v1.0.0"></script>
-	<script type="module" src="/js/modules/form_demo.js?v1.0.0"></script>
-	<script type="module" src="/js/modules/form_acceso.js?v1.0.0"></script>
+	<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js?v1.0.2"></script>
+	<script type="module" src="/js/Main.js?v1.0.2"></script>
+	<script type="module" src="/js/modules/form_demo.js?v1.0.2"></script>
+	<script type="module" src="/js/modules/form_acceso.js?v1.0.2"></script>
 </body>
 </html>
