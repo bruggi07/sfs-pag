@@ -438,6 +438,11 @@
             scale: 1;
         }  
 }
+@media screen and (max-height:800px){
+  .contenedor-form-demo{
+    scale: 0.8;
+  }
+}
 .oculto{
         top: -300%;
         transition: .4s ease-in;
