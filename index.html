@@ -74,7 +74,7 @@
 				<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
 				<button id="incorrectoCerrarAcc"><span>Volver</span></button>
 			</div>
-			<form action="" method="POST" id="form_acceso">
+			<form action="" method="POST" id="form_acceso" onsubmit="return false;">
 				<div class="accesoform show" id="accesoform">
 					<h2>ACCESO A CLIENTES</h2>
 						<input id="group" type="hidden" required="true" value="default" />  
@@ -596,14 +596,15 @@
 	<script>
 
         function init() {
-
-            if (window.location.hostname != "localhost"){
-            	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
-                 sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            }
-            else {
-				sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            }
+			sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+            // if (window.location.hostname != "127.0.0.1:5500"){
+            // 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
+            //       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+            // }
+            // else {
+            //     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
+			// 	//  sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+            // }
             
         }
     </script>

@@ -104,6 +104,7 @@ sfs.gae.login.intentar = function (resp,intento){
 			}, delay1);
 			
 			window.location.assign(redirect); 
+			// console.log(redirect);
 			
 		}
 		else {
@@ -137,7 +138,7 @@ sfs.gae.login.tryProduct = function(url,retry){
 			
 		},4000 ); //2000 4 segundo para reintentar
 		
-		 window.location.assign(data); 
+		 window.location.assign(data);
 		 
 
 		});	
@@ -151,29 +152,29 @@ sfs.gae.login.initOK= function () {
 		if(validar()){
 		document.querySelector('#loadacc').classList.add('show');
 		document.querySelector('#accesoform').classList.remove('show');
-		// var openIdAccount = document.querySelector('#openIdAccount');
-		// var sopenIdAccount=null; 
-		// if(openIdAccount) sopenIdAccount=openIdAccount.value;
+		var openIdAccount = document.querySelector('#openIdAccount');
+		var sopenIdAccount=null; 
+		if(openIdAccount) sopenIdAccount=openIdAccount.value;
 		
-		// if(sopenIdAccount){
-		//     gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
-		//     	                          'user': 	  sopenIdAccount,
-		//     							  'password': document.querySelector('#contrasenia').value,
-		//     							  'openIdAccount': sopenIdAccount,
-		//     							  'intento': 0
-		//     	                       }).execute(
-		// 							    		function(resp){
+		if(sopenIdAccount){
+		    gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
+		    	                          'user': 	  sopenIdAccount,
+		    							  'password': document.querySelector('#contrasenia').value,
+		    							  'openIdAccount': sopenIdAccount,
+		    							  'intento': 0
+		    	                       }).execute(
+									    		function(resp){
 									    			
-		// 							    			sfs.gae.login.intentar(resp,1,$btn);
+									    			sfs.gae.login.intentar(resp,1,$btn);
 									    			 
-		// 							    		}
-		//     );
-		// }
-		// else{
+									    		}
+		    );
+		}
+		else{
 		    gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
                 'user': document.querySelector('#usuario').value,
 				'password': document.querySelector('#contrasenia').value,
-				// 'openIdAccount': null,
+				'openIdAccount': null,
 				'intento': 0
              }).execute(
 			    		function(resp){
@@ -181,7 +182,7 @@ sfs.gae.login.initOK= function () {
 			    		}
          	);
 			
-		// }
+		}
 		}
 		else{
 			e.preventDefault();
