@@ -3,6 +3,8 @@
 <head>
 	<meta lang="es">
 	<meta charset="utf-8">
+
+    <script async src="/js/base.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css?v1.0.5">
@@ -59,36 +61,41 @@
 
 <!-- acceso a cliente formulario----------------------------------------->
 
-<div class="opacooff" id="opaco"></div>
-<div class="container-acceso-form oculto-acc" id="container_form_acceso">
-    <div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
-        <div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
-        <form action="" method="POST" id="form_acceso">
-                <div class="accesoform">
-                
-                <h2>ACCESO A CLIENTES</h2>
+<div class="opacooff" id="opaco"></div> 
+	<div class="container-acceso-form oculto-acc" id="container_form_acceso">
+		<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
+			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
+			<div class="laoding" id="loadacc"><div class="spin"></div></div>
+			<div class="incorrecto" id="result">
+				<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
+				<button id="incorrectoCerrarAcc"><span>Volver</span></button>
+			</div>
+			<form action="" method="POST" id="form_acceso" onsubmit="return false;">
+				<div class="accesoform show" id="accesoform">
+					<h2>ACCESO A CLIENTES</h2>
+						<input id="group" type="hidden" required="true" value="default" />  
+                        <!-- <input id="group" type="hidden" required="true" value="local" /> -->
+					<div class="grupo">
+						<input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
+						<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
+						<div class="error" id="usuarioError">
+							<span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
+						</div>
+					</div>
 
-                <div class="grupo">
-                    <input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
-                    <label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
-                    <div class="error" id="usuarioError">
-                        <span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
-                    </div>
-                </div>
+					<div class="grupo">
+						<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
+						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
+						<div class="error" id="contraseniaError">
+							<span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
+						</div>
+					</div>				
+					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
+				</div>
+			</form>
+			<a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
+	</div>
 
-                <div class="grupo">
-                    <input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
-                    <label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
-                    <div class="error" id="contraseniaError">
-                        <span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
-                    </div>
-                </div>				
-
-                <button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
-            </div>
-        </form>
-        <a href="#" class="olvido-pass">¿Olvidó su contraseña?</a>
-</div>
  
 
 <!-- formulario demo ---------------------------------------------------->
@@ -628,19 +635,26 @@
 	</div>
 </footer>
 </div>
-<<<<<<< HEAD
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js?v1.0.5"></script>
 	<script type="module" src="/js/HIS.js"></script>
     <script type="module" src="/js/modules/form_demo.js?v1.0.5"></script>
     <script type="module" src="/js/modules/form_acceso.js?v1.0.5"></script>
     <script type="module" src="/js/modules/slider.js?v1.0.5"></script>
-=======
-    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js?v1.0.5"></script>
-	<script type="module" src="/js/HIS.js"></script>
-    <script type="module" src="/js/modules/form_demo.js?v1.0.5"></script>
-    <script type="module" src="/js/modules/form_acceso.js?v1.0.5"></script>
-    <script type="module" src="/js/modules/slider.js?v1.0.5"></script>
->>>>>>> 1a6a3d0e68513171c03a79586c0a5bb63e4d889f
+    <script>
 
+        function init() {
+			sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+            // if (window.location.hostname != "127.0.0.1:5500"){
+            // 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
+            //       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+            // }
+            // else {
+            //     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
+			// 	//  sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+            // }
+            
+        }
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
 </body>
 </html>

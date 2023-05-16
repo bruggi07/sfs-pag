@@ -3,6 +3,8 @@
 <head>
     <meta lang="es">
 	<meta charset="utf-8">
+
+    <script async src="/js/base.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -47,8 +49,16 @@
                 </a>
             </nav>
             <p>Hemos cerrado tu sesión por inactividad <br> ¿Querés volver a iniciar sesión?</p>
-            <form class="formReLogin" action="">
+
+            <div class="form_container_relog">
+                <div class="laoding" id="loadacc"><div class="spin"></div></div>
+			<div class="incorrecto" id="result">
+				<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
+				<button id="incorrectoCerrarAcc"><span>Volver</span></button>
+			</div>
+            <form class="formReLogin show" id="accesoform" action="" method="POST" onsubmit="return false;">
                 <h2>ACCESO A CLIENTES</h2>
+                <input id="group" type="hidden" required="true" value="default" />  
                 <div class="grupin">
                     <input placeholder=" " type="text" required maxlength="35" name="usuario" id="usuario">
                     <label for=""><img src="img/Vectores-relogin/user.png">Usuario</label>
@@ -57,23 +67,40 @@
                     </div>
                 </div>
                 <div class="grupin">
-                    <input placeholder=" " type="password" required maxlength="35" name="Password" id="password">
+                    <input placeholder=" " type="password" required maxlength="35" name="Password" id="contrasenia">
                     <label for=""><img src="img/Vectores-relogin/candado.png">Contraseña</label>
-                    <div class="error" id="passwordError">
-                        <span>!</span><p id="passwordErrorP">Completa este campo para continuar.</p>
+                    <div class="error" id="contraseniaError">
+                        <span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
                     </div>
                 </div>
-                <button id="btn-relogin" class="btn-relog"><span>Ingresar</span></button>
+                <button id="btn__acceso" class="btn-relog"><span>Ingresar</span></button>
                 <a href="#">
                     <div class="olvpass">
                         <p> <span>!</span> ¿Olvidó su contraseña?</p>
                      </div>
                 </a>
             </form>
+            </div>
 
             
         </section>
     </article>
 </body>
 <script type="module" src="./js/relogin.js?v1.0.5"></script>
+<script>
+
+    function init() {
+        sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+        // if (window.location.hostname != "127.0.0.1:5500"){
+        // 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
+        //       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+        // }
+        // else {
+        //     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
+        // 	//  sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+        // }
+        
+    }
+</script>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
 </html>
