@@ -32,17 +32,20 @@
 	<header>
 		<div class="header-transition"></div>
 		<div class="container_header" id="header">
-			<div class="logo-menu">
+		<div class="logo-menu">
+				<div class="menu-resp" id="btn_hambur">
+					<input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+					<label for="abrir-cerrar" class="toggle-button"></label>
+				</div>
 				<div class="logo-header">
 					<div class="imglogo">
 						<a id="minilogo" href="#inicio"><img src="img/	logo-mini.png" alt="Santa fe sistemas logo"></a>
 						<a id="logogrande" href="#inicio"><img src="img/	logosfs.png" alt="Santa fe sistemas logo"></a>
 					</div>
 				</div>
-		<div class="btn-acceso-mobil">
-			<button class="btn-acceso-m" id="open_acceso-mobil">Acceso a clientes</button>
-		</div>
-		<div class="menu-resp" id="btn_hambur"><img src="img/menuhambur.png" alt="menú hamburguesa png"></div>
+				<div class="btn-acceso-mobil">
+					<button class="btn-acceso-m" id="open_acceso-mobil">Acceso a clientes</button>
+				</div>
 		</div>
 		<div class="nav_header hamburoculto" id="nav_header">
 			<nav class="nav" id="menu">
@@ -86,7 +89,6 @@
 							<span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
 						</div>
 					</div>
-
 					<div class="grupo">
 						<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
 						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
@@ -265,7 +267,7 @@
 							</div>
 							<div class="prto-text">
 								<h3>
-								 Sistema de Información Hospitalaria / Healthcare Information System
+									Sistema de Información Hospitalaria / Healthcare Information System
 								</h3>
 								<p>Conjunto de aplicaciones y módulos diseñados para la gestión y administración de recursos hospitalarios.</p>
 							</div>

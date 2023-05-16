@@ -9,14 +9,19 @@ open_tres.addEventListener('click',()=>{
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
 });
-// menu responsive
-let btnHambur = document.getElementById('btn_hambur');
-let navHeader = document.getElementById('nav_header');
 
+// menu responsive
+
+let btnHambur = document.getElementById('abrir-cerrar');
+let navHeader = document.getElementById('nav_header');
+let containerHeader = document.getElementById('header');
 btnHambur.addEventListener('click',()=>{
 	navHeader.classList.toggle('hamburoculto');
+	containerHeader.classList.toggle('container-show')
 });
+
 // Envío formulario de contacto-------------->
+
 let $formContacto = document.getElementById('form-contacto');
 let loading2 = document.getElementById('load2');
 let listo2 = document.getElementById('env2');
@@ -132,7 +137,7 @@ async	function enviar2 (e){
 			return false;
 		}
 	};
-	 formEnviar2.addEventListener('click', e =>{
+	formEnviar2.addEventListener('click', e =>{
 		if (validar2()){
 			formcon2.classList.add('form-contacto-enviado');
 			loading2.classList.add('show');
@@ -141,7 +146,7 @@ async	function enviar2 (e){
 		else{
 			e.preventDefault();
 		}
-	 });
+	});
 
 // efecto menú con scroll ----------------->
 
@@ -197,8 +202,8 @@ if (ventana > 500){
 }
 
 // selectores sections ------------------------------>
- const menu = document.getElementById('menu');
- const secciones = document.querySelectorAll('.seccion');
+const menu = document.getElementById('menu');
+const secciones = document.querySelectorAll('.seccion');
 //observer
 const observer = new IntersectionObserver((entradas) => {
 
@@ -292,25 +297,25 @@ apretar3.addEventListener('click',function (){
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
-  
+
       // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
+    if (this.hash !== "") {
         // Prevent default anchor click behavior
         event.preventDefault();
-  
+
         // Store hash
         var hash = this.hash;
-  
+
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
-          scrollTop: $(hash).offset().top
+        scrollTop: $(hash).offset().top
         }, 650, function(){
-  
+
           // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
+        window.location.hash = hash;
         });
       } // End if
     });
-  });
+});
 	

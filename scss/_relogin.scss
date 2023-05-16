@@ -83,6 +83,9 @@ body{
             flex-direction: column;
             position: relative;
             height: 50px;
+            input:-webkit-autofill{
+              -webkit-text-fill-color: #000 !important;
+          }
             input{
                 position: relative;
                 border: none;

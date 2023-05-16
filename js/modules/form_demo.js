@@ -1,13 +1,13 @@
 // formu demo------>
 import {openf,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form} from './model.js';
 
-  openf.addEventListener('click',()=>{
-	  form.classList.remove('oculto');
-	  opaco.classList.add('opaco');
+openf.addEventListener('click',()=>{
+form.classList.remove('oculto');
+opaco.classList.add('opaco');
 })
-  closef.addEventListener('click',()=>{
-	  form.classList.add('oculto');
-	  opaco.classList.remove('opaco')
+closef.addEventListener('click',()=>{
+    form.classList.add('oculto');
+	opaco.classList.remove('opaco')
 })
 opaco.addEventListener('click',()=>{
     form.classList.add('oculto');
@@ -33,17 +33,17 @@ if (response.ok){
         setTimeout(()=>{   
         formcon.classList.remove('hide');
         listo.classList.remove('show');
-    },15000);
+        },15000);
     this.reset();
 }
 else{
-      loading.classList.remove('show');
-       noListo.classList.add('show');
+    loading.classList.remove('show');
+    noListo.classList.add('show');
 }
 };
-   form2Cerrar.addEventListener('click',()=>{
-       formcon.classList.remove('hide');
-       noListo.classList.remove('show');
+form2Cerrar.addEventListener('click',()=>{
+    formcon.classList.remove('hide');
+    noListo.classList.remove('show');
 });
 function valNombre(){
 var elemento = document.getElementById('nombre');
@@ -124,21 +124,21 @@ document.getElementById(`${elemento.id}Error`).classList.remove('errorShow1');
 };
 
 function validar (e){
-if(valNombre() && valEmail() && valTelefono() && valCiudad() && valInstitucion() && true){
-    return true;
-}
-else{
-    return false;
-}
+    if(valNombre() && valEmail() && valTelefono() && valCiudad() && valInstitucion() && true){
+        return true;
+    }
+    else{
+        return false;
+    }
 };
 
-   formEnviar.addEventListener('click',(e)=>{
-if (validar()){
-    formcon.classList.add('hide');
-    loading.classList.add('show');
-    $formdemo.addEventListener('submit',enviar);
-}
-else{
-    e.preventDefault();
-}
+formEnviar.addEventListener('click',(e)=>{
+    if (validar()){
+        formcon.classList.add('hide');
+        loading.classList.add('show');
+        $formdemo.addEventListener('submit',enviar);
+    }
+    else{
+        e.preventDefault();
+    }
 });

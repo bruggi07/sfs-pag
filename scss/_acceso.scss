@@ -67,7 +67,7 @@
                     &:-internal-autofill-selected{
                         background: transparent !important;
                     }
-                }
+                  }
                 input:focus ~ label,
 				input:not(:placeholder-shown) ~ label{
 					top: -30px;

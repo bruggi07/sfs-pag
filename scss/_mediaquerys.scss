@@ -88,19 +88,16 @@
 	.hamburoculto{
 		top: 0;
 		height: 5vh;
+		transition: .3s linear;
 	}
 	.logo-menu{
 		background: transparent;
 	}
 	.nav_header nav{
-
 		display: flex;
-
 		position: relative;
-
 		flex-direction: row;
-
-}
+	}
 	.nav{
 		align-items: center;
 		transition: .3s linear;
@@ -419,7 +416,7 @@
         position:absolute;
         width: 100%;
         background: rgba(91,150,187,1) !important;
-        // background: linear-gradient(352deg, rgba(135,210,255,0.5410539215686274) 0%, rgba(91,150,187,0.9556197478991597) 39%);
+        height: 90px;
         box-shadow: 0px 4px 6px #9CB6C6;
         opacity: 1;
         flex-direction: column;
@@ -427,18 +424,22 @@
         padding-bottom: 10px;
         top: 0;
         user-select: none;
-        transition: all .4s linear;
+        transition: all .2s linear;
     }
+	.container-show{
+		height: 250px;
+	}
     .imglogo{
         display: flex;
         flex-direction: row;
-        position: relative;
-        align-items: center;
+        position: absolute;
+		inset: 0;
+		margin: auto;
         width: 80px;
         transition: 0.4s linear;
     }
     #minilogo{
-        margin-left: 20px;
+		margin-left: 10px;
     }
     #logogrande{
         display: none;
@@ -451,18 +452,83 @@
         display: flex;
         flex-direction: row;
         background: transparent;
-        align-items: center;
         position: relative;
         width: 100%;
         margin-top: 20px;
         z-index: 60;
-        justify-content: space-between;
     }
+	.nav{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: auto;
+	}
+	// boton hamburguesa start------
     .menu-resp{
         width: 30px;
         margin-right: 5vh;
     }
+	.hamburoculto{
+		position: relative;
+		opacity: 0;
+		pointer-events: none;
+		transition: .1s linear;
+	}
+	input#abrir-cerrar{
+		visibility: hidden;
+		position: absolute;
+		top: -99999px;
+	}
+	.toggle-button {
+        display:block;
+        width:50px;
+        height:50px;
+        // border:2px solid black;
+        position:relative;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+	.toggle-button:before, .toggle-button:after {
+        position:absolute;
+        display:block;
+        content:" ";
+        width: calc(100% / 2);               
+        box-sizing: border-box;
+        left: calc(100% / 4);
+        transition: all 0.2s ease-out;
+    }
+
+    .toggle-button:before {
+        top: calc(100% / 4);
+        height:27%;
+        border-top:3px solid #fff;
+        border-bottom:3px solid #fff;
+        background-color: transparent;
+    }
+
+    .toggle-button:after {
+        height:3px;
+        background-color:#fff;
+        bottom:calc(100% / 4);
+    }
+	input#abrir-cerrar:checked + .toggle-button:before, input#abrir-cerrar:checked + .toggle-button:after {
+        top:calc(100% / 2);
+        height:3px;
+        border-bottom:0;
+    }
+
+    input#abrir-cerrar:checked + .toggle-button:before {
+        transform: rotate(45deg); 
+    }
+
+    input#abrir-cerrar:checked + .toggle-button:after {
+        transform: rotate(-45deg);
+    }
+	// boton hamburguesa fin------
     .nav a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
         margin-top: 10px;
         font-size: 3vh;
     }
@@ -472,16 +538,18 @@
     .btn-acceso-m{
         position: relative;
 		font-weight: 400;
-		font-size:2vh;
-		background: $bg2;
-		color: #31358D;
-        padding: 5px;
-		border-radius: 6px;
+		font-size:1.8vh;
+		background: $bg1;
+		color: #fff;
+        padding: 10px 8px;
+		margin-right: 15px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 8px;
 		border: none;
 		cursor: pointer;
 		font-family:'Inter';
     }
-	//header ---------
+	//header fin---------
 
 	//principal ---------
 	section[id]{

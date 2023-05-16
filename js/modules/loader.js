@@ -3,10 +3,7 @@ function disableScroll(){
   }
   window.addEventListener('scroll', disableScroll);  
   window.onload = function(){
-	      let load = document.getElementById('loading');
-	      let contcarga = document.getElementById('contcarga');
-	      load.classList.add('cargahide');
-	      contcarga.classList.add('imghide');
-        window.removeEventListener('scroll', disableScroll);
+      document.getElementById('loading').classList.add('cargahide');
+      document.getElementById('contcarga').classList.add('imghide');
+      window.removeEventListener('scroll', disableScroll);
 };
-

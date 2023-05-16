@@ -84,15 +84,11 @@ sfs.gae.login.intentar = function (resp,intento){
 					document.querySelector('#accesoform').classList.remove('show');
 					
 					gapi.client.sfsLogin.doLogin({
-						  'group': document.querySelector('#group').value,
-                          'user': document.querySelector('#usuario').value,
-						  'password': document.querySelector('#contrasenia').value,
-						  'intento': intento
-                     }).execute(
-					    		function(resp){
-					    			sfs.gae.login.intentar(resp,intento+1);
-					    		}
-					    		);
+					'group': document.querySelector('#group').value,
+					'user': document.querySelector('#usuario').value,
+					'password': document.querySelector('#contrasenia').value,
+					'intento': intento
+                    }).execute(function(resp){sfs.gae.login.intentar(resp,intento+1);});
 					
 				}else{
 					//el primer reintento trato le avisa al usuario
@@ -138,8 +134,8 @@ sfs.gae.login.tryProduct = function(url,retry){
 			
 		},4000 ); //2000 4 segundo para reintentar
 		
-		 window.location.assign(data);
-		 
+		window.location.assign(data);
+		
 
 		});	
 	}
@@ -157,40 +153,34 @@ sfs.gae.login.initOK= function () {
 		if(openIdAccount) sopenIdAccount=openIdAccount.value;
 		
 		if(sopenIdAccount){
-		    gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
-		    	                          'user': 	  sopenIdAccount,
-		    							  'password': document.querySelector('#contrasenia').value,
-		    							  'openIdAccount': sopenIdAccount,
-		    							  'intento': 0
-		    	                       }).execute(
-									    		function(resp){
-									    			
-									    			sfs.gae.login.intentar(resp,1,$btn);
-									    			 
-									    		}
-		    );
+			gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
+											'user': 	  sopenIdAccount,
+											'password': document.querySelector('#contrasenia').value,
+											'openIdAccount': sopenIdAccount,
+											'intento': 0
+										}).execute(
+											function(resp){
+												sfs.gae.login.intentar(resp,1,$btn);
+											});
 		}
 		else{
-		    gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
+			gapi.client.sfsLogin.doLogin({'group': document.querySelector('#group').value,
                 'user': document.querySelector('#usuario').value,
 				'password': document.querySelector('#contrasenia').value,
 				'openIdAccount': null,
 				'intento': 0
-             }).execute(
-			    		function(resp){
-			    			sfs.gae.login.intentar(resp,1);
-			    		}
-         	);
-			
+            }).execute(
+				function(resp){
+					sfs.gae.login.intentar(resp,1);
+				});
 		}
 		}
 		else{
 			e.preventDefault();
 		}
-	  }); 
+	}); 
 
 };
- 
 /**
  * Initializes the application.
  * @param {string} apiRoot Root of the API's path.
@@ -198,13 +188,13 @@ sfs.gae.login.initOK= function () {
 sfs.gae.login.init = function(apiRoot) {
   // Loads the OAuth and helloworld APIs asynchronously, and triggers login
   // when they have completed.
-  var apisToLoad;
-  var callback = function() {
+var apisToLoad;
+var callback = function() {
     if (--apisToLoad == 0) {
-    	sfs.gae.login.initOK();
+		sfs.gae.login.initOK();
     }
-  }
+}
 
   apisToLoad = 1; // must match number of calls to gapi.client.load()
-  gapi.client.load('sfsLogin', 'v1', callback, apiRoot);
+gapi.client.load('sfsLogin', 'v1', callback, apiRoot);
 };

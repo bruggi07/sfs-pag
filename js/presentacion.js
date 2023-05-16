@@ -25,8 +25,8 @@ if (response.ok){
     this.reset();
 }
 else{
-      loading.classList.remove('show');
-       noListo.classList.add('show');
+        loading.classList.remove('show');
+        noListo.classList.add('show');
 }
 };
 function valNombre(){
@@ -116,7 +116,7 @@ else{
 }
 };
 
-   formEnviar.addEventListener('click',(e)=>{
+    formEnviar.addEventListener('click',(e)=>{
 if (validar()){
     formcon.classList.add('hide');
     loading.classList.add('show');
