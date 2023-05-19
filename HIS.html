@@ -26,20 +26,23 @@
 			</div>
 		</div>
 	</div>
-	<header>
-		<div class="header-transition menuscroll" style="opacity: 1;"></div>
-		<div style="background: transparent;" class="container_header menuscroll" id="header">
-			<div class="logo-menu">
-				<div class="logo-header navscroll">
+    <header>
+		<div class="header-transition"></div>
+		<div class="container_header" id="header">
+		<div class="logo-menu">
+				<div class="menu-resp" id="btn_hambur">
+					<input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+					<label for="abrir-cerrar" class="toggle-button"></label>
+				</div>
+				<div class="logo-header">
 					<div class="imglogo">
-						<a style="scale: 0.6;top: -5px;" id="minilogo" href="index.html"><img src="img/	logo-mini.png" alt="Santa fe sistemas logo"></a>
-						<a style="opacity: 0;" id="logogrande" href="index.html"><img src="img/	logosfs.png" alt="Santa fe sistemas logo"></a>
+						<a id="minilogo" href="#inicio"><img src="img/	logo-mini.png" alt="Santa fe sistemas logo"></a>
+						<a id="logogrande" href="#inicio"><img src="img/	logosfs.png" alt="Santa fe sistemas logo"></a>
 					</div>
 				</div>
-                <div class="btn-acceso-mobil">
-                    <button class="btn-acceso-m" id="open_acceso-mobil">Acceso a clientes</button>
-                </div>       
-		<div class="menu-resp" id="btn_hambur"><img src="img/menuhambur.png" alt="menú hamburguesa png"></div>
+				<div class="btn-acceso-mobil">
+					<button class="btn-acceso-m" id="open_acceso-mobil">Acceso a clientes</button>
+				</div>
 		</div>
 		<div class="nav_header hamburoculto" id="nav_header">
 			<nav class="nav" id="menu">
@@ -640,6 +643,7 @@
     <script type="module" src="/js/modules/form_demo.js?v1.0.5"></script>
     <script type="module" src="/js/modules/form_acceso.js?v1.0.5"></script>
     <script type="module" src="/js/modules/slider.js?v1.0.5"></script>
+	<script type="module" src="/js/modules/menuhambur.js?v1.0.5"></script>
     <script>
         function init() {
 			sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');

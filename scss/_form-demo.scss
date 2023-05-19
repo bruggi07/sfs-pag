@@ -259,7 +259,6 @@
 			transition: 0.3s;
 			.msj{
         display: flex;
-        // background: #6da1c265;
         padding: 15px;
         border-radius: 8px;
         gap: 20px;
@@ -272,7 +271,9 @@
           font-family: 'Roboto';
           font-weight: 400;
           font-size: 1.8vh;
-          
+          span{
+            margin-top: 10px;
+          }
         }
         img{
           position: relative;

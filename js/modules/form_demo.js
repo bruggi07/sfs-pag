@@ -15,7 +15,9 @@ opaco.addEventListener('click',()=>{
 })
 async function enviar (event){
     event.preventDefault();
-    let fd = new FormData(this)
+    let fd = new FormData(this);
+    // https://formspree.io/f/mqkogqvn ---> correo gmail nico produccion
+    // https://formspree.io/f/mayzbqok ---> correo hotmail ruggia para testing
     let response = await fetch('https://formspree.io/f/mqkogqvn',{
     method: 'POST',
     body: fd,
@@ -25,11 +27,13 @@ async function enviar (event){
 });
 if (response.ok){
     let ema=document.getElementById('email');
+    let name = document.getElementById('nombre').value;
+    let firstname = name.split(' ');
     let emaco=document.getElementById('emailcorrect');
 
         loading.classList.remove('show');
         listo.classList.add('show');
-        emaco.innerText=`En breve nos vamos a comunicar con vos al correo: ${ema.value}`
+        emaco.innerText=`Hola ${firstname[0]}! en breve nos vamos a comunicar con vos al correo: ${ema.value}`
         setTimeout(()=>{   
         formcon.classList.remove('hide');
         listo.classList.remove('show');
