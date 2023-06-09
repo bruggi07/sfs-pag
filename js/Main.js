@@ -1,5 +1,5 @@
 'use strict';
-import {open_dos,open_tres,opaco,form,open_cuatro} from './modules/model.js';
+import {open_dos,open_tres,opaco,form,open_cuatro,header,imglogo,fontsizebtnacceso,fonsizebtnpresent,nav,navFontSize,imgmini,imggrande,transitionop} from './modules/model.js';
 
 open_dos.addEventListener('click',()=>{
 	form.classList.remove('oculto');
@@ -140,17 +140,9 @@ async	function enviar2 (e){
 
 // efecto menú con scroll ----------------->
 
-const header = document.getElementById('header');
-const imglogo = document.querySelector('.logo-header > .imglogo');
-const fontsizebtnacceso = document.querySelector('.btn-acceso');
-const fonsizebtnpresent = document.querySelector('.btn-demo')
-const nav = document.querySelector('.logo-header');
-const navFontSize = document.querySelector('.nav');
-const imgmini = document.getElementById('minilogo');
-const imggrande = document.getElementById('logogrande');
-const transitionop = document.querySelector('.header-transition');
-let prevY = window.scrollY;
+var prevY = window.scrollY;
 var ventana = screen.width;
+
 if (ventana > 500){
 	window.addEventListener('scroll', function(){
 

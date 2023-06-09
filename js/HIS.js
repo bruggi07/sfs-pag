@@ -1,4 +1,6 @@
-import { open_tres,form,opaco } from "./modules/model.js";
+import { open_tres,form,opaco,ventpage } from "./modules/model.js";
+
+ventpage();
 
 open_tres.addEventListener('click',()=>{
 	form.classList.remove('oculto');
@@ -12,6 +14,7 @@ let navHeader = document.getElementById('nav_header');
 btnHambur.addEventListener('click',()=>{
 	navHeader.classList.toggle('hamburoculto');
 });
+
 //smooth links con jquery
 $(document).ready(function(){
     // Add smooth scrolling to all links

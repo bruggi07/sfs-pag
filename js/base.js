@@ -1,3 +1,4 @@
+// Validaciónes del form ---
 function valUser(){
 	var elemento = document.getElementById('usuario');
 	if (!elemento.checkValidity()){
