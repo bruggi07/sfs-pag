@@ -403,6 +403,10 @@
         left: -30%;
         background-size: 85%;
     }
+	.fondo-footer{
+		background-size: 150%;
+		bottom: 1%;
+	}
 	//fondos ---------
 
 	//header ---------
@@ -843,7 +847,7 @@
             display: flex;
             flex-direction: column;
 			height: 100%;
-            .contactos-img{
+            .imgcontactos{
                 display: none;
             }
             .formulariodecontacto{
@@ -853,30 +857,30 @@
                     width: 100%;
                 }
             }
-			.tabs-contactos{
-				margin: 10vh auto;
-				width: 100%;
-				gap: 20px;
-				background: transparent !important;
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0% 50%);
-				padding-bottom: 50px;
-				.box-cto{
-					align-items: center;
-					text-align: center;
-					span{
-						font-size: 2.5vh;
-						img{
-							display: none;
-						}
-					}
-					p{
-						text-align: center;
-						font-size: 2vh;
-						line-height: 18px;
+        }
+		.tabs-contactos{
+			display: flex;
+			flex-direction: column;
+			margin: 10vh auto;
+			width: 100%;
+			gap: 20px;
+			padding-bottom: 50px;
+			.box-cto{
+				align-items: center;
+				text-align: center;
+				span{
+					font-size: 2.5vh;
+					img{
+						display: none;
 					}
 				}
+				p{
+					text-align: center;
+					font-size: 2vh;
+					line-height: 18px;
+				}
 			}
-        }
+		}
 		.txt-btn{
 			
 			button{
@@ -1118,6 +1122,9 @@
 	top: 25%;
 	left: -30%;
 	background-size: 85%;
+}
+.fondo-footer{
+	background-size: 90%;
 }
 //fondos ---------
 
@@ -1572,37 +1579,35 @@ section[id]{
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		.contactos-img{
-			display: none;
+		.imgcontactos{
+			margin-left: 20px;
 		}
 		.formulariodecontacto{
-			width: 80%;
+			width: 90%;
 			margin: 50px auto;
 			form{
 				width: 100%;
 			}
 		}
-		.tabs-contactos{
-			margin: 10vh auto;
-			width: 100%;
-			gap: 50px;
-			background: transparent !important;
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0% 50%);
-			padding-bottom: 50px;
-			.box-cto{
-				align-items: center;
+	}
+	.tabs-contactos{
+		margin: 10vh auto;
+		width: 100%;
+		gap: 50px;
+		padding-bottom: 50px;
+		.box-cto{
+			align-items: center;
+			text-align: center;
+			span{
+				font-size: 1.5vh;
+				img{
+					display: none;
+				}
+			}
+			p{
 				text-align: center;
-				span{
-					font-size: 2vh;
-					img{
-						display: none;
-					}
-				}
-				p{
-					text-align: center;
-					font-size: 1.5vh;
-					line-height: 25px;
-				}
+				font-size: 1.5vh;
+				line-height: 25px;
 			}
 		}
 	}
