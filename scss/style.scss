@@ -419,7 +419,6 @@ body{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-bottom: 50px;
 	img{
 		width: 20px;
 		margin-right: 1vh;
@@ -545,7 +544,6 @@ body{
 					}
 				}
 			}
-			
 		}
 		#Acc4{
 			position: absolute;
@@ -1411,6 +1409,7 @@ body{
 @import "./presentacion";
 @import "./acceso";
 @import "./ECE";
+@import "./land";
 /* responsive media screen--------------------- */
 
 
