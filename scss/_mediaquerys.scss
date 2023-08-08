@@ -389,6 +389,41 @@
 			}
 		}
 	}
+	//landing
+	.minilogo-landing{
+    width: 60% !important;
+	}
+	.cuerpoland{
+		margin: 150px 50px;
+		.contenedor1{
+			.formulariodecontacto{
+				form{
+					padding: 20px 50px;
+					h1{
+						font-size: 4vh;
+					}
+				}
+			}
+		}
+		.contenedor2{
+			#Acc3{
+				&:checked{
+					~{
+						.prto-info3{
+							height: 400px;
+						}
+					}
+				}
+			}
+			.tab{
+				.prto-info3{
+					li{
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
 }
 //Celular
 @media screen and (max-width:500px) and (orientation: portrait){

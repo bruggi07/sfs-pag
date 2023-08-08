@@ -1,3 +1,4 @@
+
 .cuerpoland{
     height: 100%;
     margin: 150px 200px 150px 200px;
@@ -5,6 +6,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 150px;
+        margin-bottom: 50px;
         .contenedortxt{
             display: flex;
             flex-direction: column;
@@ -13,14 +15,14 @@
                     color: #31358D;
                     font-family: 'Montserrat';
                     font-weight: 600;
-                    font-size: 36px;
+                    font-size: 3.5vh;
                 }
                 p{
                     color: #0D1852;
                     font-family: 'Roboto';
                     font-weight: 400;
-                    font-size: 28px;
-                    line-height: 35px;
+                    font-size: 2.8vh;
+                    line-height: 3.5vh;
                 }
             }
             .imagenland{
@@ -370,10 +372,10 @@
                 border-radius: 15px;
                 z-index: 10;
                 background: linear-gradient(370deg, #CEDDE6  50%,#E1EAEF 50%);
-			    h3,p{
+                h3,p{
 				color: #000000;
-			    }
-			    .circle-icon{
+                }
+                .circle-icon{
 				background: rgba(91, 150, 187, 1);
 				span{
 					font-size: 3vh;
@@ -431,20 +433,26 @@
                         font-size: 2.5vh;
                     }
                 }		
-                .btn-mas{
+                .btn-land{
                     position: absolute;
                     font-family: 'Roboto';
                     font-weight: 600;
-                    right: 20px;
-                    bottom: 15px;
+                    right: 0;
+                    bottom: 0;
                     border: none;
-                    background: transparent;
+                    width: 200px;
+                    height: 40px;
+                    background: #31358D;
                     user-select:none;
+                    border-radius: 50px 0 15px 0;
                     cursor: pointer;
                     span{
+                        font-size: 2vh;
+                        color: #FFF;
                         margin-right: 5px;
                     }
                     i{
+                        color: #FFF;
                         transition: 0.5s;
                     }
                     &:active{
@@ -468,6 +476,9 @@
 			z-index: 5;
 			transition: 1s;
 			overflow: hidden;
+            #focusform{
+                font-size: 2.5vh;
+            }
 			h3{
 				font-family: 'Roboto';
 				font-weight: 500;
