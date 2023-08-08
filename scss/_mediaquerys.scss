@@ -1143,6 +1143,86 @@
 		}
 	}
 	//Footer--------------
+
+	//landing -----------
+	.hamburlanding{
+		display: none;
+	}
+	.imglogolanding{
+		position: relative;
+		width: 200px;
+	}
+	.logogrande-landing{
+		display: flex !important;
+		position: relative;
+	}
+	.minilogo-landing{
+		width: 100% !important;
+		margin-left: 30px !important;
+	}
+	.cuerpoland{
+		margin: 150px 10px;
+		.contenedor1{
+			display: flex;
+			flex-direction: column;
+			gap: 0px;
+			.contenedortxt{
+				.imagenland{
+					width: 370px;
+				}
+			}
+			.formulariodecontacto{
+				form{
+					padding: 60px 20px;
+				}
+			}
+		}
+		.contenedor2{
+			.tab{
+				.prto{
+					height: 200px;
+					.prtoimg{
+						img{
+							height: 100%;
+							object-fit: cover;
+							border-radius: 15px 0 0 15px;
+						}
+					}
+					.prto-text{
+						margin: 10px 25px;
+						padding-right: 0;
+						h3{
+							font-size: 1.5vh;
+							line-height:2vh;
+						}
+						p{
+							// margin-top: 50px;
+							font-size:1.4vh;
+							line-height: 2vh;
+						}
+					}
+					.circle-icon{
+						right: 20px;
+						width: 60px;
+						height: 60px;
+					}
+				}
+				.prto-info3{
+					padding: 70px 20px;
+                h3{
+                    font-size: 2vh;
+                    line-height: 18px;
+                }
+                li{
+                    font-size: 1.6vh;
+					img{
+						width: 15px;
+					}
+                }
+				}
+			}
+		}
+	}
 }
 
 //Tablet

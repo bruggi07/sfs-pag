@@ -38,7 +38,7 @@ async	function enviar2 (e){
 		let fd = new FormData(this)
 		// https://formspree.io/f/mqkogqvn ---> correo gmail nico produccion
 	    // https://formspree.io/f/mayzbqok ---> correo hotmail ruggia para testing
-		let respuesta = await fetch('https://formspree.io/f/mayzbqok',{
+		let respuesta = await fetch('https://formspree.io/f/mqkogqvn',{
 		method: 'POST',
 		body: fd,
 		headers: {
