@@ -1,77 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Santa Fe Sistemas | Contacto</title>
 </head>
+
 <body>
     <div class="bgpresent">
         <div class="contenedor-form-presentacion" id="container_form">
             <div class="imagform">
                 <img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
             </div>
-            <div class="laoding" id="load"><div class="spin"></div></div>	
-            <div class="correcto" id="env">               
-            <div class="msj">
-                <img src="/img/Vectores-formularios/correctoicon.png">
-                <p><b>¡Mensaje enviado con éxito!</b>
-                    <span id="emailcorrect"></span></p>
+            <div class="laoding" id="load">
+                <div class="spin"></div>
+            </div>
+            <div class="correcto" id="env">
+                <div class="msj">
+                    <img src="/img/Vectores-formularios/correctoicon.png">
+                    <p><b>¡Mensaje enviado con éxito!</b>
+                        <span id="emailcorrect"></span>
+                    </p>
                 </div>
-    
+
             </div>
             <div class="incorrecto" id="noenv">
-                <p><img src="/img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
+                <p><img src="/img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus datos o
+                    vuelve a intentar más tarde</p>
                 <button id="incorrectoCerrar"><span>Volver</span></button>
             </div>
             <form autocomplete="off" action="" method="POST" id="form-demo">
                 <div class="form-demo" id="formc">
                     <h2>PEDÍ TU PRESENTACIÓN</h2>
                     <div class="grupo">
-                        <input id="nombre" placeholder=" "  autocomplete="off" type="text" name="nombre" required maxlength="30" pattern="[A-Z a-z]{3,30}"><span class="barra imputado"></span>
+                        <input id="nombre" placeholder=" " autocomplete="off" type="text" name="nombre" required
+                            maxlength="30" pattern="[A-Z a-z]{3,30}"><span class="barra imputado"></span>
                         <label for=""><img src="/img/Vectores-formularios/user.svg"> Nombre y Apellido</label>
                         <div class="error" id="nombreError">
-                            <span>!</span><p id="nombreErrorP">Completa este campo para continuar.</p>
+                            <span>!</span>
+                            <p id="nombreErrorP">Completa este campo para continuar.</p>
                         </div>
                     </div>
                     <div class="grupo">
-                        <input id="email" placeholder=" "  autocomplete="off" type="Email" name="email" required maxlength="35"><span class="barra imputado"></span>
+                        <input id="email" placeholder=" " autocomplete="off" type="Email" name="email" required
+                            maxlength="35"><span class="barra imputado"></span>
                         <label for=""><img src="/img/Vectores-formularios/mail.svg">Correo electrónico</label>
                         <div class="error" id="emailError">
-                            <span>!</span><p id="emailErrorP">Completa este campo para continuar.</p>
+                            <span>!</span>
+                            <p id="emailErrorP">Completa este campo para continuar.</p>
                         </div>
                     </div>
                     <div class="grupo">
-                        <input id="telefono" placeholder=" "  autocomplete="off" type="tel" name="telefono" required maxlength="35" pattern="[0-9]{7,13}"><span class="barra imputado"></span>
-                        <label for="telefono"><img src="/img/Vectores-formularios/telefono.svg">Número de teléfono</label>
+                        <input id="telefono" placeholder=" " autocomplete="off" type="tel" name="telefono" required
+                            maxlength="35" pattern="[0-9]{7,13}"><span class="barra imputado"></span>
+                        <label for="telefono"><img src="/img/Vectores-formularios/telefono.svg">Número de
+                            teléfono</label>
                         <div class="error" id="telefonoError">
-                            <span>!</span><p id="telefonoErrorP">Completa este campo para continuar.</p>
+                            <span>!</span>
+                            <p id="telefonoErrorP">Completa este campo para continuar.</p>
                         </div>
                     </div>
                     <div class="grupo">
-                        <input id="ciudad" placeholder=" "  autocomplete="off" type="text" name="ciudad" required maxlength="35"><span class="barra imputado"></span>
+                        <input id="ciudad" placeholder=" " autocomplete="off" type="text" name="ciudad" required
+                            maxlength="35"><span class="barra imputado"></span>
                         <label for=""><img src="/img/Vectores-formularios/point-lugar.svg">Ciudad</label>
                         <div class="error" id="ciudadError">
-                            <span>!</span><p id="ciudadErrorP">Completa este campo para continuar.</p>
+                            <span>!</span>
+                            <p id="ciudadErrorP">Completa este campo para continuar.</p>
                         </div>
                     </div>
                     <div class="grupo">
-                        <input id="institucion" placeholder=" "  autocomplete="off" type="text" name="institucion" required maxlength="35"><span class="barra imputado"></span>
+                        <input id="institucion" placeholder=" " autocomplete="off" type="text" name="institucion"
+                            required maxlength="35"><span class="barra imputado"></span>
                         <label for=""><img src="/img/Vectores-formularios/maletin-institucion.svg">Institución</label>
                         <div class="error" id="institucionError">
-                            <span>!</span><p id="institucionErrorP">Completa este campo para continuar.</p>
+                            <span>!</span>
+                            <p id="institucionErrorP">Completa este campo para continuar.</p>
                         </div>
-                        <input type="text" value="SOLICITUD DE DEMO" name="subject" style="opacity:0 ;" contenteditable="false">
-                    </div>				
+                        <input type="text" value="SOLICITUD DE DEMO" name="subject" style="opacity:0 ;"
+                            contenteditable="false">
+                    </div>
                     <button id="btn__enviar" class="btn_enviar" name="enviar" type="submit"><span>Enviar</span></button>
                 </div>
             </form>
-            </div>
+        </div>
     </div>
     <script type="module" src="/js/presentacion.js"></script>
 </body>
+
 </html>

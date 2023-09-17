@@ -1,73 +1,87 @@
-.head{
-    h1{
+.head {
+    h1 {
         font-size: 16vh;
     }
-    h2{
+
+    h2 {
         font-size: 6vh;
         text-align: center;
     }
 }
-.SAPma{
-    h2{
+
+.SAPma {
+    h2 {
         font-size: 1.6em;
         text-align: center;
     }
-    .boxinfo{
+
+    .boxinfo {
         display: flex;
-        img{
+
+        img {
             height: 70vh;
         }
     }
 }
-.modulos{
-    .contenedor-items{
-        .item{
-            .p2sap{
+
+.modulos {
+    .contenedor-items {
+        .item {
+            .p2sap {
                 margin-top: 10px !important;
             }
-            .sapimg1{
+
+            .sapimg1 {
                 background-image: url(../img/Vectores-SAPma/boxSAP1hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg2{
+
+            .sapimg2 {
                 background-image: url(../img/Vectores-SAPma/boxSAP2hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg3{
+
+            .sapimg3 {
                 background-image: url(../img/Vectores-SAPma/boxSAP3hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg4{
+
+            .sapimg4 {
                 background-image: url(../img/Vectores-SAPma/boxSAP4hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg5{
+
+            .sapimg5 {
                 background-image: url(../img/Vectores-SAPma/boxSAP5hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg6{
+
+            .sapimg6 {
                 background-image: url(../img/Vectores-SAPma/boxSAP6hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg7{
+
+            .sapimg7 {
                 background-image: url(../img/Vectores-SAPma/boxSAP7hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
-            .sapimg8{
+
+            .sapimg8 {
                 background-image: url(../img/Vectores-SAPma/boxSAP8hover.png);
-                background-size:100% ;
+                background-size: 100%;
                 background-repeat: no-repeat;
             }
         }
     }
 }
+
 // .contenedor-slider{
 //     .slider{
 //         .contenido1{

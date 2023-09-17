@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<script async src="/js/base.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Santa Fe Sistemas | Acceso</title>
+	<title>Santa Fe Sistemas | Acceso</title>
 </head>
+
 <body>
-    <div class="container-accesopage">
-        <div class="container-acceso-page" id="container_form_acceso">
+	<div class="container-accesopage">
+		<div class="container-acceso-page" id="container_form_acceso">
 			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
-			<div class="laoding" id="loadacc"><div class="spin"></div></div>
+			<div class="laoding" id="loadacc">
+				<div class="spin"></div>
+			</div>
 			<div class="incorrecto" id="result">
 				<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
 				<button id="incorrectoCerrarfb"><span>Volver</span></button>
@@ -23,45 +27,51 @@
 			<form action="" method="POST" id="form_acceso" onsubmit="return false;">
 				<div class="accesoform show" id="accesoform">
 					<h2>ACCESO A CLIENTES</h2>
-						<input id="group" type="hidden" required="true" value="default" />  
-                        <!-- <input id="group" type="hidden" required="true" value="local" /> -->
+					<input id="group" type="hidden" required="true" value="default" />
+					<!-- <input id="group" type="hidden" required="true" value="local" /> -->
 					<div class="grupo">
-						<input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
+						<input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span
+							class="barra"></span>
 						<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
 						<div class="error" id="usuarioError">
-							<span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
+							<span>!</span>
+							<p id="usuarioErrorP">Completa este campo para continuar.</p>
 						</div>
 					</div>
 
 					<div class="grupo">
-						<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
+						<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required
+							maxlength="35"><span class="barra"></span>
 						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
 						<div class="error" id="contraseniaError">
-							<span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
+							<span>!</span>
+							<p id="contraseniaErrorP">Completa este campo para continuar.</p>
 						</div>
-					</div>				
+					</div>
 					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
 				</div>
 			</form>
-			<a href="https://online2.sfssa.com.ar/SFS2FwAuthWEB/restorePasswordStep1.jsp" class="olvido-pass">¿Olvidó su contraseña?</a>
+			<a href="https://online2.sfssa.com.ar/SFS2FwAuthWEB/restorePasswordStep1.jsp" class="olvido-pass">¿Olvidó su
+				contraseña?</a>
+		</div>
 	</div>
-    </div>
 	<script type="module" src="../js/accesofb.js"></script>
 	<script>
 
-        function init() {
+		function init() {
 			sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            // if (window.location.hostname != "127.0.0.1:5500"){
-            // 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
-            //       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            // }
-            // else {
-            //     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
+			// if (window.location.hostname != "127.0.0.1:5500"){
+			// 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
+			//       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+			// }
+			// else {
+			//     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
 			// 	//  sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            // }
-            
-        }
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+			// }
+
+		}
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 </body>
+
 </html>

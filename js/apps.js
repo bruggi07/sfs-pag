@@ -1,8 +1,8 @@
 'use strict';
-import { open_tres,form,opaco,ventpage } from "./modules/model.js";
+import { open_tres, form, opaco, ventpage } from "./modules/model.js";
 
 ventpage();
-open_tres.addEventListener('click',()=>{
+open_tres.addEventListener('click', () => {
 	form.classList.remove('oculto');
 	opaco.classList.add('opaco');
 });
@@ -10,6 +10,6 @@ open_tres.addEventListener('click',()=>{
 let btnHambur = document.getElementById('btn_hambur');
 let navHeader = document.getElementById('nav_header');
 
-btnHambur.addEventListener('click',()=>{
+btnHambur.addEventListener('click', () => {
 	navHeader.classList.toggle('hamburoculto');
 });

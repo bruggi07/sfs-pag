@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta lang="es">
 	<meta charset="utf-8">
@@ -9,11 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css?v1.0.5">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<title>Santa Fe Sistemas</title>
 	<link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
-<link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
+	<link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
 </head>
+
 <body>
 	<script src="/js/modules/loader.js"></script>
 	<div class="fondocarga" id="loading">
@@ -27,371 +29,425 @@
 		</div>
 	</div>
 	<div class="bodyall">
-	<div class="fondo"></div>
-	<div class="fondo-dos"></div>
-	<header>
-		<div class="header-transition"></div>
-		<div class="container_header" id="header">
-		<div class="logo-menu">
-				<div class="menu-resp" id="btn_hambur">
-					<input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
-					<label for="abrir-cerrar" class="toggle-button"></label>
+		<div class="fondo"></div>
+		<div class="fondo-dos"></div>
+		<header>
+			<div class="header-transition"></div>
+			<div class="container_header" id="header">
+				<div class="logo-menu">
+					<div class="menu-resp" id="btn_hambur">
+						<input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+						<label for="abrir-cerrar" class="toggle-button"></label>
+					</div>
+					<div class="logo-header">
+						<div class="imglogo">
+							<a id="minilogo" href="#inicio"><img src="img/	logo-mini.png"
+									alt="Santa fe sistemas logo"></a>
+							<a id="logogrande" href="#inicio"><img src="img/	logosfs.png"
+									alt="Santa fe sistemas logo"></a>
+						</div>
+					</div>
+					<div class="btn-acceso-mobil">
+						<button class="btn-acceso-m" id="open_acceso-mobil">Acceso a clientes</button>
+					</div>
 				</div>
-				<div class="logo-header">
-					<div class="imglogo">
-						<a id="minilogo" href="#inicio"><img src="img/	logo-mini.png" alt="Santa fe sistemas logo"></a>
-						<a id="logogrande" href="#inicio"><img src="img/	logosfs.png" alt="Santa fe sistemas logo"></a>
+				<div class="nav_header hamburoculto" id="nav_header">
+					<nav class="nav" id="menu">
+						<a href="#inicio">Inicio</a>
+						<a href="#servicios">Nosotros</a>
+						<a href="#irproductos">Servicios</a>
+						<!-- <a href="#">Clientes</a> -->
+						<a href="#contacto">Contacto</a>
+					</nav>
+					<div class="botones">
+						<button class="btn-demo" id="open"><span>Solicitar presentación</span></button>
+						<button class="btn-acceso" id="open_acceso"><span>Acceso a clientes</span></button>
 					</div>
 				</div>
-				<div class="btn-acceso-mobil">
-					<button class="btn-acceso-m" id="open_acceso-mobil">Acceso a clientes</button>
+			</div>
+
+		</header>
+		<div class="cuerpo" id="main">
+			<div class="fondo-footer"></div>
+
+			<!-- acceso a cliente formulario----------------------------------------->
+
+			<div class="opacooff" id="opaco"></div>
+			<div class="container-acceso-form oculto-acc" id="container_form_acceso">
+				<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg">
 				</div>
-		</div>
-		<div class="nav_header hamburoculto" id="nav_header">
-			<nav class="nav" id="menu">
-				<a href="#inicio">Inicio</a>
-				<a href="#servicios">Nosotros</a>
-				<a href="#irproductos">Servicios</a>
-				<!-- <a href="#">Clientes</a> -->
-				<a href="#contacto">Contacto</a>		
-			</nav>
-			<div class="botones">
-				<button class="btn-demo" id="open"><span>Solicitar presentación</span></button>
-				<button class="btn-acceso" id="open_acceso"><span>Acceso a clientes</span></button>
-			</div>
-		</div>
-		</div>
-		
-	</header>
-	<div class="cuerpo"  id="main">
-	<div class="fondo-footer"></div>
-
-<!-- acceso a cliente formulario----------------------------------------->
-
-<div class="opacooff" id="opaco"></div> 
-	<div class="container-acceso-form oculto-acc" id="container_form_acceso">
-		<div id="close_acceso" class="btn-cerrar-acceso"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
-			<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
-			<div class="laoding" id="loadacc"><div class="spin"></div></div>
-			<div class="incorrecto" id="result">
-				<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
-				<button id="incorrectoCerrarAcc"><span>Volver</span></button>
-			</div>
-			<form action="" method="POST" id="form_acceso" onsubmit="return false;">
-				<div class="accesoform show" id="accesoform">
-					<h2>ACCESO A CLIENTES</h2>
-						<input id="group" type="hidden" required="true" value="default" />  
-                        <!-- <input id="group" type="hidden" required="true" value="local" /> -->
-					<div class="grupo">
-						<input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span class="barra"></span>
-						<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
-						<div class="error" id="usuarioError">
-							<span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
-						</div>
-					</div>
-					<div class="grupo">
-						<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required maxlength="35"><span class="barra"></span>
-						<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
-						<div class="error" id="contraseniaError">
-							<span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
-						</div>
-					</div>				
-					<button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
+				<div class="img-form-acc"><img src="/img/Vectores/VectorAccesoimg.png"></div>
+				<div class="laoding" id="loadacc">
+					<div class="spin"></div>
 				</div>
-			</form>
-			<a href="https://online2.sfssa.com.ar/SFS2FwAuthWEB/restorePasswordStep1.jsp" class="olvido-pass">¿Olvidó su contraseña?</a>
-	</div>
-
-
-
-<!-- formulario demo ---------------------------------------------------->
-
-<div class="opacooffdemo" id="opacodemo"></div>
-		<div class="contenedor-form-demo oculto" id="container_form">
-			<div id="close" class="btn-cerrar"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
-			<div class="imagform">
-				<img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
-			</div>
-			<div class="laoding" id="load"><div class="spin"></div></div>	
-			<div class="correcto" id="env">
-								
-			<div class="msj">
-				<img src="img/Vectores-formularios/correctoicon.png">
-				<p><b>¡Mensaje enviado con éxito!</b>
-					<span id="emailcorrect"></span></p>
-			</div>
-				<!-- <button id="correctoCerrar"><span>Cerrar</span></button> -->
-
-			</div>
-			<div class="incorrecto" id="noenv">
-				<p><img src="img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
-				<button id="incorrectoCerrar"><span>Volver</span></button>
-			</div>
-			<form autocomplete="off" action="" method="POST" id="form-demo">
-				<div class="form-demo" id="formc">
-					<h2>PEDÍ TU PRESENTACIÓN</h2>
-					<div class="grupo">
-						<input id="nombre" placeholder=" "  autocomplete="off" type="text" name="nombre" required maxlength="30" pattern="[A-Z a-z]{3,30}"><span class="barra imputado"></span>
-						<label for=""><img src="img/Vectores-formularios/user.svg"> Nombre y Apellido</label>
-						<div class="error" id="nombreError">
-							<span>!</span><p id="nombreErrorP">Completa este campo para continuar.</p>
-						</div>
-					</div>
-					<div class="grupo">
-						<input id="email" placeholder=" "  autocomplete="off" type="Email" name="email" required maxlength="35"><span class="barra imputado"></span>
-						<label for=""><img src="img/Vectores-formularios/mail.svg">Correo electrónico</label>
-						<div class="error" id="emailError">
-							<span>!</span><p id="emailErrorP">Completa este campo para continuar.</p>
-						</div>
-					</div>
-					<div class="grupo">
-						<input id="telefono" placeholder=" "  autocomplete="off" type="tel" name="telefono" required maxlength="35" pattern="[0-9]{7,13}"><span class="barra imputado"></span>
-						<label for="telefono"><img src="img/Vectores-formularios/telefono.svg">Número de teléfono</label>
-						<div class="error" id="telefonoError">
-							<span>!</span><p id="telefonoErrorP">Completa este campo para continuar.</p>
-						</div>
-					</div>
-					<div class="grupo">
-						<input id="ciudad" placeholder=" "  autocomplete="off" type="text" name="ciudad" required maxlength="35"><span class="barra imputado"></span>
-						<label for=""><img src="img/Vectores-formularios/point-lugar.svg">Ciudad</label>
-						<div class="error" id="ciudadError">
-							<span>!</span><p id="ciudadErrorP">Completa este campo para continuar.</p>
-						</div>
-					</div>
-					<div class="grupo">
-						<input id="institucion" placeholder=" "  autocomplete="off" type="text" name="institucion" required maxlength="35"><span class="barra imputado"></span>
-						<label for=""><img src="img/Vectores-formularios/maletin-institucion.svg">Institución</label>
-						<div class="error" id="institucionError">
-							<span>!</span><p id="institucionErrorP">Completa este campo para continuar.</p>
-						</div>
-						<input type="text" value="SOLICITUD DE DEMO" name="subject" style="opacity:0 ;" contenteditable="false">
-					</div>				
-					<button id="btn__enviar" class="btn_enviar" name="enviar" type="submit"><span>Enviar</span></button>
+				<div class="incorrecto" id="result">
+					<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
+					<button id="incorrectoCerrarAcc"><span>Volver</span></button>
 				</div>
-			</form>
-			</div>
-<article>
-	<!-- principal--------------------- -->
-		<section class="seccion" id="inicio">
-			<div class="principal">
-	
-				<div class="text_principal" >
-					<h1>Software médico de vanguardia</h1>
-					<div class="contprin">
-						<!-- <h3>Software para el sector salud</h3> -->
-					<p>
-						Maximice la eficiencia de su institución a través de nuestras soluciones informáticas. <br> <br> Simplifique la gestión de sus servicios, y optimice la atención a sus pacientes.
-					</p>
-					</div>
-					<div class="botonesprin">
-					<a  href="#irproductos">
-						<button class="btn-conomas">
-							<span> CONOCER MÁS</span>
-						</button>
-					</a>
-						<button class="btn-demo2" id="open2">
-							<span>SOLICITAR PRESENTACIÓN</span>
-						</button>
-					</div>
-				</div>	
-			</div>
-		</section>
-		<!-- Servicios----------------- -->
-		<section class="seccion"  id="servicios">
-			<div class="servicios">
-				<span class="separador"></span>
-				<div class="title-nosotros sobreNosotros">
-					<img src="/img/Vectores/VectorNosotros-icon.svg" alt="icon"><h2>SOBRE NOSOTROS</h2>
-				</div>
-				<div class="nosotros">
-					<div class="nosotros-cajas">
-						<div class="nosotros-box b1">
-							<div class="nosimg">
-								<img src="img/Vectores/user.png" alt="user">
+				<form action="" method="POST" id="form_acceso" onsubmit="return false;">
+					<div class="accesoform show" id="accesoform">
+						<h2>ACCESO A CLIENTES</h2>
+						<input id="group" type="hidden" required="true" value="default" />
+						<!-- <input id="group" type="hidden" required="true" value="local" /> -->
+						<div class="grupo">
+							<input id="usuario" placeholder=" " type="text" name="usuario" required maxlength="35"><span
+								class="barra"></span>
+							<label for=""><img src="/img/Vectores-formularios/user.svg"> Usuario</label>
+							<div class="error" id="usuarioError">
+								<span>!</span>
+								<p id="usuarioErrorP">Completa este campo para continuar.</p>
 							</div>
-							<h2>Clientes</h2>
-							<p>Nuestros clientes incluyen profesionales particulares, clinicas, sanatorios, gerenciadoras y aseguradoras.
+						</div>
+						<div class="grupo">
+							<input id="contrasenia" placeholder=" " type="password" name="contrasenia" required
+								maxlength="35"><span class="barra"></span>
+							<label for=""><img src="/img/Vectores-formularios/candado-password.svg"> Contraseña</label>
+							<div class="error" id="contraseniaError">
+								<span>!</span>
+								<p id="contraseniaErrorP">Completa este campo para continuar.</p>
+							</div>
+						</div>
+						<button id="btn__acceso" class="btn_enviar" type="submit"><span>Ingresar</span></button>
+					</div>
+				</form>
+				<a href="https://online2.sfssa.com.ar/SFS2FwAuthWEB/restorePasswordStep1.jsp"
+					class="olvido-pass">¿Olvidó su contraseña?</a>
+			</div>
+
+
+
+			<!-- formulario demo ---------------------------------------------------->
+
+			<div class="opacooffdemo" id="opacodemo"></div>
+			<div class="contenedor-form-demo oculto" id="container_form">
+				<div id="close" class="btn-cerrar"><img src="img/Vectores-formularios/x-cerrar-form.svg"></div>
+				<div class="imagform">
+					<img src="/img/logo-mini.png" alt="Santa fe sistemas logo">
+				</div>
+				<div class="laoding" id="load">
+					<div class="spin"></div>
+				</div>
+				<div class="correcto" id="env">
+
+					<div class="msj">
+						<img src="img/Vectores-formularios/correctoicon.png">
+						<p><b>¡Mensaje enviado con éxito!</b>
+							<span id="emailcorrect"></span>
+						</p>
+					</div>
+					<!-- <button id="correctoCerrar"><span>Cerrar</span></button> -->
+
+				</div>
+				<div class="incorrecto" id="noenv">
+					<p><img src="img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus
+						datos o vuelve a intentar más tarde</p>
+					<button id="incorrectoCerrar"><span>Volver</span></button>
+				</div>
+				<form autocomplete="off" action="" method="POST" id="form-demo">
+					<div class="form-demo" id="formc">
+						<h2>PEDÍ TU PRESENTACIÓN</h2>
+						<div class="grupo">
+							<input id="nombre" placeholder=" " autocomplete="off" type="text" name="nombre" required
+								maxlength="30" pattern="[A-Z a-z]{3,30}"><span class="barra imputado"></span>
+							<label for=""><img src="img/Vectores-formularios/user.svg"> Nombre y Apellido</label>
+							<div class="error" id="nombreError">
+								<span>!</span>
+								<p id="nombreErrorP">Completa este campo para continuar.</p>
+							</div>
+						</div>
+						<div class="grupo">
+							<input id="email" placeholder=" " autocomplete="off" type="Email" name="email" required
+								maxlength="35"><span class="barra imputado"></span>
+							<label for=""><img src="img/Vectores-formularios/mail.svg">Correo electrónico</label>
+							<div class="error" id="emailError">
+								<span>!</span>
+								<p id="emailErrorP">Completa este campo para continuar.</p>
+							</div>
+						</div>
+						<div class="grupo">
+							<input id="telefono" placeholder=" " autocomplete="off" type="tel" name="telefono" required
+								maxlength="35" pattern="[0-9]{7,13}"><span class="barra imputado"></span>
+							<label for="telefono"><img src="img/Vectores-formularios/telefono.svg">Número de
+								teléfono</label>
+							<div class="error" id="telefonoError">
+								<span>!</span>
+								<p id="telefonoErrorP">Completa este campo para continuar.</p>
+							</div>
+						</div>
+						<div class="grupo">
+							<input id="ciudad" placeholder=" " autocomplete="off" type="text" name="ciudad" required
+								maxlength="35"><span class="barra imputado"></span>
+							<label for=""><img src="img/Vectores-formularios/point-lugar.svg">Ciudad</label>
+							<div class="error" id="ciudadError">
+								<span>!</span>
+								<p id="ciudadErrorP">Completa este campo para continuar.</p>
+							</div>
+						</div>
+						<div class="grupo">
+							<input id="institucion" placeholder=" " autocomplete="off" type="text" name="institucion"
+								required maxlength="35"><span class="barra imputado"></span>
+							<label for=""><img
+									src="img/Vectores-formularios/maletin-institucion.svg">Institución</label>
+							<div class="error" id="institucionError">
+								<span>!</span>
+								<p id="institucionErrorP">Completa este campo para continuar.</p>
+							</div>
+							<input type="text" value="SOLICITUD DE DEMO" name="subject" style="opacity:0 ;"
+								contenteditable="false">
+						</div>
+						<button id="btn__enviar" class="btn_enviar" name="enviar"
+							type="submit"><span>Enviar</span></button>
+					</div>
+				</form>
+			</div>
+			<article>
+				<!-- principal--------------------- -->
+				<section class="seccion" id="inicio">
+					<div class="principal">
+
+						<div class="text_principal">
+							<h1>Software médico de vanguardia</h1>
+							<div class="contprin">
+								<!-- <h3>Software para el sector salud</h3> -->
+								<p>
+									Maximice la eficiencia de su institución a través de nuestras soluciones
+									informáticas. <br> <br> Simplifique la gestión de sus servicios, y optimice la
+									atención a sus pacientes.
+								</p>
+							</div>
+							<div class="botonesprin">
+								<a href="#irproductos">
+									<button class="btn-conomas">
+										<span> CONOCER MÁS</span>
+									</button>
+								</a>
+								<button class="btn-demo2" id="open2">
+									<span>SOLICITAR PRESENTACIÓN</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Servicios----------------- -->
+				<section class="seccion" id="servicios">
+					<div class="servicios">
+						<span class="separador"></span>
+						<div class="title-nosotros sobreNosotros">
+							<img src="/img/Vectores/VectorNosotros-icon.svg" alt="icon">
+							<h2>SOBRE NOSOTROS</h2>
+						</div>
+						<div class="nosotros">
+							<div class="nosotros-cajas">
+								<div class="nosotros-box b1">
+									<div class="nosimg">
+										<img src="img/Vectores/user.png" alt="user">
+									</div>
+									<h2>Clientes</h2>
+									<p>Nuestros clientes incluyen profesionales particulares, clinicas, sanatorios,
+										gerenciadoras y aseguradoras.
+									</p>
+								</div>
+								<div class="nosotros-box b2">
+									<div class="nosimg">
+										<img src="img/Vectores/text.png" alt="25">
+									</div>
+									<h2>Años de trayectoria</h2>
+									<p>Contamos con mas de 25 años de trayectoria en el desarrollo de aplicaciones,
+										logrando un producto estable y escalable en constante evolución.</p>
+								</div>
+								<div class="nosotros-box b3">
+									<div class="nosimg">
+										<img src="img/Vectores/HL7.png" alt="img,cadena">
+									</div>
+									<h2>Integración con HL7</h2>
+									<p>Nuestras aplicaciones utilizan el estandar HL7 para intercomunicarse entre sí y
+										con otras soluciones de software.</p>
+								</div>
+								<div class="nosotros-box b4">
+									<div class="nosimg">
+										<img src="img/Vectores/isoimg.png" alt="intercomunicacion">
+									</div>
+									<h2>Calidad Certificada</h2>
+									<p>Nuestros procesos de desarrollo se encuentran certificados por la norma de
+										gestion de calidad ISO 9001.</p>
+								</div>
+								<div class="nosotros-box b5">
+									<div class="nosimg">
+										<img src="img/Vectores/247.png" alt="mano,fácil,acceso">
+									</div>
+									<h2>Disponibilidad 24/7</h2>
+									<p>Nuestros sistemas 100% web ofrecen acceso y soporte personalizado desde cualquier
+										ubicación, las 24 horas, los 7 dias de la semana, los 365 del año.</p>
+								</div>
+							</div>
+							<p class="nosotros-text">
+								¿Tenés alguna pregunta?
 							</p>
-						</div>
-						<div class="nosotros-box b2">
-							<div class="nosimg">
-								<img src="img/Vectores/text.png" alt="25">
-							</div>
-							<h2>Años de trayectoria</h2>
-							<p>Contamos con mas de 25 años de trayectoria en el desarrollo de aplicaciones, logrando un producto estable y escalable en constante evolución.</p>
-						</div>
-						<div class="nosotros-box b3">
-							<div class="nosimg">
-								<img src="img/Vectores/HL7.png" alt="img,cadena">
-							</div>
-							<h2>Integración con HL7</h2>
-							<p>Nuestras aplicaciones utilizan el estandar HL7 para intercomunicarse entre sí y con otras soluciones de software.</p>
-						</div>
-							<div class="nosotros-box b4">
-								<div class="nosimg">
-									<img src="img/Vectores/isoimg.png" alt="intercomunicacion">
-								</div>
-								<h2>Calidad Certificada</h2>
-								<p>Nuestros procesos de desarrollo se encuentran certificados por la norma de gestion de calidad ISO 9001.</p>
-							</div>
-							<div class="nosotros-box b5">
-								<div class="nosimg">
-									<img src="img/Vectores/247.png" alt="mano,fácil,acceso">
-								</div>
-								<h2>Disponibilidad 24/7</h2>
-								<p>Nuestros sistemas 100% web ofrecen acceso y soporte personalizado desde cualquier ubicación, las 24 horas, los 7 dias de la semana, los 365 del año.</p>
-							</div>
-					</div>
-					<p class="nosotros-text">
-						¿Tenés alguna pregunta?
-					</p>
-					<a href="#contacto"><button class="btn-contactanos"><span>CONTACTANOS</span></button></a>
-				</div>
-			</div>
-		</section>
-		<!-- Productos------------------- -->
-		<section class="seccion" id="irproductos">
-			<div class="productos">
-				<span class="separador"></span>
-				<div class="title-nosotros">
-					<img src="/img/Vectores/VectorProductos-icon.svg" alt="icon"><h2>PRODUCTOS Y SOLUCIONES DE SOFTWARE</h2>
-				</div>
-				<div class="productos-principal">
-					<p>
-						Sanatorios y Hospitales
-					</p>
-					<div class="tab">
-						<div class="prto p1" id="btn-check">
-							<div class="prtoimg">
-								<img src="img/HISimg.png" alt="pc sfs services">
-							</div>
-							<div class="prto-text">
-								<h3>
-									Sistema de Información Hospitalaria
-								</h3>
-								<p>Plataforma completa de módulos y aplicaciones diseñada para optimizar la gestión y administración de hospitales y sanatorios.</p>
-							</div>
-							<a class="circle-icon" href="HIS.html"><div ><span>HIS</span></div></a>
-							<button class="btn-mas">
-								<span id="text-btn">Ver más</span>
-								<i id="flechi" class="fa fa-angle-down"></i>
-							</button>
-						</div>
-						<input type="radio" id="Acc1" name="ver-mas">
-						<div class="prto-info">
-								<h3>Incluye los siguientes módulos:</h3>
-							<li><img src="/img/check.png">Expediente Clínico Electrónico</li>
-							<li><img src="/img/check.png">Planificación de Recursos Empresariales (ERP)</li>
-							<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados y Ambulatorios</li>
-							<li><img src="/img/check.png">Sistema de Gestión de Turnos y Citas</li>
-							<li><img src="/img/check.png">Gestión de Autorizaciones y Prestaciones</li>
-							<li><img src="/img/check.png">Gestión de Imágenes RIS / PACS</li>
-							<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
-							<li><img src="/img/check.png">Gestión de Farmacia</li>
-							<a href="HIS.html"><span>Conocé sus funcionalidades →</span></a>
+							<a href="#contacto"><button class="btn-contactanos"><span>CONTACTANOS</span></button></a>
 						</div>
 					</div>
-					<p>
-						Aseguradoras y Gerenciadoras
-					</p>
-					<div class="tab">
-						<div class="prto p2" id="btn-check2">
-							<div class="prtoimg">
-								<img src="img/SAPmaimg.png" alt="pc sfs services">
-							</div>
-							<div class="prto-text">
-							<h3>
-								Sistema de Administración de Prestaciones médico-asistenciales
-							</h3>
-							<p>Aplicaciones y módulos web para la administración de aseguradoras y financiadoras de salud.</p>
-							</div>
-							<a class="circle-icon" href="SAPma.html"><div><span>SAPma</span></div></a>
-							<button class="btn-mas">
-								<span id="text-btn2">Ver más</span>
-								<i id="flechi2" class="fa fa-angle-down"></i>
-							</button>
+				</section>
+				<!-- Productos------------------- -->
+				<section class="seccion" id="irproductos">
+					<div class="productos">
+						<span class="separador"></span>
+						<div class="title-nosotros">
+							<img src="/img/Vectores/VectorProductos-icon.svg" alt="icon">
+							<h2>PRODUCTOS Y SOLUCIONES DE SOFTWARE</h2>
 						</div>
-						<input type="radio" id="Acc2" name="ver-mas">
-						<div class="prto-info2">
-								<h3>Incluye los siguientes módulos:</h3>
-							<li><img src="/img/check.png"> Gestión de Prestadores</li>
-							<li><img src="/img/check.png"> Administración de Prestaciones </li>
-							<li><img src="/img/check.png"> Gestión de Autorizaciones y Rechazos</li>
-							<li><img src="/img/check.png"> Gestión Administrativa de Afiliados</li>
-							<li><img src="/img/check.png"> Gestión de Nomencladores, Aranceles y Planes de Cobertura</li>
-							<li><img src="/img/check.png"> Gestión de Cobranzas</li>
-							<li><img src="/img/check.png"> Facturación Electrónica</li>
-							<li><img src="/img/check.png"> Portal para el Afiliado</li>
-							<a href="SAPma.html"><span>Conocé sus funcionalidades →</span></a>
-						</div>
-					</div>
-					<p>
-						Clínicas, Consultorios y Particulares
-					</p>
-					<div class="tab">
-						<div class="prto p3" id="btn-check3">
-							<div class="prtoimg">
-								<img src="img/HCEimg.png" alt="pc sfs services">
-							</div>
-							<div class="prto-text">
-								<h3>
-									Expediente Clínico Electrónico / Historia Clínica Electrónica
-							</h3>
+						<div class="productos-principal">
 							<p>
-								Registro integrado de datos clínicos del paciente, prácticas y estudios complementarios realizados.
+								Sanatorios y Hospitales
 							</p>
-							</div>
-							<a class="circle-icon" href="ECE.html"><div><span>ECE</span></div></a>
-							<button class="btn-mas">
-								<span id="text-btn3">Ver más</span>
-								<i id="flechi3" class="fa fa-angle-down"></i>
-							</button>
-						</div>
-						<input type="radio" id="Acc3" name="ver-mas">
-						<div class="prto-info3">
-									<h3>Aplicación web / mobile que incluye los siguientes modulos:</h3>
-								<div class="continfo">
-									<div class="basci">
-										<div class="btnbasic">
-											<h3>Ambulatorio</h3>
-										</div>
-										<li><img src="/img/check.png">Administración de Datos Clínicos</li>
-										<li><img src="/img/check.png">Notas de Evolución</li>
-										<li><img src="/img/check.png">Carga de Estudios y Prácticas</li>
-										<li><img src="/img/check.png">Registro de Antecedentes Personales y Familiares</li>
-										<li><img src="/img/check.png">Prescripción de Recetas Médicas</li>
-										<li><img src="/img/check.png">Alertas Automáticas por Medicamentos, 
-											Alergias y Resultados de Laboratorio</li>
+							<div class="tab">
+								<div class="prto p1" id="btn-check">
+									<div class="prtoimg">
+										<img src="img/HISimg.png" alt="pc sfs services">
 									</div>
-									<div class="standart">
-										<div class="btnstandart">
-											<h3>Hospitalización</h3>
-										</div>
-										<li><img src="/img/check.png">Administración de Datos Clínicos</li>
-										<li><img src="/img/check.png">Notas de Evolución e Indicaciones Médicas</li>
-										<li><img src="/img/check.png">Carga de Estudios y Prácticas</li>
-										<li><img src="/img/check.png">Registro de Antecedentes Personales y Familiares</li>
-										<li><img src="/img/check.png">Prescripción de Recetas Médicas</li>
-										<li><img src="/img/check.png">Alertas Automáticas por Medicamentos, alergias y Resultados de Laboratorio</li>
-										<li><img src="/img/check.png">Módulo de Servicios de Hospitalización</li>
-										<div class="moduloserv">
-											<div class="g1">
-												<img src="/img/Vectores/pinline.png"><p>Gestión de Enfermería</p>
-											</div>
-											<div class="g2">
-												<img src="/img/Vectores/pinline.png"><p>Gestión de Protocolos Quirúrgicos y Anestesia</p>
-											</div>
-											<div class="g3">
-												<img src="/img/Vectores/pinline.png"><p>Registro de Epicrisis</p>
-											</div>
-										</div>
-
+									<div class="prto-text">
+										<h3>
+											Sistema de Información Hospitalaria
+										</h3>
+										<p>Plataforma completa de módulos y aplicaciones diseñada para optimizar la
+											gestión y administración de hospitales y sanatorios.</p>
 									</div>
+									<a class="circle-icon" href="HIS.html">
+										<div><span>HIS</span></div>
+									</a>
+									<button class="btn-mas">
+										<span id="text-btn">Ver más</span>
+										<i id="flechi" class="fa fa-angle-down"></i>
+									</button>
 								</div>
-								<a href="ECE.html"><span>Conocé sus funcionalidades →</span></a>
-						</div>
-						</div>
-					<!-- <div class="tab">
+								<input type="radio" id="Acc1" name="ver-mas">
+								<div class="prto-info">
+									<h3>Incluye los siguientes módulos:</h3>
+									<li><img src="/img/check.png">Expediente Clínico Electrónico</li>
+									<li><img src="/img/check.png">Planificación de Recursos Empresariales (ERP)</li>
+									<li><img src="/img/check.png">Gestión de Pacientes Hospitalizados y Ambulatorios
+									</li>
+									<li><img src="/img/check.png">Sistema de Gestión de Turnos y Citas</li>
+									<li><img src="/img/check.png">Gestión de Autorizaciones y Prestaciones</li>
+									<li><img src="/img/check.png">Gestión de Imágenes RIS / PACS</li>
+									<li><img src="/img/check.png">Sistema de Información para Laboratorios (LIS)</li>
+									<li><img src="/img/check.png">Gestión de Farmacia</li>
+									<a href="HIS.html"><span>Conocé sus funcionalidades →</span></a>
+								</div>
+							</div>
+							<p>
+								Aseguradoras y Gerenciadoras
+							</p>
+							<div class="tab">
+								<div class="prto p2" id="btn-check2">
+									<div class="prtoimg">
+										<img src="img/SAPmaimg.png" alt="pc sfs services">
+									</div>
+									<div class="prto-text">
+										<h3>
+											Sistema de Administración de Prestaciones médico-asistenciales
+										</h3>
+										<p>Aplicaciones y módulos web para la administración de aseguradoras y
+											financiadoras de salud.</p>
+									</div>
+									<a class="circle-icon" href="SAPma.html">
+										<div><span>SAPma</span></div>
+									</a>
+									<button class="btn-mas">
+										<span id="text-btn2">Ver más</span>
+										<i id="flechi2" class="fa fa-angle-down"></i>
+									</button>
+								</div>
+								<input type="radio" id="Acc2" name="ver-mas">
+								<div class="prto-info2">
+									<h3>Incluye los siguientes módulos:</h3>
+									<li><img src="/img/check.png"> Gestión de Prestadores</li>
+									<li><img src="/img/check.png"> Administración de Prestaciones </li>
+									<li><img src="/img/check.png"> Gestión de Autorizaciones y Rechazos</li>
+									<li><img src="/img/check.png"> Gestión Administrativa de Afiliados</li>
+									<li><img src="/img/check.png"> Gestión de Nomencladores, Aranceles y Planes de
+										Cobertura</li>
+									<li><img src="/img/check.png"> Gestión de Cobranzas</li>
+									<li><img src="/img/check.png"> Facturación Electrónica</li>
+									<li><img src="/img/check.png"> Portal para el Afiliado</li>
+									<a href="SAPma.html"><span>Conocé sus funcionalidades →</span></a>
+								</div>
+							</div>
+							<p>
+								Clínicas, Consultorios y Particulares
+							</p>
+							<div class="tab">
+								<div class="prto p3" id="btn-check3">
+									<div class="prtoimg">
+										<img src="img/HCEimg.png" alt="pc sfs services">
+									</div>
+									<div class="prto-text">
+										<h3>
+											Expediente Clínico Electrónico / Historia Clínica Electrónica
+										</h3>
+										<p>
+											Registro integrado de datos clínicos del paciente, prácticas y estudios
+											complementarios realizados.
+										</p>
+									</div>
+									<a class="circle-icon" href="ECE.html">
+										<div><span>ECE</span></div>
+									</a>
+									<button class="btn-mas">
+										<span id="text-btn3">Ver más</span>
+										<i id="flechi3" class="fa fa-angle-down"></i>
+									</button>
+								</div>
+								<input type="radio" id="Acc3" name="ver-mas">
+								<div class="prto-info3">
+									<h3>Aplicación web / mobile que incluye los siguientes modulos:</h3>
+									<div class="continfo">
+										<div class="basci">
+											<div class="btnbasic">
+												<h3>Ambulatorio</h3>
+											</div>
+											<li><img src="/img/check.png">Administración de Datos Clínicos</li>
+											<li><img src="/img/check.png">Notas de Evolución</li>
+											<li><img src="/img/check.png">Carga de Estudios y Prácticas</li>
+											<li><img src="/img/check.png">Registro de Antecedentes Personales y
+												Familiares</li>
+											<li><img src="/img/check.png">Prescripción de Recetas Médicas</li>
+											<li><img src="/img/check.png">Alertas Automáticas por Medicamentos,
+												Alergias y Resultados de Laboratorio</li>
+										</div>
+										<div class="standart">
+											<div class="btnstandart">
+												<h3>Hospitalización</h3>
+											</div>
+											<li><img src="/img/check.png">Administración de Datos Clínicos</li>
+											<li><img src="/img/check.png">Notas de Evolución e Indicaciones Médicas</li>
+											<li><img src="/img/check.png">Carga de Estudios y Prácticas</li>
+											<li><img src="/img/check.png">Registro de Antecedentes Personales y
+												Familiares</li>
+											<li><img src="/img/check.png">Prescripción de Recetas Médicas</li>
+											<li><img src="/img/check.png">Alertas Automáticas por Medicamentos, alergias
+												y Resultados de Laboratorio</li>
+											<li><img src="/img/check.png">Módulo de Servicios de Hospitalización</li>
+											<div class="moduloserv">
+												<div class="g1">
+													<img src="/img/Vectores/pinline.png">
+													<p>Gestión de Enfermería</p>
+												</div>
+												<div class="g2">
+													<img src="/img/Vectores/pinline.png">
+													<p>Gestión de Protocolos Quirúrgicos y Anestesia</p>
+												</div>
+												<div class="g3">
+													<img src="/img/Vectores/pinline.png">
+													<p>Registro de Epicrisis</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<a href="ECE.html"><span>Conocé sus funcionalidades →</span></a>
+								</div>
+							</div>
+							<!-- <div class="tab">
 						<div class="prto p4" id="btn-check4">
 							<div class="prtoimg">
 								<img src="img/Turneroimg.png" alt="pc sfs services">
@@ -424,136 +480,148 @@
 								<span>Conocé sus funcionalidades →</span>
 						</div>
 					</div> -->
-				</div>
-				<p class="solPacienteTxt">
-					Soluciones de software para sus pacientes
-				</p>
-				<div class="productos-paciente">
-					<a href="App.html">
-						<div class="prto-p">
-							<img src="img/image 22.png" alt="celulares">
-							<h3>App para el paciente</h3>
-							<p>
-								Aplicación móvil para facilitar el acceso a su información clínica.
-							</p>
-							<span>Funcionalidades →</span>
 						</div>
-					</a>
-					<a href="teleconsulta.html">
-						<div class="prto-p">
-							<img src="img/image 25.png" alt="celular,doctor">
-							<h3>Teleconsulta</h3>
-							<p>
-								Consulte a su médico desde la comodidad de su hogar.
-							</p>
-							<span>Funcionalidades →</span>
-						</div>
-					</a>
-					<a href="Triage.html">
-						<div class="prto-p">
-							<img src="img/image 24.png" alt="Celular, app, aplicacion">
-							<h3>Triage</h3>
-							<p>
-								Protocolo de selección y clasificación de pacientes.
-							</p>
-							<span>Funcionalidades →</span>
-						</div>
-					</a>
-				</div>
-				<div class="txt-btn">
-					<p class="contactos-text">
-						¿Querés tener una experiencia personalizada?
-					</p>
-				
-					<button class="btn-demo3" id="open3">
-					<span>SOLICITAR PRESENTACIÓN</span>
-					</button>
-				</div>
-			</div>
-		</section>
-		<section class="seccion" id="contacto">
-				<div class="contactos">
-				<span class="separador sepContacto"></span>
-				<div class="title-nosotros text-contactanos">
-					<img src="/img/Vectores/VectorContacto-icon.svg" alt="icon"><h2>CONTACTANOS</h2>
-				</div>
-				<div class="contactos-frm">
-					<div class="formulariodecontacto">
-						<div class="formulariodecontacto">
-							<div class="laoding" id="load2"><div class="spin"></div></div>	
-							<div class="correcto" id="env2">
-								<div class="msjcont">
-									<img src="img/Vectores-formularios/correctoicon.png">
-								<p><b>¡Mensaje enviado con éxito!</b> <span id="email2correct"></span></p>
-								</div>
-							</div>
-							<div class="incorrecto" id="noenv2">
-								<p><img src="img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
-								<button id="incorrectoCerrar2"><span>Volver</span></button>
-							</div>
-						<form class="" id="form-contacto" action="" method="POST">
-							<h3>Escribinos un correo:</h3>
-							<div class="group-input">
-								<input id="nombre2" name="Nombre" required placeholder=" " type="text">
-								<label for=""><img src="img/Vectores/user.svg">Nombre</label>
-								<div class="error " id="nombre2Error">
-									<span>!</span><p id="nombre2ErrorP">Completa este campo para continuar.</p>
-								</div>
-							</div>
-							<div class="group-input">
-								<input id="email2" name="Email" required placeholder=" " type="email">
-								<label for=""><img src="img/Vectores/mail.svg">Email</label>
-								<div class="error " id="email2Error">
-									<span>!</span><p id="email2ErrorP">Completa este campo para continuar.</p>
-								</div>
-							</div>
-							<div class="group-input">
-								<input id="asunto" name="Asunto" required placeholder=" " type="text">
-								<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
-								<div class="error " id="asuntoError">
-									<span>!</span><p id="asuntoErrorP">Completa este campo para continuar.</p>
-								</div>
-							</div>
-							<div class="group-input">
-								<textarea id="mensaje" name="Mensaje" required placeholder=" " class="mensaje" type="text"></textarea>
-								<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
-								<div class="error msj " id="mensajeError">
-									<span>!</span><p id="mensajeErrorP">Completa este campo para continuar.</p>
-								</div>
-							</div>
-							<input type="text" value="SOLICITUD DE CONTACTO" name="subject" style="opacity:0;position: absolute;pointer-events: none;" contenteditable="false">
-							<button id="btn_enviar2" name="enviar" type="submit" ><span>Enviar</span></button>
-						</form>
-						</div>
-						<div class="imgcontactos">
-							<img src="img/image 26.png">
-						</div>
-					</div>
-				</div>
-				<div class="tabs-contactos">
-					<div class="box-cto">
-						<span><img src="img/Vectores/lugar-point.svg">¿Donde estamos?</span>
-						<p>
-							Santiago Derqui 3265.
-							<br> Santa Fe, Argentina
+						<p class="solPacienteTxt">
+							Soluciones de software para sus pacientes
 						</p>
-					</div>
-					<div class="box-cto">
-						<span><img src="img/Vectores/telefono.svg">Teléfono</span>
-						<p>
-							+54 (0342) 4578665 / 4578666
-						</p>
-					</div>
-					<div class="box-cto">
-						<span><img class="correo-icon" src="img/Vectores/correo.svg">Correo electrónico</span>
-						<p class="correo-cto">
-							info@sfs.com.ar
-						</p>
-					</div>
-				</div>
-				
+						<div class="productos-paciente">
+							<a href="App.html">
+								<div class="prto-p">
+									<img src="img/image 22.png" alt="celulares">
+									<h3>App para el paciente</h3>
+									<p>
+										Aplicación móvil para facilitar el acceso a su información clínica.
+									</p>
+									<span>Funcionalidades →</span>
+								</div>
+							</a>
+							<a href="teleconsulta.html">
+								<div class="prto-p">
+									<img src="img/image 25.png" alt="celular,doctor">
+									<h3>Teleconsulta</h3>
+									<p>
+										Consulte a su médico desde la comodidad de su hogar.
+									</p>
+									<span>Funcionalidades →</span>
+								</div>
+							</a>
+							<a href="Triage.html">
+								<div class="prto-p">
+									<img src="img/image 24.png" alt="Celular, app, aplicacion">
+									<h3>Triage</h3>
+									<p>
+										Protocolo de selección y clasificación de pacientes.
+									</p>
+									<span>Funcionalidades →</span>
+								</div>
+							</a>
+						</div>
+						<div class="txt-btn">
+							<p class="contactos-text">
+								¿Querés tener una experiencia personalizada?
+							</p>
 
-				<!-- <div class="txt-btn">
+							<button class="btn-demo3" id="open3">
+								<span>SOLICITAR PRESENTACIÓN</span>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="seccion" id="contacto">
+					<div class="contactos">
+						<span class="separador sepContacto"></span>
+						<div class="title-nosotros text-contactanos">
+							<img src="/img/Vectores/VectorContacto-icon.svg" alt="icon">
+							<h2>CONTACTANOS</h2>
+						</div>
+						<div class="contactos-frm">
+							<div class="formulariodecontacto">
+								<div class="formulariodecontacto">
+									<div class="laoding" id="load2">
+										<div class="spin"></div>
+									</div>
+									<div class="correcto" id="env2">
+										<div class="msjcont">
+											<img src="img/Vectores-formularios/correctoicon.png">
+											<p><b>¡Mensaje enviado con éxito!</b> <span id="email2correct"></span></p>
+										</div>
+									</div>
+									<div class="incorrecto" id="noenv2">
+										<p><img src="img/Vectores-formularios/erroricon.png">Ha ocurrido un error, por
+											favor revisa tus datos o vuelve a intentar más tarde</p>
+										<button id="incorrectoCerrar2"><span>Volver</span></button>
+									</div>
+									<form class="" id="form-contacto" action="" method="POST">
+										<h3>Escribinos un correo:</h3>
+										<div class="group-input">
+											<input id="nombre2" name="Nombre" required placeholder=" " type="text">
+											<label for=""><img src="img/Vectores/user.svg">Nombre</label>
+											<div class="error " id="nombre2Error">
+												<span>!</span>
+												<p id="nombre2ErrorP">Completa este campo para continuar.</p>
+											</div>
+										</div>
+										<div class="group-input">
+											<input id="email2" name="Email" required placeholder=" " type="email">
+											<label for=""><img src="img/Vectores/mail.svg">Email</label>
+											<div class="error " id="email2Error">
+												<span>!</span>
+												<p id="email2ErrorP">Completa este campo para continuar.</p>
+											</div>
+										</div>
+										<div class="group-input">
+											<input id="asunto" name="Asunto" required placeholder=" " type="text">
+											<label for=""><img src="img/Vectores/asunto.svg">Asunto</label>
+											<div class="error " id="asuntoError">
+												<span>!</span>
+												<p id="asuntoErrorP">Completa este campo para continuar.</p>
+											</div>
+										</div>
+										<div class="group-input">
+											<textarea id="mensaje" name="Mensaje" required placeholder=" "
+												class="mensaje" type="text"></textarea>
+											<label for=""><img src="img/Vectores/lapiz.svg"> Mensaje</label>
+											<div class="error msj " id="mensajeError">
+												<span>!</span>
+												<p id="mensajeErrorP">Completa este campo para continuar.</p>
+											</div>
+										</div>
+										<input type="text" value="SOLICITUD DE CONTACTO" name="subject"
+											style="opacity:0;position: absolute;pointer-events: none;"
+											contenteditable="false">
+										<button id="btn_enviar2" name="enviar"
+											type="submit"><span>Enviar</span></button>
+									</form>
+								</div>
+								<div class="imgcontactos">
+									<img src="img/image 26.png">
+								</div>
+							</div>
+						</div>
+						<div class="tabs-contactos">
+							<div class="box-cto">
+								<span><img src="img/Vectores/lugar-point.svg">¿Donde estamos?</span>
+								<p>
+									Santiago Derqui 3265.
+									<br> Santa Fe, Argentina
+								</p>
+							</div>
+							<div class="box-cto">
+								<span><img src="img/Vectores/telefono.svg">Teléfono</span>
+								<p>
+									+54 (0342) 4578665 / 4578666
+								</p>
+							</div>
+							<div class="box-cto">
+								<span><img class="correo-icon" src="img/Vectores/correo.svg">Correo electrónico</span>
+								<p class="correo-cto">
+									info@sfs.com.ar
+								</p>
+							</div>
+						</div>
+
+
+						<!-- <div class="txt-btn">
 					<p class="contactos-text">
 						¿Querés tener una experiencia personalizada?
 					</p>
@@ -562,39 +630,46 @@
 					<span>SOLICITAR PRESENTACIÓN</span>
 					</button>
 				</div> -->
-			</div>
-		</section>
-</article>
-<footer>
-	<div class="footer">
-		<div class="imgContain dataFis">
-			<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank"><img src="/img/dataweb.jpg" alt="Data fiscal"></a>
-		</div>
-		<a href="https://www.clusterticsantafe.org/" target="_blank">
-			<div class="imgContain">
-				<img src="/img/logo_cluster_tic_santafe.png" alt="Cluster Tic Santa Fe">
-			</div>
-		</a>
-		<a href="#inicio">
-			<div class="imgContain">
-				<img src="/img/logo SFS footer.png" alt="Santa Fe Sistemas">
-			</div>
-		</a>
-		<div class="servFooter">
-			<h2>Servicios</h2>
-			<a href="HIS.html"><h3>HIS</h3></a>
-			<a href="SAPma.html"><h3>SAPma</h3></a>
-			<a href="ECE.html"><h3>ECE</h3></a>
-		</div>
-		<div class="contFooter">
-			<h2>Contactos</h2>
-			<h3><b>Email:</b> info@sfs.com.ar</h3>
-			<h3><b>Teléfono:</b> +54 (0342) 4578665 / 4578666</h3>
+					</div>
+				</section>
+			</article>
+			<footer>
+				<div class="footer">
+					<div class="imgContain dataFis">
+						<a href="http://qr.afip.gob.ar/?qr=vFCbhkDBxlQy6R3Qbw7d8w,," target="_blank"><img
+								src="/img/dataweb.jpg" alt="Data fiscal"></a>
+					</div>
+					<a href="https://www.clusterticsantafe.org/" target="_blank">
+						<div class="imgContain">
+							<img src="/img/logo_cluster_tic_santafe.png" alt="Cluster Tic Santa Fe">
+						</div>
+					</a>
+					<a href="#inicio">
+						<div class="imgContain">
+							<img src="/img/logo SFS footer.png" alt="Santa Fe Sistemas">
+						</div>
+					</a>
+					<div class="servFooter">
+						<h2>Servicios</h2>
+						<a href="HIS.html">
+							<h3>HIS</h3>
+						</a>
+						<a href="SAPma.html">
+							<h3>SAPma</h3>
+						</a>
+						<a href="ECE.html">
+							<h3>ECE</h3>
+						</a>
+					</div>
+					<div class="contFooter">
+						<h2>Contactos</h2>
+						<h3><b>Email:</b> info@sfs.com.ar</h3>
+						<h3><b>Teléfono:</b> +54 (0342) 4578665 / 4578666</h3>
+					</div>
+				</div>
+			</footer>
 		</div>
 	</div>
-</footer>
-</div>
-</div>
 	<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js?v1.0.5"></script>
 	<script type="module" src="/js/Main.js?v1.0.5"></script>
 	<script type="module" src="/js/modules/form_demo.js?v1.0.5"></script>
@@ -602,19 +677,20 @@
 	<script type="module" src="/js/modules/menuhambur.js?v1.0.5"></script>
 	<script>
 
-        function init() {
+		function init() {
 			sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            // if (window.location.hostname != "127.0.0.1:5500"){
-            // 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
-            //       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            // }
-            // else {
-            //     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
+			// if (window.location.hostname != "127.0.0.1:5500"){
+			// 	//  sfs.gae.login.init('https://'+window.location.hostname+'/_ah/api');
+			//       sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
+			// }
+			// else {
+			//     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
 			// 	//  sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
-            // }
-            
-        }
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+			// }
+
+		}
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
 </body>
+
 </html>

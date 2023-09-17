@@ -31,22 +31,22 @@ const imgmini = document.getElementById('minilogo');
 const imggrande = document.getElementById('logogrande');
 const transitionop = document.querySelector('.header-transition');
 
-export function ventpage (){
+export function ventpage() {
   var ventana = screen.width;
-  if(ventana > 500){
+  if (ventana > 500) {
     nav.classList.add('navscroll');
     fontsizebtnacceso.classList.add('scrollbtnacceso');
     fonsizebtnpresent.classList.add('scrollbtnacceso');
     header.classList.add('menuscroll');
     transitionop.classList.add('menuscroll');
     navFontSize.classList.add('nav-scroll');
-    imggrande.style.opacity='0';
-    imggrande.style.left='-70px';
-    imggrande.style.scale='0.6';
-    imgmini.style.scale='0.6';
-    imgmini.style.top='-5px';
-    transitionop.style.opacity="1";
+    imggrande.style.opacity = '0';
+    imggrande.style.left = '-70px';
+    imggrande.style.scale = '0.6';
+    imgmini.style.scale = '0.6';
+    imgmini.style.top = '-5px';
+    transitionop.style.opacity = "1";
   }
 }
 
-export {openf,open_dos,open_tres,closef,$formdemo,opaco,loading,listo,formcon,formEnviar,formCerrar,noListo,form2Cerrar,form,open_acceso,form_acceso,close_acceso,opacoacceso,open_acceso_mobil,btn__enviar_acceso,open_cuatro,header,imglogo,fontsizebtnacceso,fonsizebtnpresent,nav,navFontSize,imgmini,imggrande,transitionop};
+export { openf, open_dos, open_tres, closef, $formdemo, opaco, loading, listo, formcon, formEnviar, formCerrar, noListo, form2Cerrar, form, open_acceso, form_acceso, close_acceso, opacoacceso, open_acceso_mobil, btn__enviar_acceso, open_cuatro, header, imglogo, fontsizebtnacceso, fonsizebtnpresent, nav, navFontSize, imgmini, imggrande, transitionop };

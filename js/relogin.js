@@ -33,12 +33,12 @@
 // 	}
 // 	elemento.focus();
 // 	};
-	
+
 // 	function limpiarError (elemento){
 // 	document.getElementById(`${elemento.id}`).classList.remove('errorShow2');
 // 	document.getElementById(`${elemento.id}Error`).classList.remove('errorShow1');
 // 	};
-	
+
 // 	function validar (e){
 // 	if(valUser() && valPass() && true){
 // 		return true;
@@ -51,7 +51,7 @@
 // 		e.preventDefault();
 // 		validar();
 // 	})
-document.querySelector('#incorrectoCerrarAcc').addEventListener('click',()=>{
+document.querySelector('#incorrectoCerrarAcc').addEventListener('click', () => {
     document.querySelector('#result').classList.remove('show');
-	document.querySelector('#accesoform').classList.add('show');
+    document.querySelector('#accesoform').classList.add('show');
 })

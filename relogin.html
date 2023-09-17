@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta lang="es">
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
     <script async src="/js/base.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css?v1.0.5">
-	<title>Santa Fe Sistemas | relogin</title>
-	<link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
-<link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v1.0.5">
+    <title>Santa Fe Sistemas | relogin</title>
+    <link rel=”icon” href=”favicon.ico” type=”image/x-icon” />
+    <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon” />
 </head>
+
 <body>
     <script type="module" src="js/modules/loader.js?v1.0.5"></script>
     <div class="fondocarga" id="loading">
-		<div class="contcarga" id="contcarga">
-			<div class="carga">
-				<img class="imgl top" src="/img/iconcarga/top.png">
-				<img class="imgl left" src="/img/iconcarga/left.png">
-				<img class="imgl right" src="/img/iconcarga/right.png">
-				<img src="/img/iconcarga/center.png">
-			</div>
-		</div>
-	</div>
+        <div class="contcarga" id="contcarga">
+            <div class="carga">
+                <img class="imgl top" src="/img/iconcarga/top.png">
+                <img class="imgl left" src="/img/iconcarga/left.png">
+                <img class="imgl right" src="/img/iconcarga/right.png">
+                <img src="/img/iconcarga/center.png">
+            </div>
+        </div>
+    </div>
     <article class="contenedorRelog">
         <section class="img">
             <img class="logosfs" src="img/Vectores-relogin/logo SFS 2.png" alt="Santa fe sistemas">
@@ -51,38 +53,42 @@
             <p>Hemos cerrado tu sesión por inactividad <br> ¿Querés volver a iniciar sesión?</p>
 
             <div class="form_container_relog">
-                <div class="laoding" id="loadacc"><div class="spin"></div></div>
-			<div class="incorrecto" id="result">
-				<p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
-				<button id="incorrectoCerrarAcc"><span>Volver</span></button>
-			</div>
-            <form class="formReLogin show" id="accesoform" action="" method="POST" onsubmit="return false;">
-                <h2>ACCESO A CLIENTES</h2>
-                <input id="group" type="hidden" required="true" value="default" />  
-                <div class="grupin">
-                    <input placeholder=" " type="text" required maxlength="35" name="usuario" id="usuario">
-                    <label for=""><img src="img/Vectores-relogin/user.png">Usuario</label>
-                    <div class="error" id="usuarioError">
-                        <span>!</span><p id="usuarioErrorP">Completa este campo para continuar.</p>
-                    </div>
+                <div class="laoding" id="loadacc">
+                    <div class="spin"></div>
                 </div>
-                <div class="grupin">
-                    <input placeholder=" " type="password" required maxlength="35" name="Password" id="contrasenia">
-                    <label for=""><img src="img/Vectores-relogin/candado.png">Contraseña</label>
-                    <div class="error" id="contraseniaError">
-                        <span>!</span><p id="contraseniaErrorP">Completa este campo para continuar.</p>
-                    </div>
+                <div class="incorrecto" id="result">
+                    <p id="msjresult">Ha ocurrido un error, por favor revisa tus datos o vuelve a intentar más tarde</p>
+                    <button id="incorrectoCerrarAcc"><span>Volver</span></button>
                 </div>
-                <button id="btn__acceso" class="btn-relog"><span>Ingresar</span></button>
-                <a href="https://online2.sfssa.com.ar/SFS2FwAuthWEB/restorePasswordStep1.jsp">
-                    <div class="olvpass">
-                        <p> <span>!</span> ¿Olvidó su contraseña?</p>
+                <form class="formReLogin show" id="accesoform" action="" method="POST" onsubmit="return false;">
+                    <h2>ACCESO A CLIENTES</h2>
+                    <input id="group" type="hidden" required="true" value="default" />
+                    <div class="grupin">
+                        <input placeholder=" " type="text" required maxlength="35" name="usuario" id="usuario">
+                        <label for=""><img src="img/Vectores-relogin/user.png">Usuario</label>
+                        <div class="error" id="usuarioError">
+                            <span>!</span>
+                            <p id="usuarioErrorP">Completa este campo para continuar.</p>
+                        </div>
                     </div>
-                </a>
-            </form>
+                    <div class="grupin">
+                        <input placeholder=" " type="password" required maxlength="35" name="Password" id="contrasenia">
+                        <label for=""><img src="img/Vectores-relogin/candado.png">Contraseña</label>
+                        <div class="error" id="contraseniaError">
+                            <span>!</span>
+                            <p id="contraseniaErrorP">Completa este campo para continuar.</p>
+                        </div>
+                    </div>
+                    <button id="btn__acceso" class="btn-relog"><span>Ingresar</span></button>
+                    <a href="https://online2.sfssa.com.ar/SFS2FwAuthWEB/restorePasswordStep1.jsp">
+                        <div class="olvpass">
+                            <p> <span>!</span> ¿Olvidó su contraseña?</p>
+                        </div>
+                    </a>
+                </form>
             </div>
 
-            
+
         </section>
     </article>
 </body>
@@ -99,8 +105,9 @@
         //     //  sfs.gae.login.init('//' + window.location.host + '/_ah/api');
         // 	//  sfs.gae.login.init('https://iniciosfs.appspot.com/_ah/api');
         // }
-        
+
     }
 </script>
 <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
 </html>
