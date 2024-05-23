@@ -1,0 +1,26 @@
+.fondo-dos-politica,
+.fondo-politica {
+    height: 120%;
+}
+.fondo-politica{
+    opacity: 0.15;
+}
+.cuerpoland{
+    margin-top: 200px;
+    .contenedor1Politicas{
+        display: flex;
+        align-items: center;
+        .txtland{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            p{
+                text-align: justify;
+                width: 60%;
+            }
+        }
+    }
+}

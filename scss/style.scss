@@ -485,6 +485,29 @@ body {
 		margin-right: 1vh;
 	}
 }
+.politicaConteiner{
+	display: flex;
+	margin-top: 50px;
+	width: 100%;
+	align-items: center;
+	justify-self: center;
+	a{
+		width: 100%;
+		height: 100%;
+		z-index: 900;
+		text-align: center;
+	}
+}
+.b4{
+	.nosimg{
+		margin-bottom: -40px;
+	}
+}
+.b5{
+	.nosimg{
+		margin-bottom: -30px;
+	}
+}
 
 .principal {
 	padding-top: 8vh;
@@ -1616,6 +1639,7 @@ body {
 @import "./acceso";
 @import "./ECE";
 @import "./land";
+@import "./politica";
 /* responsive media screen--------------------- */
 
 
