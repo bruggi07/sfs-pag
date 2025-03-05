@@ -3,8 +3,10 @@ import { open_acceso, form_acceso, close_acceso, opacoacceso, open_acceso_mobil,
 
 open_acceso.addEventListener('click',()=>{
 	window.location.href = "https://online.sfssa.com.ar/";
-})
-
+});
+open_acceso_mobil.addEventListener('click', () => { 
+	window.location.href = "https://online.sfssa.com.ar/";
+});
 // open_acceso.addEventListener('click', () => {
 // 	form_acceso.classList.remove('oculto-acc');
 // 	opacoacceso.classList.add('opaco');
